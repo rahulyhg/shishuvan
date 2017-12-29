@@ -7,11 +7,15 @@
     <div class="homeslider" id="sliderhome">
         <flex-slider flex-slide="s in mySlides track by $index" prev-text="" next-text="">
             <li>
-                <img ng-src="{{s}}" class="img-full" target="">
-                <div class="slider-content">
-                    <p>saDSSSSSSSSSSSSSSSSSSSS</p>
+                <img ng-src="{{s.img}}" class="img-full" target="">
+                <div class="pogoSlider-progressBar">
+                    <div class="pogoSlider-progressBar-duration" style="width: 70.9%; overflow: hidden;">
+                        <h2>{{s.title1}}</h2>
+                        <h3>{{s.title2}}</h3>
+                    </div>
+                      <h3 class="pogoSlider-slide-element" data-in="slideUp" data-out="flipX" data-duration="700"><a href="#">Learn More</a></h3>
                 </div>
-                <h3 class="pogoSlider-slide-element" data-in="slideUp" data-out="flipX" data-duration="700" style="opacity: 0;"><a href="#">Learn More</a></h3>
+              
             </li>
         </flex-slider>
     </div>
@@ -26,7 +30,7 @@
                 </div>
             </div>
             <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-                <div class="about-content">
+                <div class="about-content-home">
                     <h3>Overview</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
                         et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -147,71 +151,14 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
+            <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12" ng-repeat="T in Teachers track by $index">
                 <div class="single-team-member fix text-center">
                     <div class="team-member-img ">
-                        <img src="img/teacher/teacher_1.jpg" alt="" class="img-responsive">
+                        <img src="{{T.img}}" alt="" class="img-responsive">
                     </div>
                     <div class="member-details">
-                        <h3>Angel Di Maria</h3>
-                        <p>Assistant Teacher</p>
-                        <div class="member-social-bookmark">
-                            <ul>
-                                <li><a href="#"><i class="icofont icofont-social-facebook"></i></a></li>
-                                <li><a href="#"><i class="icofont icofont-social-twitter"></i></a></li>
-                                <li><a href="#"><i class="icofont icofont-social-linkedin"></i></a></li>
-                                <li><a href="#"><i class="icofont icofont-social-google-hangouts"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
-                <div class="single-team-member fix text-center">
-                    <div class="team-member-img ">
-                        <img src="img/teacher/teacher_2.jpg" alt="" class="img-responsive">
-                    </div>
-                    <div class="member-details">
-                        <h3>Albert Cole</h3>
-                        <p>Teacher</p>
-                        <div class="member-social-bookmark">
-                            <ul>
-                                <li><a href="#"><i class="icofont icofont-social-facebook"></i></a></li>
-                                <li><a href="#"><i class="icofont icofont-social-twitter"></i></a></li>
-                                <li><a href="#"><i class="icofont icofont-social-linkedin"></i></a></li>
-                                <li><a href="#"><i class="icofont icofont-social-google-hangouts"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
-                <div class="single-team-member fix text-center">
-                    <div class="team-member-img ">
-                        <img src="img/teacher/teacher_3.jpg" alt="" class="img-responsive">
-                    </div>
-                    <div class="member-details">
-                        <h3>Fanny Greer</h3>
-                        <p>Professor</p>
-                        <div class="member-social-bookmark">
-                            <ul>
-                                <li><a href="#"><i class="icofont icofont-social-facebook"></i></a></li>
-                                <li><a href="#"><i class="icofont icofont-social-twitter"></i></a></li>
-                                <li><a href="#"><i class="icofont icofont-social-linkedin"></i></a></li>
-                                <li><a href="#"><i class="icofont icofont-social-google-hangouts"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
-                <div class="single-team-member fix text-center">
-                    <div class="team-member-img ">
-                        <img src="img/teacher/teacher_4.jpg" alt="" class="img-responsive">
-                    </div>
-                    <div class="member-details">
-                        <h3>Rhoda Byrd</h3>
-                        <p>Teacher</p>
+                        <h3>{{T.name}}</h3>
+                        <p>{{T.desc}}</p>
                         <div class="member-social-bookmark">
                             <ul>
                                 <li><a href="#"><i class="icofont icofont-social-facebook"></i></a></li>
@@ -237,119 +184,14 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
+            <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12" ng-repeat="C in Courses track by $index">
                 <div class="single_courses text-center">
                     <div class="course-cover">
                         <div class="course-bg"></div>
-                        <img src="img/course/course_1.jpg" alt="">
+                        <img src="{{C.img}}" alt="">
                     </div>
                     <div class="course-details">
-                        <h3>Water Color</h3>
-                        <div class="price-details">
-                            <p>80<span>USD</span></p>
-                            <p><a href="#">Readmore</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
-                <div class="single_courses text-center">
-                    <div class="course-cover">
-                        <div class="course-bg"></div>
-                        <img src="img/course/course_2.jpg" alt="">
-                    </div>
-                    <div class="course-details">
-                        <h3>Oil Painting</h3>
-                        <div class="price-details">
-                            <p>80<span>USD</span></p>
-                            <p><a href="#">Readmore</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
-                <div class="single_courses text-center">
-                    <div class="course-cover">
-                        <div class="course-bg"></div>
-                        <img src="img/course/course_3.jpg" alt="">
-                    </div>
-                    <div class="course-details">
-                        <h3>Biology</h3>
-                        <div class="price-details">
-                            <p>80<span>USD</span></p>
-                            <p><a href="#">Readmore</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
-                <div class="single_courses text-center">
-                    <div class="course-cover">
-                        <div class="course-bg"></div>
-                        <img src="img/course/course_4.jpg" alt="">
-                    </div>
-                    <div class="course-details">
-                        <h3>Swimming</h3>
-                        <div class="price-details">
-                            <p>80<span>USD</span></p>
-                            <p><a href="#">Readmore</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
-                <div class="single_courses text-center">
-                    <div class="course-cover">
-                        <div class="course-bg"></div>
-                        <img src="img/course/course_5.jpg" alt="">
-                    </div>
-                    <div class="course-details">
-                        <h3>English</h3>
-                        <div class="price-details">
-                            <p>80<span>USD</span></p>
-                            <p><a href="#">Readmore</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
-                <div class="single_courses text-center">
-                    <div class="course-cover">
-                        <div class="course-bg"></div>
-                        <img src="img/course/course_6.jpg" alt="">
-                    </div>
-                    <div class="course-details">
-                        <h3>Acrylic Painting</h3>
-                        <div class="price-details">
-                            <p>80<span>USD</span></p>
-                            <p><a href="#">Readmore</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
-                <div class="single_courses text-center">
-                    <div class="course-cover">
-                        <div class="course-bg"></div>
-                        <img src="img/course/course_7.jpg" alt="">
-                    </div>
-                    <div class="course-details">
-                        <h3>Tennis Practice</h3>
-                        <div class="price-details">
-                            <p>80<span>USD</span></p>
-                            <p><a href="#">Readmore</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
-                <div class="single_courses text-center">
-                    <div class="course-cover">
-                        <div class="course-bg"></div>
-                        <img src="img/course/course_8.jpg" alt="">
-                    </div>
-                    <div class="course-details">
-                        <h3>Cooking</h3>
+                        <h3>{{C.courseDetail}}</h3>
                         <div class="price-details">
                             <p>80<span>USD</span></p>
                             <p><a href="#">Readmore</a></p>
@@ -454,10 +296,11 @@
                     </div>
                 </div>
             </div>
-            <div class="map">
+         
+        </div>
+    </div>
+       <div class="map">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15084.968121528249!2d72.86914420000001!3d19.053093399999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1514445368557"
                     width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>
-        </div>
-    </div>
 </section>

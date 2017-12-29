@@ -2,27 +2,27 @@ myApp.factory('NavigationService', function () {
     var navigation = [{
             name: "About Us",
             classis: "active",
-            anchor: "home",
+            anchor: "aboutus",
             subnav: [{
                     name: "History & Legacy",
                     classis: "active",
-                    anchor: "home"
+                    anchor: "aboutus"
                 },
                 {
                     name: "School Mission and Vision Statements",
                     classis: "active",
-                    anchor: "home"
+                    anchor: "aboutus"
 
                 },
                 {
                     name: "Educational Pillars",
                     classis: "active",
-                    anchor: "home"
+                    anchor: "aboutus"
                 },
                 {
                     name: "School Governing Board",
                     classis: "active",
-                    anchor: "home"
+                    anchor: "aboutus"
                 }
             ]
         },
@@ -65,7 +65,7 @@ myApp.factory('NavigationService', function () {
         {
             name: "Program",
             classis: "active",
-            anchor: "home",
+            anchor: "program",
             subnav: [{
                 name: "Academic Programmes",
                 classis: "active",
@@ -216,7 +216,7 @@ myApp.factory('NavigationService', function () {
         {
             name: "Contact Us",
             classis: "active",
-            anchor: "home",
+            anchor: "contactus",
             subnav: [{
                 name: "Directions & Contact Information (Google Map)",
                 classis: "active",

@@ -30,6 +30,21 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $locat
             templateUrl: tempateURL,
             controller: 'FormCtrl'
         })
+        .state('aboutus', {
+            url: "/aboutus",
+            templateUrl: tempateURL,
+            controller: 'AboutusCtrl'
+        })
+          .state('contactus', {
+            url: "/contactus",
+            templateUrl: tempateURL,
+            controller: 'ContactusCtrl'
+        })
+         .state('program', {
+            url: "/program",
+            templateUrl: tempateURL,
+            controller: 'ProgramCtrl'
+        })
         .state('grid', {
             url: "/grid",
             templateUrl: tempateURL,
