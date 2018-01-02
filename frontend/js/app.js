@@ -35,15 +35,20 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $locat
             templateUrl: tempateURL,
             controller: 'AboutusCtrl'
         })
-          .state('contactus', {
+        .state('contactus', {
             url: "/contactus",
             templateUrl: tempateURL,
             controller: 'ContactusCtrl'
         })
-         .state('program', {
+        .state('program', {
             url: "/program",
             templateUrl: tempateURL,
             controller: 'ProgramCtrl'
+        })
+        .state('campus_facility', {
+            url: "/campusfacility",
+            templateUrl: tempateURL,
+            controller: 'CampusFacilityCtrl'
         })
         .state('grid', {
             url: "/grid",

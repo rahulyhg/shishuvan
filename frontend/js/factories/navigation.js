@@ -6,23 +6,27 @@ myApp.factory('NavigationService', function () {
             subnav: [{
                     name: "History & Legacy",
                     classis: "active",
-                    anchor: "aboutus"
+                    anchor: "aboutus",
+                    link: "HistoryandLegacy"
                 },
                 {
                     name: "School Mission and Vision Statements",
                     classis: "active",
-                    anchor: "aboutus"
+                    anchor: "aboutus",
+                    link: "MissionandVission",
 
                 },
                 {
                     name: "Educational Pillars",
                     classis: "active",
-                    anchor: "aboutus"
+                    anchor: "aboutus",
+                    link: "EducationalPillars",
                 },
                 {
                     name: "School Governing Board",
                     classis: "active",
-                    anchor: "aboutus"
+                    anchor: "aboutus",
+                    link: "SchoolGoverningBoard",
                 }
             ]
         },

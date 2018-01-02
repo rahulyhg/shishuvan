@@ -10,4 +10,17 @@ myApp.controller('headerCtrl', function ($scope, TemplateService) {
         scrollTop: $('body,html').offset().top -100 
     }, 3000);
     }
+       $scope.goToAnchor = function (anchor, id) {
+        console.log("inside anchor")
+        $state.go(anchor)
+            // $location.hash(anchor);
+        if (id) {
+            $timeout(function () {
+                // $anchorScroll();
+                $('html,body').animate({
+                    scrollTop: $('#' + id).offset().top - 50
+                }, "slow");
+            }, 500);
+        }
+    };
 });

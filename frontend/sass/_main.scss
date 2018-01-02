@@ -147,14 +147,14 @@ header {
     }
     .navbar-nav {
         float: right;
-        font-weight: bold;
+        // font-weight: bold;
         color: black; // background: white;
         li {
             a {
                 color: black;
                 background-color: white;
-                font-weight: bold;
-                letter-spacing: 2px;
+                // font-weight: bold;
+                letter-spacing: 1px;
                 padding: 40px 20px;
                 font-size: 16px;
                 &:hover {
@@ -211,7 +211,7 @@ h5,
 h6 {
     margin: 0 0 15px;
     font-family: 'Boogaloo', cursive;
-    font-weight: 700;
+    // font-weight: 700;
 }
 
 .area-title h2 {
@@ -825,11 +825,22 @@ margin: 0 3%;
     top: 0;
     width: 100%;
 }
-.about-content h3 {
-    color: #2bb24c;
-    font-size: 30px;
-    margin:30px 0;
+.about-content{
+ h3 {
+    color: #7070a4;
+    font-size: 48px;
+    // margin:30px 0;
     font-family: 'Boogaloo', cursive;
+}
+h5{
+    font-size: 28px;
+     color: #00bbf1;
+}
+}
+.education-pillar{
+h3{
+    color:#cd247d;
+}
 }
 .about-img{
     margin: 30px 0;
@@ -846,7 +857,12 @@ margin: 0 3%;
     letter-spacing: 2px;
     text-transform: capitalize;
 }
-
+.about-content{
+        margin-top: 45px;
+}
+.padding-about{
+    padding-bottom: 100px;
+}
 ////////////////
 
 //End of about us scss //
@@ -901,4 +917,27 @@ margin: 0 3%;
     display: -ms-flexbox;
     display: flex;
 }
+//for flex scss
+.d-flex {
+    @include display(flex);
+    @include flex-direction(row);
+    @include flex-wrap(wrap);
+}
+
+.justify-content-center {
+    @include justify-content(center);
+}
+
+.justify-content-top {
+    @include justify-content(top);
+}
+
+.justify-content-bottom {
+    @include justify-content(bottom);
+}
+
+.align-items-center {
+    @include align-items(center);
+}
+//end of flex scss
 //End of scss for contact
