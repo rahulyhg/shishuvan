@@ -10027,8 +10027,7 @@ body {
   font-size: 15px;
   font-weight: 400;
   letter-spacing: 0.3px;
-  line-height: 1.7em;
-  padding-top: 100px; }
+  line-height: 1.7em; }
 
 img.loading {
   text-align: center;
@@ -10748,7 +10747,8 @@ a.readmore {
   background: #fff none repeat scroll 0 0;
   color: #92278f; }
 
-.contact-area button, .subscriber-form-content button {
+.contact-area button,
+.subscriber-form-content button {
   background: #92278f none repeat scroll 0 0;
   border: 0 none;
   border-radius: 50px;
@@ -10835,6 +10835,31 @@ a.readmore {
   -o-align-items: center;
   align-items: center;
   -ms-flex-align: center; }
+
+.coming-soon {
+  background: #000;
+  background-image: url("../img/commingsoon/Comming-soon_bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+  overflow: hidden; }
+
+.coming-soon .coming-soon-text {
+  display: table;
+  margin: auto;
+  height: 100%; }
+
+.coming-soon .coming-soon-text .text-division {
+  display: table-cell;
+  vertical-align: middle;
+  color: #fff;
+  text-align: center; }
+
+.logo-comming {
+  position: absolute;
+  width: 276px;
+  left: 0; }
 
 #fancybox-loading,
 .fancybox-close,

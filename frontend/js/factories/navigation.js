@@ -69,52 +69,52 @@ myApp.factory('NavigationService', function () {
         {
             name: "Program",
             classis: "active",
-            anchor: "program",
+            // anchor: "program",
             subnav: [{
                 name: "Academic Programmes",
                 classis: "active",
-                anchor: "home",
-                innersub: [{
-                        name: "Preschool & Kindergarten – following the Play Way Method",
-                        classis: "active",
-                        anchor: "home"
-                    },
-                    {
-                        name: "Primary School – Following the Cambridge Primary Programme",
-                        classis: "active",
-                        anchor: "home"
-                    }
-                ]
+                anchor: "academic_programmes",
+                // innersub: [{
+                //         name: "Preschool & Kindergarten – following the Play Way Method",
+                //         classis: "active",
+                //         anchor: "home"
+                //     },
+                //     {
+                //         name: "Primary School – Following the Cambridge Primary Programme",
+                //         classis: "active",
+                //         anchor: "home"
+                //     }
+                // ]
             }, {
                 name: "Co-curricular Program",
                 classis: "active",
-                anchor: "home",
-                innersub: [{
-                        name: "Art",
-                        classis: "active",
-                        anchor: "home"
-                    },
-                    {
-                        name: "STEM",
-                        classis: "active",
-                        anchor: "home"
-                    },
-                    {
-                        name: "Drama",
-                        classis: "active",
-                        anchor: "home"
-                    },
-                    {
-                        name: "Dance",
-                        classis: "active",
-                        anchor: "home"
-                    },
-                    {
-                        name: "Music",
-                        classis: "active",
-                        anchor: "home"
-                    }
-                ]
+                anchor: "co-curricular_program",
+                // innersub: [{
+                //         name: "Art",
+                //         classis: "active",
+                //         anchor: "home"
+                //     },
+                //     {
+                //         name: "STEM",
+                //         classis: "active",
+                //         anchor: "home"
+                //     },
+                //     {
+                //         name: "Drama",
+                //         classis: "active",
+                //         anchor: "home"
+                //     },
+                //     {
+                //         name: "Dance",
+                //         classis: "active",
+                //         anchor: "home"
+                //     },
+                //     {
+                //         name: "Music",
+                //         classis: "active",
+                //         anchor: "home"
+                //     }
+                // ]
 
             }]
         }

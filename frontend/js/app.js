@@ -40,10 +40,15 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $locat
             templateUrl: tempateURL,
             controller: 'ContactusCtrl'
         })
-        .state('program', {
-            url: "/program",
+        .state('academic_programmes', {
+            url: "/academic_programmes",
             templateUrl: tempateURL,
-            controller: 'ProgramCtrl'
+            controller: 'AcademicProgrammesCtrl'
+        })
+         .state('co-curricular_program', {
+            url: "/co-curricular_program",
+            templateUrl: tempateURL,
+            controller: 'Co-curricularProgramCtrl'
         })
         .state('campus_facility', {
             url: "/campusfacility",
