@@ -169,16 +169,18 @@ myApp.factory('NavigationService', function () {
         {
             name: "Community",
             classis: "active",
-            anchor: "home",
+            anchor: "community",
             subnav: [{
                     name: "Initiatives of the KVOSJM Trust",
                     classis: "active",
-                    anchor: "home"
+                    anchor: "community",
+                     link: "Initiatives"
                 },
                 {
                     name: "Our Traditions",
                     classis: "active",
-                    anchor: "home"
+                    anchor: "community",
+                     link: "Our-Traditions"
                 }
             ]
         },

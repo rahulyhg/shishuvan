@@ -214,6 +214,10 @@ h6 {
     // font-weight: 700;
 }
 
+h5 {
+    font-size: 28px;
+}
+
 .area-title h2 {
     color: #92278f;
     display: inline-block;
@@ -232,6 +236,14 @@ h6 {
 
 .section-padding {
     padding: 100px 0;
+}
+
+.section-top {
+    padding-top: 100px;
+}
+
+.section-bottom {
+    padding-bottom: 100px;
 }
 
 .area-title {
@@ -992,7 +1004,103 @@ a.readmore {
 .logo-comming {
     position: absolute;
     width: 276px;
-    left:0;
+    left: 0;
 }
 
 //end of scss for comming soon page
+//  scss for Acadamic program page
+.acadamic-field {
+    h3 {
+        margin: 0;
+        padding: 28px;
+    }
+}
+
+.modal-padding {
+    padding: 50px;
+}
+
+.close-modal {
+    position: absolute;
+    top: 6px;
+    right: 11px;
+    cursor: pointer;
+    .fa {
+        font-size: 20px;
+        color: white;
+    }
+}
+
+.quotes-main {
+    width: 520px;
+    margin: 0 auto;
+    h4 {
+        border-bottom: 2px solid #ff6b8c;
+        border-top: 2px solid #ff6b8c;
+        padding: 12px;
+        color: #ff6b8c;
+        font-size: 25px;
+        position: relative;
+        &:before {
+            font: normal normal normal 14px/1 FontAwesome;
+            content: "\f10d";
+            position: absolute;
+            left: 0;
+            top: -18px;
+            font-size: 20px;
+        }
+        &:after {
+            font: normal normal normal 14px/1 FontAwesome;
+            content: "\f10e";
+            position: absolute;
+            right: 0;
+            bottom: -20px;
+            font-size: 20px;
+        }
+    }
+    p {
+        margin-top: 20px;
+        color: #ff6b8c;
+    }
+}
+
+.game-content {
+    padding: 20px 0;
+}
+
+.acadamic-page {
+    h5 {
+        color: #edbf47;
+    }
+}
+.heading-padd{
+    padding: 15px 0;
+}
+///
+.d-flex2{
+display:flex
+}
+.border-right {
+    border-right: 10px solid red;
+}
+
+.left-text {
+    padding: 0 0 10px 0;
+    border-right: 10px solid;
+    width: 500px;
+}
+.main-content {
+    background: yellow;
+    color: black;
+    padding: 10px; 
+}
+.right-text {
+    padding: 0 0 0 10px 0;
+    padding: 0 0 10px 0;
+    /* padding: 10px; */
+    width: 60px;
+    background-color: black;
+    color: pink;
+}
+///
+// end of scss for Acadamic program page

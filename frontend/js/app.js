@@ -55,6 +55,11 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $locat
             templateUrl: tempateURL,
             controller: 'CampusFacilityCtrl'
         })
+          .state('community', {
+            url: "/community",
+            templateUrl: tempateURL,
+            controller: 'CommunityCtrl'
+        })
         .state('grid', {
             url: "/grid",
             templateUrl: tempateURL,
