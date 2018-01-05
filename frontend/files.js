@@ -50,10 +50,12 @@ module.exports = [
   // Contorllers
   'frontend/js/controllers/controller.js',
   'frontend/js/controllers/aboutus.js',
+    'frontend/js/controllers/admission.js',
   'frontend/js/controllers/community.js',
   'frontend/js/controllers/contactus.js',
   'frontend/js/controllers/academic_programmes.js',
   'frontend/js/controllers/Co-curricularProgram.js',
+   'frontend/js/controllers/employment_opportunities.js',
    'frontend/js/controllers/campusfacility.js',
   'frontend/js/controllers/header-controller.js',
   'frontend/js/controllers/language-controller.js',

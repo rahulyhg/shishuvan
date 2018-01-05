@@ -33,21 +33,21 @@ myApp.factory('NavigationService', function () {
         {
             name: "Campus Facilities",
             classis: "active",
-            anchor: "grid",
+            anchor: "campus_facility",
             subnav: [{
                     name: "Virtual tour of the School",
                     classis: "active",
-                    anchor: "home"
+                    anchor: "campus_facility"
                 },
                 {
                     name: "Technology enabled & temperature controlled learning spaces",
                     classis: "active",
-                    anchor: "home"
+                    anchor: "campus_facility"
                 },
                 {
                     name: "Play Area",
                     classis: "active",
-                    anchor: "home"
+                    anchor: "campus_facility"
                 },
                 {
                     name: "Multipurpose Room",
@@ -187,36 +187,36 @@ myApp.factory('NavigationService', function () {
         {
             name: "Admissions",
             classis: "active",
-            anchor: "home",
+            anchor: "admission",
             subnav: [{
                     name: "Admissions Overview",
                     classis: "active",
-                    anchor: "home"
+                    anchor: "admission"
                 },
                 {
                     name: "Admission Process",
                     classis: "active",
-                    anchor: "home"
+                    anchor: "admission"
                 },
                 {
                     name: "Contact & Enquiries",
                     classis: "active",
-                    anchor: "home"
+                    anchor: "admission"
                 }
             ]
         },
         {
             name: "Employment Opportunities",
             classis: "active",
-            anchor: "home",
+            anchor: "employment_opportunities",
             subnav: [{
                 name: "Working at ShishuVihar School",
                 classis: "active",
-                anchor: "home"
+                anchor: "employment_opportunities"
             }, {
                 name: "Online Application Form",
                 classis: "active",
-                anchor: "home"
+                anchor: "employment_opportunities"
             }]
         },
         {

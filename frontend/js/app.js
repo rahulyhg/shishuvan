@@ -51,7 +51,7 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $locat
             controller: 'Co-curricularProgramCtrl'
         })
         .state('campus_facility', {
-            url: "/campusfacility",
+            url: "/campus_facility",
             templateUrl: tempateURL,
             controller: 'CampusFacilityCtrl'
         })
@@ -59,6 +59,16 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $locat
             url: "/community",
             templateUrl: tempateURL,
             controller: 'CommunityCtrl'
+        })
+           .state('admission', {
+            url: "/admission",
+            templateUrl: tempateURL,
+            controller: 'AdmissionCtrl'
+        })
+        .state('employment_opportunities', {
+            url: "/employment_opportunities",
+            templateUrl: tempateURL,
+            controller: 'EmploymentOpportunitiesCtrl'
         })
         .state('grid', {
             url: "/grid",
