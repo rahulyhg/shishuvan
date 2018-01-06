@@ -1,3 +1,28 @@
  @media (max-width: $screen-xs-max) {
      // Mobile
+     //scss for home page
+     .cust-nav .navbar-nav{
+         float: none;
+         text-align: center;
+     }
+     .pogoSlider-progressBar {
+    left: 25%;
+}
+.navbar-brand{
+    height: 70px;
+}
+.navbar-nav > li > .dropdown-menu{
+    width:100%;
+    text-align: center !important;
+}
+.section-padding {
+    padding: 50px 0;
+}
+.area-title h2{
+    font-size: 40px;
+}
+.about-content-home h3{
+    font-size: 30px;
+}
+        //end of scss for home page
  }

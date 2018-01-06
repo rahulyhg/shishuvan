@@ -1,31 +1,71 @@
 <section>
+    <div class="welcom-barner-area padding-about">
+        <div class="page-barner-bg" data-stellar-background-ratio="0.5"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                    <div class="welcome-text text-center">
+                        <!--<h1>Our Community</h1>
+                        <h3>Home / Our Community</h3>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <div class="admission-top">
+            <h3 class="pink-color">Admissions Overview</h3>
+            <p>We welcome families to the exceptional learning environment our school has to offer. Our aim is to provide every
+                prospective family with the information and support they require to make the right educational decision.
+                To find out more about the school, please contact us on admissions@shishuviharindia.com
+            </p>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <h3 class="pink-color">Admission Inquiry Form</h3>
+        <ul>
+            <li>Kindly register your interest by filling in the online inquiry form given below. </li>
+            <li>In case we have a vacancy in the grade you are seeking admission to, our admissions associates will connect with
+                you.
+            </li>
+        </ul>
+    </div>
+</section>
+<section>
     <div class="container">
         <div class="admission-form">
+            <div class="text-center about-content">
+                <h2>We thank you for your interest in ShishuVihar School</h2>
+            </div>
             <h3 class="pink-color">personal information</h3>
             <div class="admission-main pink-border">
                 <form>
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="email">First name:</label>
-                                <input type="email" class="form-control">
+                                <label for="first-name">First name:</label>
+                                <input type="text" class="form-control">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="email">Middle Name:</label>
-                                <input type="email" class="form-control">
+                                <label for="middle-name">Middle Name:</label>
+                                <input type="text" class="form-control">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="email">Family Name:</label>
-                                <input type="email" class="form-control">
+                                <label for="family-name">Family Name:</label>
+                                <input type="text" class="form-control">
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div >
-                           <label for="email">Gender</label>
+                            <div>
+                                <label for="email">Gender</label>
                             </div>
                             <div class="inline-div gender-div">
                                 <input type="radio" id="test6" name="radio-group" checked>
@@ -48,29 +88,42 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="email">Student Aadhaar Card No:</label>
-                                <input type="email" class="form-control">
+                                <label for="Aadhaar-no">Student Aadhaar Card No:</label>
+                                <input type="text" class="form-control">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="email">Date of Birth:</label>
-                                <input type="email" class="form-control">
+                                <label for="DOB">Date of Birth:</label>
+                                <div class="">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <p class="input-group">
+                                                <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="dt" is-open="popup1.opened" datepicker-options="dateOptions"
+                                                    ng-required="true" close-text="Close" alt-input-formats="altInputFormats"
+                                                />
+                                                <span class="input-group-btn calender-border">
+            <button type="button" class="btn btn-default" ng-click="open1()"><i class="fa fa-calendar" aria-hidden="true"></i></button>
+          </span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="email">Nationality:</label>
-                                <input type="email" class="form-control">
+                                <label for="nationality">Nationality:</label>
+                                <input type="text" class="form-control">
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="email">Grade Applying to:</label>
+                                <label for="Grade">Grade Applying to:</label>
                                 <select class="form-control" id="sel1">
                                 <option>Nursery</option>
                                 <option>Junior Kg</option>
@@ -84,8 +137,17 @@
             </div>
         </div>
         <div class="admission-form">
-            <h3 class="green-color">Current School</h3>
-            <div class="admission-main green-border">
+            <div class="">
+                <div class="inline-div">
+                    <h3 class="green-color">Current School</h3>
+                </div>
+                <div class="inline-div pull-right">
+                    <h3>
+                        <button class="btn btn-open" ng-click="openDiv();">open/close</button>
+                    </h3>
+                </div>
+            </div>
+            <div class="admission-main green-border" ng-if="open">
                 <form>
                     <div class="row">
                         <div class="col-md-12">
@@ -112,11 +174,11 @@
                                 <input type="radio" id="test3" name="radio-group">
                                 <label for="test3">CBSE</label>
                             </div>
-                             <div class="inline-div">
+                            <div class="inline-div">
                                 <input type="radio" id="test4" name="radio-group">
                                 <label for="test4">IB</label>
                             </div>
-                              <div class="inline-div">
+                            <div class="inline-div">
                                 <input type="radio" id="test5" name="radio-group">
                                 <label for="test5">Cambridge</label>
                             </div>
@@ -132,34 +194,85 @@
                     </div>
                 </form>
             </div>
+            <div class="admission-form">
+                <h3 class="blue-color">Parent Information </h3>
+                <div class="admission-main blue-border">
+                    <form>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="name">Name of Parent:</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="contact">Contact No:</label>
+                                    <input type="number" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="email">Email Id:</label>
+                                    <input type="email" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
-        <div class="admission-form">
-            <h3 class="blue-color">Parent Information </h3>
-            <div class="admission-main blue-border">
-                <form>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="email">Name of Parent:</label>
-                                <input type="text" class="form-control">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="email">Contact No:</label>
-                                <input type="number" class="form-control">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="email">Email Id:</label>
-                                <input type="email" class="form-control">
-                            </div>
-                        </div>
-                    </div>
-                </form>
+</section>
+<section>
+    <div class="container">
+        <div class="admission-top">
+            <h3 class="pink-color">School Timings</h3>
+            <div class="admission-main">
+                <p>Nursery, Junior Kg & Senior Kg – 8.30 a.m. to 12.30 p.m.</p>
+                <p>Grade 1 – 8.30 a.m. to 3.15 p.m
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <div class="admission-top">
+            <h3 class="pink-color">Admission Office Hours</h3>
+            <div class="admission-main">
+                <p>Monday to Saturday: 9.00 a.m. to 5.00 p.m.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <div class="admission-top">
+            <h3 class="pink-color">Admission FAQs</h3>
+            <div class="">
+                <h3>a. What is the age cut-off for the pre-primary (early years) section?
+                </h3>
+                <p>Nursery: Students should be three years old by 30th September of their Nursery program school year.</p>
+                <p>
+                Junior Kindergarten - Students should be four years old by 30th September of their Junior kindergarten program
+                    school year.</p>
+                <p> Senior Kindergarten - Students should be five years old by 30th September of their Senior kindergarten program
+                    school year.</p>
+                <h3>b. Does the school offer transportation?
+                </h3>
+                <p>Yes, we have a school bus facility. For details on routes, please get in touch with our admission associates.</p>
+                <h3>c. What is the class size in each grade level?
+                </h3>
+                <p>The class size for all our classes is 30. </p>
+                <h3>d. What is the co-curricular program that the school offers?
+                </h3>
+                <p>At ShishuVihar School, our learners will have the opportunity to engage themselves in different forms of art (visual / music / dramatics) and an exclusive STEM Program.</p>
+                <h3>e. What are the indoor and outdoor play facilities at ShishuVihar School?
+                </h3>
+                <p>We have an exclusive indoor play area created specially for our early years and primary section learners. Further, students would have access to sand and water play areas and a central atrium for the PE program.</p>
             </div>
         </div>
     </div>

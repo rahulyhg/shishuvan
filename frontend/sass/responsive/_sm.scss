@@ -1,3 +1,16 @@
  @media (max-width: $screen-sm-max) {
      // Tablet
+     //scss for header 
+     .cust-nav .navbar-nav li a {
+    padding: 15px 10px;
+    font-size: 16px;
+}
+h3{
+    font-size: 22px;
+}
+.cust-nav .navbar-brand img {
+    width: 150px;}
  }
+.section-padding {
+    padding: 50px 0;
+}

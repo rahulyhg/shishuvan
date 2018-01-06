@@ -302,52 +302,72 @@ a.readmore {
     background: #ff6b8c;
     color: #ffffff;
 }
-.pink-color{
-   
-    color:  #ff6b8c;
+
+.pink-color {
+    color: #ff6b8c;
 }
+
 .yellow-bg {
     background: #edbf47;
     color: #ffffff;
 }
-.yellow-color{
-    color:#edbf47
+
+.yellow-border-cale {
+    border-bottom: 2px solid #edbf47;
+    .btn {
+        padding: 5px 16px;
+    }
 }
+
+.yellow-color {
+    color: #edbf47
+}
+
 .green-bg {
     background: #43c077;
     color: #ffffff;
 }
-.green-color{
+
+.green-color {
     color: #43c077
 }
+
 .dark-bg {
     background: #34333b;
     color: #ffffff;
 }
-.dark-color{
+
+.dark-color {
     color: #34333b
 }
-.purple-bg{
-     background: #8d8cc8;
+
+.purple-bg {
+    background: #8d8cc8;
     color: #ffffff;
 }
-.purple-color{
+
+.purple-color {
     color: #8d8cc8;
 }
+
 .blue-bg {
     background: #53b1c8;
     color: #ffffff;
 }
-.blue-color{
+
+.blue-color {
     color: #53b1c8;
 }
+
 .orange-bg {
     background: #eb774c;
     color: #ffffff;
 }
-.orange-color{
+
+.orange-color {
     color: #eb774c;
 }
+
 .team-area.section-padding {
     padding-bottom: 50px;
 }
@@ -890,10 +910,11 @@ a.readmore {
 }
 
 //scss for slider//
-.pogoSlider-progressBar {
+.slider-content {
     position: absolute;
     top: 50%;
-    left: 45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
 
 .slider-area h2 {
@@ -1113,19 +1134,20 @@ a.readmore {
 .border-right {
     border-right: 15px solid #36353d;
 }
+
 .border-left {
     border-left: 15px solid #36353d;
 }
+
 .left-text {
     padding: 0 0 10px 0;
-   
 }
 
 .main-content {
     padding: 10px 30px;
-     width: 500px;
+    width: 500px;
     height: 90px;
-     align-items: center;
+    align-items: center;
     justify-content: center;
 }
 
@@ -1141,38 +1163,61 @@ a.readmore {
 ///end of .timeline
 // end of scss for Acadamic program page
 //scss for admission page 
-      .admission-form{
-          h3{
-              margin: 15px 100px;
-          }
-      }
-.inline-div{
-        display: inline-block;
+.admission-form {
+    h3 {
+        margin: 15px 100px;
+    }
 }
-.admission-main{
+
+.inline-div {
+    display: inline-block;
+}
+
+.admission-main {
     padding: 30px;
-   
     margin: 0 100px;
-    background: #f9f9f9
+    background: #f9f9f9;
+    label {
+        font-family: "Boogaloo";
+        font-weight: normal;
+    }
 }
-.pink-border{
- border: 2px solid #ff6b8c;
- .form-control{
-     border-bottom: 2px solid #ff6b8c;
- }
+
+.pink-border {
+    border: 2px solid #ff6b8c;
+    .form-control {
+        border-bottom: 2px solid #ff6b8c;
+    }
 }
-.green-border{
- border: 2px solid #43c077;
-  .form-control{
-     border-bottom: 2px solid #43c077;
- }
+
+.calender-border {
+    border-bottom: 2px solid #ff6b8c;
+    .btn {
+        padding: 5px 15px;
+    }
 }
-.blue-border{
- border: 2px solid #53b1c8;
-  .form-control{
-     border-bottom: 2px solid #53b1c8;
- }
+
+.green-border {
+    border: 2px solid #43c077;
+    .form-control {
+        border-bottom: 2px solid #43c077;
+    }
 }
+
+.yellow-border {
+    border: 2px solid #edbf47;
+    .form-control {
+        border-bottom: 2px solid #edbf47;
+    }
+}
+
+.blue-border {
+    border: 2px solid #53b1c8;
+    .form-control {
+        border-bottom: 2px solid #53b1c8;
+    }
+}
+
 //scss for radio button
 // Radio Buttons
 [type="radio"]:checked,
@@ -1180,9 +1225,9 @@ a.readmore {
     position: absolute;
     left: -9999px;
 }
-[type="radio"]:checked + label,
-[type="radio"]:not(:checked) + label
-{
+
+[type="radio"]:checked+label,
+[type="radio"]:not(:checked)+label {
     position: relative;
     padding-left: 28px;
     cursor: pointer;
@@ -1190,8 +1235,9 @@ a.readmore {
     display: inline-block;
     color: #666;
 }
-[type="radio"]:checked + label:before,
-[type="radio"]:not(:checked) + label:before {
+
+[type="radio"]:checked+label:before,
+[type="radio"]:not(:checked)+label:before {
     content: '';
     position: absolute;
     left: 0;
@@ -1201,21 +1247,20 @@ a.readmore {
     border: 1px solid #43c077;
     background: #fff;
 }
-.gender-div{
-[type="radio"]:checked + label:before,
-[type="radio"]:not(:checked) + label:before {
- 
-    border: 1px solid #ff6b8c !important;
- 
-}
-[type="radio"]:checked + label:after,
-[type="radio"]:not(:checked) + label:after {
 
-    background: #ff6b8c;
+.gender-div {
+    [type="radio"]:checked+label:before,
+    [type="radio"]:not(:checked)+label:before {
+        border: 1px solid #ff6b8c !important;
+    }
+    [type="radio"]:checked+label:after,
+    [type="radio"]:not(:checked)+label:after {
+        background: #ff6b8c;
+    }
 }
-}
-[type="radio"]:checked + label:after,
-[type="radio"]:not(:checked) + label:after {
+
+[type="radio"]:checked+label:after,
+[type="radio"]:not(:checked)+label:after {
     content: '';
     width: 12px;
     height: 12px;
@@ -1223,17 +1268,43 @@ a.readmore {
     position: absolute;
     top: 3px;
     left: 3px;
-
     -webkit-transition: all 0.2s ease;
     transition: all 0.2s ease;
 }
-[type="radio"]:not(:checked) + label:after {
+
+[type="radio"]:not(:checked)+label:after {
     opacity: 0;
     -webkit-transform: scale(0);
     transform: scale(0);
 }
-[type="radio"]:checked + label:after {
+
+[type="radio"]:checked+label:after {
     opacity: 1;
     -webkit-transform: scale(1);
     transform: scale(1);
+}
+
+.btn-open {
+    background: transparent;
+    border: 2px solid #5bc178;
+}
+
+.submit-btn .btn {
+    background: transparent;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) white no-repeat 98.5% !important;
+    background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) white no-repeat calc(100% - 10px) !important;
+}
+
+.admission-top {
+    margin-top: 50px;
+}
+
+.declaration {
+    margin: 15px 100px;
 }

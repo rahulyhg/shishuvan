@@ -70,6 +70,11 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $locat
             templateUrl: tempateURL,
             controller: 'EmploymentOpportunitiesCtrl'
         })
+         .state('faq', {
+            url: "/faq",
+            templateUrl: tempateURL,
+            controller: 'FaqCtrl'
+        })
         .state('grid', {
             url: "/grid",
             templateUrl: tempateURL,

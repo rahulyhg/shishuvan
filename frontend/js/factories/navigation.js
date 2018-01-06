@@ -196,7 +196,7 @@ myApp.factory('NavigationService', function () {
                 {
                     name: "Admission Process",
                     classis: "active",
-                    anchor: "admission"
+                    anchor: "faq"
                 },
                 {
                     name: "Contact & Enquiries",
