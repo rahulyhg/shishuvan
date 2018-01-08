@@ -1,6 +1,6 @@
 <section>
     <div class="welcom-barner-area padding-about">
-        <div class="page-barner-bg" data-stellar-background-ratio="0.5"></div>
+        <div class="employment-bg" data-stellar-background-ratio="0.5"></div>
         <div class="container">
             <div class="row">
                 <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
@@ -38,22 +38,23 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="first-name">First name:</label>
+                                        <label for="first-name">First Name:</label>
                                         <input type="text" class="form-control" ng-model="employeeForm.formData.name" name="name" required>
-                                        <span class="errormsg" ng-show="employeeForm.name.$touched && employeeForm.name.$invalid">First name is required.</span>
+                                        <span class="errormsg" ng-show="employeeForm.name.$touched && employeeForm.name.$invalid">First Name is required.</span>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="middle-name">Surname:</label>
-                                        <input type="text" class="form-control" ng-model="employeeForm.formData.lastName" name="lastName">
-                                        <span class="errormsg" ng-show="employeeForm.name.$touched && employeeForm.name.$invalid">First name is required.</span>
+                                        <input type="text" class="form-control" ng-model="employeeForm.formData.lastName" name="lastName" required>
+                                        <span class="errormsg" ng-show="employeeForm.lastName.$touched && employeeForm.lastName.$invalid">Last Name is required.</span>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="family-name">Title:</label>
-                                        <input type="text" class="form-control" ng-model="employeeForm.formData.title">
+                                        <input type="text" class="form-control" ng-model="employeeForm.formData.title" name="title" required>
+                                        <span class="errormsg" ng-show="employeeForm.title.$touched && employeeForm.title.$invalid">Title is required.</span>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -67,7 +68,10 @@
                                 <div class="col-md-6">
                                     <div>
                                         <label for="no">Phone No (mobile)</label>
-                                        <input type="text" class="form-control" ng-model="employeeForm.formData.mobileNo">
+                                        <input type="text" class="form-control" ng-model="employeeForm.formData.mobileNo" name="mobileNo" ng-minlength="10" ng-maxlength="10"
+                                            required>
+                                        <span class="errormsg" ng-show="employeeForm.mobileNo.$error.minlength||employeeForm.mobileNo.$error.maxlength">Please enter a valid phone number</span>
+                                        <span class="errormsg" ng-show="employeeForm.mobileNo.$touched && employeeForm.mobileNo.$invalid">Mobile No is required.</span>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -79,11 +83,12 @@
                                                     <p class="input-group">
                                                         <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="employeeForm.formData.dob" is-open="popup1.opened"
                                                             datepicker-options="dateOptions" ng-required="true" close-text="Close"
-                                                            alt-input-formats="altInputFormats" />
+                                                            alt-input-formats="altInputFormats" name="dob" required/>
                                                         <span class="input-group-btn calender-border">
                                                                  <button type="button" class="btn btn-default" ng-click="open1()"><i class="fa fa-calendar" aria-hidden="true"></i></button>
                                                         </span>
                                                     </p>
+                                                    <span class="errormsg" ng-show="employeeForm.dob.$touched && employeeForm.dob.$invalid">DOB is required.</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -108,7 +113,8 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="email">Email Id:</label>
-                                        <input type="email" class="form-control" ng-model="employeeForm.formData.emailId">
+                                        <input type="email" class="form-control" ng-model="employeeForm.formData.emailId" name="emailId" required>
+                                        <span class="errormsg" ng-show="employeeForm.emailId.$touched && employeeForm.emailId.$invalid">Email is required.</span>
                                     </div>
                                 </div>
                             </div>
@@ -116,7 +122,8 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="nationality">Nationality:</label>
-                                        <input type="text" class="form-control" ng-model="employeeForm.formData.nationality">
+                                        <input type="text" class="form-control" ng-model="employeeForm.formData.nationality" name="nationality" required>
+                                        <span class="errormsg" ng-show="employeeForm.nationality.$touched && employeeForm.nationality.$invalid">Nationality is required.</span>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -141,7 +148,8 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="Present Job Title">Present Job Title</label>
-                                        <input type="text" class="form-control" ng-model="employeeForm.formData.prsentJobTiltle">
+                                        <input type="text" class="form-control" ng-model="employeeForm.formData.prsentJobTiltle" name="prsentJobTiltle" required>
+                                        <span class="errormsg" ng-show="employeeForm.prsentJobTiltle.$touched && employeeForm.prsentJobTiltle.$invalid">job title is required.</span>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -155,14 +163,23 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="comment">Date appointed to post:</label>
-                                        <input type="text" class="form-control" ng-model="employeeForm.formData.appointedDate">
+                                        <!--<input type="text" class="form-control" ng-model="employeeForm.formData.appointedDate">-->
+                                        <p class="input-group">
+                                            <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="employeeForm.formData.appointedDate"
+                                                is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close"
+                                                alt-input-formats="altInputFormats" name="dob" required/>
+                                            <span class="input-group-btn green-border-cale">
+                                                                 <button type="button" class="btn btn-default" ng-click="open1()"><i class="fa fa-calendar" aria-hidden="true"></i></button>
+                                                        </span>
+                                        </p>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="comment">Type of school:
                                         (International / ICSE / CBSE / SSC etc)</label>
-                                        <input type="text" class="form-control" ng-model="employeeForm.formData.typeOfSchool">
+                                        <input type="text" class="form-control" ng-model="employeeForm.formData.typeOfSchool" name="typeOfSchool" , required>
+                                        <span class="errormsg" ng-show="employeeForm.typeOfSchool.$touched && employeeForm.typeOfSchool.$invalid">job title is required.</span>
                                     </div>
                                 </div>
                             </div>
@@ -203,13 +220,22 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="name">University / College Details:</label>
-                                            <input type="text" class="form-control" ng-model="employeeForm.formData.collegeName">
+                                            <input type="text" class="form-control" ng-model="employeeForm.formData.collegeName" name="collegeName" required>
+                                            <span class="errormsg" ng-show="employeeForm.collegeName.$touched && employeeForm.collegeName.$invalid">university/collegeName is required.</span>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="contact">Dates:</label>
-                                            <input type="number" class="form-control" ng-model="employeeForm.formData.dateQ">
+                                            <!--<input type="number" class="form-control" ng-model="employeeForm.formData.dateQ">-->
+                                            <p class="input-group">
+                                                <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="employeeForm.formData.dateQ" is-open="popup1.opened"
+                                                    datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats"
+                                                    name="dob" required/>
+                                                <span class="input-group-btn blue-border-cale ">
+                                                                 <button type="button" class="btn btn-default" ng-click="open1()"><i class="fa fa-calendar" aria-hidden="true"></i></button>
+                                                        </span>
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -217,7 +243,8 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="qualifications">Details of qualifications achieved  and examinations passed </label>
-                                            <input type="text" class="form-control" ng-model="employeeForm.formData.qualification">
+                                            <input type="text" class="form-control" ng-model="employeeForm.formData.qualification" name="qualification" required>
+                                            <span class="errormsg" ng-show="employeeForm.qualification.$touched && employeeForm.qualification.$invalid">Qualification is required.</span>
                                         </div>
                                     </div>
                                 </div>
@@ -237,7 +264,8 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="name">Applicant Name:</label>
-                                            <input type="text" class="form-control" ng-model="employeeForm.formData.applicantName">
+                                            <input type="text" class="form-control" ng-model="employeeForm.formData.applicantName" name="applicantName" required>
+                                            <span class="errormsg" ng-show="employeeForm.applicantName.$touched && employeeForm.applicantName.$invalid">applicant Name is required.</span>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
@@ -263,7 +291,7 @@
                     </div>
                 </div>
                 <div class="submit-btn text-center admission-top" ng-if="view=='tab-four'">
-                    <button class="btn yellow-border" ng-click="submitForm(employeeForm.formData)">Submit</button>
+                    <button class="btn yellow-border" ng-click="submitForm(employeeForm.formData)" ng-disabled="employeeForm.$invalid">Submit</button>
                 </div>
             </form>
         </div>

@@ -147,7 +147,7 @@
                  $timeout(function () {
                      //  $uibModalInstance.dismiss('cancel');
                      $state.reload();
-                 }, 800);
+                 }, 1000);
              }
          })
      }
