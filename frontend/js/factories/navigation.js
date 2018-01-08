@@ -86,7 +86,7 @@ myApp.factory('NavigationService', function ($http) {
                 //     }
                 // ]
             }, {
-                name: "Co-curricular Program",
+                name: "Co-curricular Programmes",
                 classis: "active",
                 anchor: "co-curricular_program",
                 // innersub: [{
@@ -198,11 +198,6 @@ myApp.factory('NavigationService', function ($http) {
                     classis: "active",
                     anchor: "faq",
                     link: "faq"
-                },
-                {
-                    name: "Contact & Enquiries",
-                    classis: "active",
-                    anchor: "admission"
                 }
             ]
         },

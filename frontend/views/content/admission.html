@@ -1,6 +1,6 @@
 <section>
     <div class="welcom-barner-area padding-about">
-        <div class="page-barner-bg" data-stellar-background-ratio="0.5"></div>
+        <div class="admission-bg" data-stellar-background-ratio="0.5"></div>
         <div class="container">
             <div class="row">
                 <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
@@ -47,7 +47,7 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="first-name">First name:<span style="font-size:13px; color:red">&#x2731;</span></label>
+                                    <label for="first-name">First Name:<span style="font-size:13px; color:red">&#x2731;</span></label>
                                     <input type="text" class="form-control" ng-model="studentForm.formData.name" name="name" required>
                                     <span class="errormsg" ng-show="studentForm.name.$touched && studentForm.name.$invalid">First Name is required.</span>
                                 </div>
@@ -113,7 +113,6 @@
                                                 </p>
                                                 <span class="errormsg" ng-show="studentForm.dob.$touched && studentForm.dob.$invalid">DOB is required.</span>
                                             </div>
-
                                         </div>
                                     </div>
                                 </div>
@@ -228,11 +227,10 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
                 <div class="submit-btn text-center admission-top">
-                    <button class="btn submit-btn blue-border" ng-click="submitForm(studentForm.formData)" ng-disabled="studentForm.$invalid">submit</button>
+                    <button class="btn submit-btn blue-border" ng-click="submitForm(studentForm.formData)" ng-disabled="studentForm.$invalid">Submit</button>
                 </div>
             </form>
         </div>
@@ -245,15 +243,30 @@
                 <div class="col-md-6 col-sm-6 col-xs-12">
                     <div class="text-center">
                         <h3>Nursery, Junior Kg, Senior Kg</h3>
-                        <p> - 8.30 a.m. to 12.45 p.m.</p>
+                        <p>8.30 a.m. to 12.45 p.m.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-sm-6 col-xs-12">
                     <div class="text-center">
                         <h3>Grade 1 </h3>
-                        <p>- 8.30 a.m. to 3.00 p.m.
+                        <p>8.30 a.m. to 3.00 p.m.
                         </p>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <div class="admission-top">
+            <h3 class="pink-color">Admission Office Address</h3>
+            <div class="admission-main row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <p> 1102,Regus 11th floor, <br> B Wing, Peninsula Business Park,
+                        <br>S B Road, Lower Parel Mumbai- 400013,
+                        <br> Maharashtra, India
+                    </p>
                 </div>
             </div>
         </div>
@@ -266,13 +279,13 @@
             <div class="admission-main row">
                 <div class="col-md-6 col-sm-6 col-xs-12">
                     <div class="text-center">
-                        <h3>Monday to Friday:</h3>
+                        <h3>Monday to Friday</h3>
                         <p> 9.30 a.m. to 5.30 p.m.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-sm-6 col-xs-12">
                     <div class="text-center">
-                        <h3>Saturday:</h3>
+                        <h3>Saturday</h3>
                         <p> 8.30 a.m. to 12.30 p.m.
                         </p>
                     </div>
