@@ -33,7 +33,7 @@ myApp.factory('NavigationService', function () {
         {
             name: "School Facilities",
             classis: "active",
-            anchor: "campus_facility",
+            anchor: "school_facility",
             // subnav: [{
             //         name: "Virtual tour of the School",
             //         classis: "active",

@@ -50,8 +50,8 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $locat
             templateUrl: tempateURL,
             controller: 'Co-curricularProgramCtrl'
         })
-        .state('campus_facility', {
-            url: "/campus_facility",
+        .state('school_facility', {
+            url: "/school_facility",
             templateUrl: tempateURL,
             controller: 'CampusFacilityCtrl'
         })
