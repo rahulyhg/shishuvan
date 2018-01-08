@@ -1,0 +1,72 @@
+<style>
+    td{
+        border:solid 1px #333;
+    }
+</style>
+<form style="text-align:center;">
+    <table align="center" cellpadding="10" cellspacing="5" style="border-collapse:collapse; font-family:Boogaloo;">
+        <th colspan="2">Student Information</th>
+        <tr>
+            <td class="form-group">
+                <label for="first-name">First Name: </label>
+                <span><%= firstname %></span>
+            </td>
+            <td class="form-group">
+                <label for="middle-name">Middle Name: </label>
+                <span><%= middlename %></span>
+            </td>
+        </tr>
+        <tr>
+            <td class="form-group">
+                <label for="family-name">Family Name: </label>
+                <span><%= familyname %></span>
+            </td>
+            <td>
+                <label for="email">Gender: </label>
+                <span><%= gender %></span>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="form-group">
+                <label for="address">Address:</label>
+                <span><%= address %></span>
+            </td>
+        </tr>
+        <tr>
+            <td class="form-group">
+                <label for="Aadhaar-no">Student Aadhaar Card No:</label>
+                <span><%= aadhaar %></span>
+            </td>
+            <td class="form-group">
+                <label for="DOB">Date of Birth:</label>
+                <span><%= DOB %></span>
+            </td>
+        </tr>
+        <tr>
+            <td class="form-group">
+                <label for="nationality">Nationality:</label>
+                <span><%= nationality %></span>
+            </td>
+            <td class="form-group">
+                <label for="Grade">Grade Applying to:</label>
+                <span><%= grade %></span>
+            </td>
+        </tr>
+        <tr>
+                <td class="form-group">
+                    <label for="first-name">Parent Name: </label>
+                    <span><%= name %></span>
+                </td>
+                <td class="form-group">
+                    <label for="middle-name">Parent Contact Number: </label>
+                    <span><%= contact %></span>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="form-group">
+                    <label for="comment">Parent Email Id:</label>
+                    <span><%= email %></span>
+                </td>
+            </tr>
+    </table>
+</form>
