@@ -25,7 +25,9 @@ body {
     line-height: 1.7em;
     padding-top: 100px;
 }
-
+p{
+    color:black;
+}
 img.loading {
     text-align: center;
     opacity: 1;
@@ -45,11 +47,12 @@ img.doneLoading {
 nav li:hover .dropdown-menu {
     display: block;
 }
-
+.font30{
+font-size: 30px;
+}
 #map img {
     opacity: 1;
 }
-
 a,
 .btn,
 [ui-sref] {
@@ -228,7 +231,6 @@ h5 {
     line-height: 0.8;
     margin-bottom: 20px;
     position: relative;
-    text-transform: capitalize;
     font-weight: 700;
 }
 
@@ -331,7 +333,19 @@ a.readmore {
     background: #43c077;
     color: #ffffff;
 }
+.green-border-cale {
+border-bottom: 2px solid #43c077;
+.btn {
+padding: 5px 16px;
+}
+}
 
+.blue-border-cale {
+border-bottom: 2px solid #53b1c8;
+.btn {
+padding: 5px 16px;
+}
+}
 .green-color {
     color: #43c077
 }
@@ -415,6 +429,7 @@ a.readmore {
     font-size: 20px;
     letter-spacing: 1px;
     margin-bottom: 5px;
+    color:black;
 }
 
 .member-details>p {
@@ -601,7 +616,7 @@ a.readmore {
 }
 
 .contact-area a {
-    color: #919096;
+    color: black;
 }
 
 .red {
@@ -732,6 +747,9 @@ a.readmore {
 .footer-copyright {
     letter-spacing: 1px;
     padding: 40px 0;
+    p{
+        color: #ccc;
+    }
 }
 
 .scrolltotop {
@@ -864,7 +882,7 @@ width: 200px
     background-position: 50% 50%;
 }
 .admission-bg {
-    background: rgba(0, 0, 0, 0) url(../img/admission/admission-bg.png) no-repeat scroll center center / cover;
+    background: rgba(0, 0, 0, 0) url(../img/home/b1.png) no-repeat scroll center center / cover;
     height: 100%;
     left: 0;
     position: absolute;
@@ -873,7 +891,7 @@ width: 200px
     background-position: 50% 50%;
 }
 .contact-bg{
-   background: rgba(0, 0, 0, 0) url(../img/contact/contact.png) no-repeat scroll center center / cover;
+   background: rgba(0, 0, 0, 0) url(../img/home/b3.png) no-repeat scroll center center / cover;
     height: 100%;
     left: 0;
     position: absolute;
@@ -891,7 +909,7 @@ width: 200px
     background-position: 50% 50%;
 }
 .employment-bg{
-   background: rgba(0, 0, 0, 0) url(../img/employment/job.png) no-repeat scroll center center / cover;
+   background: rgba(0, 0, 0, 0) url(../img/home/b5.png) no-repeat scroll center center / cover;
     height: 100%;
     left: 0;
     position: absolute;
@@ -900,7 +918,16 @@ width: 200px
     background-position: 50% 50%;
 }
 .co-curricular-bg{
-    background: rgba(0, 0, 0, 0) url(../img/program/co-curiculam/banner-academic.jpg) no-repeat scroll center center / cover;
+    background: rgba(0, 0, 0, 0) url(../img/program/co-curiculam/banner-academic.png) no-repeat scroll center center / cover;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-position: 50% 50%;
+}
+.community-bg{
+    background: rgba(0, 0, 0, 0) url(../img/home/b5.png) no-repeat scroll center center / cover;
     height: 100%;
     left: 0;
     position: absolute;
@@ -1265,6 +1292,7 @@ width: 200px
     label {
         font-family: "Boogaloo";
         font-weight: normal;
+        color:black !important;
     }
 }
 
