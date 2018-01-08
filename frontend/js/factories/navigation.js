@@ -16,55 +16,55 @@ myApp.factory('NavigationService', function () {
                     link: "MissionandVission",
 
                 },
-                {
-                    name: "Educational Pillars",
-                    classis: "active",
-                    anchor: "aboutus",
-                    link: "EducationalPillars",
-                },
-                {
-                    name: "School Governing Board",
-                    classis: "active",
-                    anchor: "aboutus",
-                    link: "SchoolGoverningBoard",
-                }
+                // {
+                //     name: "Educational Pillars",
+                //     classis: "active",
+                //     anchor: "aboutus",
+                //     link: "EducationalPillars",
+                // },
+                // {
+                //     name: "School Governing Board",
+                //     classis: "active",
+                //     anchor: "aboutus",
+                //     link: "SchoolGoverningBoard",
+                // }
             ]
         },
         {
-            name: "Campus Facilities",
+            name: "School Facilities",
             classis: "active",
             anchor: "campus_facility",
-            subnav: [{
-                    name: "Virtual tour of the School",
-                    classis: "active",
-                    anchor: "campus_facility"
-                },
-                {
-                    name: "Technology enabled & temperature controlled learning spaces",
-                    classis: "active",
-                    anchor: "campus_facility"
-                },
-                {
-                    name: "Play Area",
-                    classis: "active",
-                    anchor: "campus_facility"
-                },
-                {
-                    name: "Multipurpose Room",
-                    classis: "active",
-                    anchor: "home"
-                },
-                {
-                    name: "Music Room",
-                    classis: "active",
-                    anchor: "home"
-                },
-                {
-                    name: "Sick Bay",
-                    classis: "active",
-                    anchor: "home"
-                }
-            ]
+            // subnav: [{
+            //         name: "Virtual tour of the School",
+            //         classis: "active",
+            //         anchor: "campus_facility"
+            //     },
+            //     {
+            //         name: "Technology enabled & temperature controlled learning spaces",
+            //         classis: "active",
+            //         anchor: "campus_facility"
+            //     },
+            //     {
+            //         name: "Play Area",
+            //         classis: "active",
+            //         anchor: "campus_facility"
+            //     },
+            //     {
+            //         name: "Multipurpose Room",
+            //         classis: "active",
+            //         anchor: "home"
+            //     },
+            //     {
+            //         name: "Music Room",
+            //         classis: "active",
+            //         anchor: "home"
+            //     },
+            //     {
+            //         name: "Sick Bay",
+            //         classis: "active",
+            //         anchor: "home"
+            //     }
+            // ]
         },
         {
             name: "Program",
@@ -177,7 +177,7 @@ myApp.factory('NavigationService', function () {
                      link: "Initiatives"
                 },
                 {
-                    name: "Our Traditions",
+                    name: "Our Aspirations ",
                     classis: "active",
                     anchor: "community",
                      link: "Our-Traditions"
@@ -194,9 +194,10 @@ myApp.factory('NavigationService', function () {
                     anchor: "admission"
                 },
                 {
-                    name: "Admission Process",
+                    name: "Admissions FAQ",
                     classis: "active",
-                    anchor: "faq"
+                    anchor: "faq",
+                    link:"faq"
                 },
                 {
                     name: "Contact & Enquiries",

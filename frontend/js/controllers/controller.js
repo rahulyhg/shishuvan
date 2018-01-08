@@ -31,91 +31,74 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
         console.log("This is a button Click");
     };
 
-    $scope.parentsDay = [{
-        para: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiu  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim",
-        name: "ssssssss",
-        desc: "esdxfcghbvjn"
-    }, {
-        para: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiu  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim",
-        name: "ssssssss",
-        desc: "esdxfcghbvjn"
-    }, {
-        para: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiu  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim",
-        name: "ssssssss",
-        desc: "esdxfcghbvjn"
-    }, {
-        para: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiu  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim",
-        name: "ssssssss",
-        desc: "esdxfcghbvjn"
-    }, {
-        para: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiu  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim",
-        name: "ssssssss",
-        desc: "esdxfcghbvjn"
-    }, {
-        para: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiu  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim",
-        name: "ssssssss",
-        desc: "esdxfcghbvjn"
-    }]
-
-    $scope.Courses = [{
+    // $scope.parentsDay = [{
+    //     para: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiu  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim",
+    //     name: "ssssssss",
+    //     desc: "esdxfcghbvjn"
+    // }, {
+    //     para: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiu  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim",
+    //     name: "ssssssss",
+    //     desc: "esdxfcghbvjn"
+    // }, {
+    //     para: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiu  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim",
+    //     name: "ssssssss",
+    //     desc: "esdxfcghbvjn"
+    // }, {
+    //     para: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiu  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim",
+    //     name: "ssssssss",
+    //     desc: "esdxfcghbvjn"
+    // }, {
+    //     para: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiu  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim",
+    //     name: "ssssssss",
+    //     desc: "esdxfcghbvjn"
+    // }, {
+    //     para: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiu  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim",
+    //     name: "ssssssss",
+    //     desc: "esdxfcghbvjn"
+    // }]
+    // $scope.Courses = [{
+    //     img: "img/course/course_1.jpg",
+    //     courseDetail: "Angel Di Maria",
+    // }, {
+    //     img: "img/course/course_1.jpg",
+    //     courseDetail: "Angel Di Maria",
+    // }, {
+    //     img: "img/course/course_1.jpg",
+    //     courseDetail: "Angel Di Maria",
+    // }, {
+    //     img: "img/course/course_1.jpg",
+    //     courseDetail: "Angel Di Maria",
+    // }, {
+    //     img: "img/course/course_1.jpg",
+    //     courseDetail: "Angel Di Maria",
+    // }, {
+    //     img: "img/course/course_1.jpg",
+    //     courseDetail: "Angel Di Maria",
+    // }, {
+    //     img: "img/course/course_1.jpg",
+    //     courseDetail: "Angel Di Maria",
+    // }, {
+    //     img: "img/course/course_1.jpg",
+    //     courseDetail: "Angel Di Maria",
+    // }]
+    $scope.school_facility = [{
         img: "img/course/course_1.jpg",
-        courseDetail: "Angel Di Maria",
-
-    }, {
-        img: "img/course/course_1.jpg",
-        courseDetail: "Angel Di Maria",
-
-    }, {
-        img: "img/course/course_1.jpg",
-        courseDetail: "Angel Di Maria",
-    }, {
-        img: "img/course/course_1.jpg",
-        courseDetail: "Angel Di Maria",
-    }, {
-        img: "img/course/course_1.jpg",
-        courseDetail: "Angel Di Maria",
-    }, {
-        img: "img/course/course_1.jpg",
-        courseDetail: "Angel Di Maria",
-    }, {
-        img: "img/course/course_1.jpg",
-        courseDetail: "Angel Di Maria",
-    }, {
-        img: "img/course/course_1.jpg",
-        courseDetail: "Angel Di Maria",
-    }]
-    $scope.Teachers = [{
-        img: "img/course/course_1.jpg",
-        name: "Angel Di Maria",
-        desc: "Assistant Teacher"
+        desc: "Technology enabled &amp; temperature controlled learning spaces."
     }, {
         img: "img/course/course_1.jpg",
-        name: "Angel Di Maria",
-        desc: "Assistant Teacher"
+        desc: "Specially designed indoor and outdoor play area for our early years learners."
     }, {
         img: "img/course/course_1.jpg",
-        name: "Angel Di Maria",
-        desc: "Assistant Teacher"
+        desc: "Multipurpose room for dance / drama / music"
     }, {
         img: "img/course/course_1.jpg",
-        name: "Angel Di Maria",
-        desc: "Assistant Teacher"
+        desc: "Small class sizes"
     }, {
         img: "img/course/course_1.jpg",
-        name: "Angel Di Maria",
-        desc: "Assistant Teacher"
+        desc: "Age appropriate STEM Education"
     }, {
         img: "img/course/course_1.jpg",
-        name: "Angel Di Maria",
-        desc: "Assistant Teacher"
-    }, {
-        img: "img/course/course_1.jpg",
-        name: "Angel Di Maria",
-        desc: "Assistant Teacher"
-    }, {
-        img: "img/course/course_1.jpg",
-        name: "Angel Di Maria",
-        desc: "Assistant Teacher"
+        desc: "Coding Skills Program"
     }]
 })
 .controller('navCtrl', function ($scope, $location, $anchorScroll,$state, $timeout) {

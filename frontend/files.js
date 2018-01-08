@@ -53,6 +53,7 @@ module.exports = [
     'frontend/js/controllers/admission.js',
   'frontend/js/controllers/community.js',
   'frontend/js/controllers/contactus.js',
+  'frontend/js/controllers/faq.js',
   'frontend/js/controllers/academic_programmes.js',
   'frontend/js/controllers/Co-curricularProgram.js',
    'frontend/js/controllers/employment_opportunities.js',

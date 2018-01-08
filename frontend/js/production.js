@@ -67465,9 +67465,29 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $locat
             controller: 'Co-curricularProgramCtrl'
         })
         .state('campus_facility', {
-            url: "/campusfacility",
+            url: "/campus_facility",
             templateUrl: tempateURL,
             controller: 'CampusFacilityCtrl'
+        })
+          .state('community', {
+            url: "/community",
+            templateUrl: tempateURL,
+            controller: 'CommunityCtrl'
+        })
+           .state('admission', {
+            url: "/admission",
+            templateUrl: tempateURL,
+            controller: 'AdmissionCtrl'
+        })
+        .state('employment_opportunities', {
+            url: "/employment_opportunities",
+            templateUrl: tempateURL,
+            controller: 'EmploymentOpportunitiesCtrl'
+        })
+         .state('faq', {
+            url: "/faq",
+            templateUrl: tempateURL,
+            controller: 'FaqCtrl'
         })
         .state('grid', {
             url: "/grid",
@@ -67692,21 +67712,21 @@ myApp.factory('NavigationService', function () {
         {
             name: "Campus Facilities",
             classis: "active",
-            anchor: "grid",
+            anchor: "campus_facility",
             subnav: [{
                     name: "Virtual tour of the School",
                     classis: "active",
-                    anchor: "home"
+                    anchor: "campus_facility"
                 },
                 {
                     name: "Technology enabled & temperature controlled learning spaces",
                     classis: "active",
-                    anchor: "home"
+                    anchor: "campus_facility"
                 },
                 {
                     name: "Play Area",
                     classis: "active",
-                    anchor: "home"
+                    anchor: "campus_facility"
                 },
                 {
                     name: "Multipurpose Room",
@@ -67828,52 +67848,54 @@ myApp.factory('NavigationService', function () {
         {
             name: "Community",
             classis: "active",
-            anchor: "home",
+            anchor: "community",
             subnav: [{
                     name: "Initiatives of the KVOSJM Trust",
                     classis: "active",
-                    anchor: "home"
+                    anchor: "community",
+                     link: "Initiatives"
                 },
                 {
                     name: "Our Traditions",
                     classis: "active",
-                    anchor: "home"
+                    anchor: "community",
+                     link: "Our-Traditions"
                 }
             ]
         },
         {
             name: "Admissions",
             classis: "active",
-            anchor: "home",
+            anchor: "admission",
             subnav: [{
                     name: "Admissions Overview",
                     classis: "active",
-                    anchor: "home"
+                    anchor: "admission"
                 },
                 {
                     name: "Admission Process",
                     classis: "active",
-                    anchor: "home"
+                    anchor: "faq"
                 },
                 {
                     name: "Contact & Enquiries",
                     classis: "active",
-                    anchor: "home"
+                    anchor: "admission"
                 }
             ]
         },
         {
             name: "Employment Opportunities",
             classis: "active",
-            anchor: "home",
+            anchor: "employment_opportunities",
             subnav: [{
                 name: "Working at ShishuVihar School",
                 classis: "active",
-                anchor: "home"
+                anchor: "employment_opportunities"
             }, {
                 name: "Online Application Form",
                 classis: "active",
-                anchor: "home"
+                anchor: "employment_opportunities"
             }]
         },
         {
@@ -68086,6 +68108,117 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
      $scope.navigation = NavigationService.getNavigation();
      $scope.formSubmitted = false;
  })
+ myApp.controller('AdmissionCtrl', function ($scope, TemplateService, NavigationService, $timeout, $uibModal, $location, apiService) {
+     $scope.template = TemplateService.getHTML("content/admission.html");
+     TemplateService.title = "Admission"; //This is the Title of the Website
+     $scope.navigation = NavigationService.getNavigation();
+     $scope.formSubmitted = false;
+     $scope.today = function () {
+         $scope.dt = new Date();
+     };
+     $scope.today();
+
+     $scope.clear = function () {
+         $scope.dt = null;
+     };
+
+     $scope.inlineOptions = {
+         customClass: getDayClass,
+         minDate: new Date(),
+         showWeeks: true
+     };
+
+     $scope.dateOptions = {
+         dateDisabled: disabled,
+         formatYear: 'yy',
+         maxDate: new Date(2020, 5, 22),
+         minDate: new Date(),
+         startingDay: 1
+     };
+
+     // Disable weekend selection
+     function disabled(data) {
+         var date = data.date,
+             mode = data.mode;
+         return mode === 'day' && (date.getDay() === 0 || date.getDay() === 6);
+     }
+
+     $scope.toggleMin = function () {
+         $scope.inlineOptions.minDate = $scope.inlineOptions.minDate ? null : new Date();
+         $scope.dateOptions.minDate = $scope.inlineOptions.minDate;
+     };
+
+     $scope.toggleMin();
+
+     $scope.open1 = function () {
+         $scope.popup1.opened = true;
+     };
+
+     $scope.open2 = function () {
+         $scope.popup2.opened = true;
+     };
+
+     $scope.setDate = function (year, month, day) {
+         $scope.dt = new Date(year, month, day);
+     };
+
+     $scope.formats = ['dd-MMMM-yyyy', 'yyyy/MM/dd', 'dd.MM.yyyy', 'shortDate'];
+     $scope.format = $scope.formats[0];
+     $scope.altInputFormats = ['M!/d!/yyyy'];
+
+     $scope.popup1 = {
+         opened: false
+     };
+
+     $scope.popup2 = {
+         opened: false
+     };
+
+     var tomorrow = new Date();
+     tomorrow.setDate(tomorrow.getDate() + 1);
+     var afterTomorrow = new Date();
+     afterTomorrow.setDate(tomorrow.getDate() + 1);
+     $scope.events = [{
+         date: tomorrow,
+         status: 'full'
+     }, {
+         date: afterTomorrow,
+         status: 'partially'
+     }];
+
+     function getDayClass(data) {
+         var date = data.date,
+             mode = data.mode;
+         if (mode === 'day') {
+             var dayToCheck = new Date(date).setHours(0, 0, 0, 0);
+
+             for (var i = 0; i < $scope.events.length; i++) {
+                 var currentDay = new Date($scope.events[i].date).setHours(0, 0, 0, 0);
+
+                 if (dayToCheck === currentDay) {
+                     return $scope.events[i].status;
+                 }
+             }
+         }
+
+         return '';
+     }
+     $scope.open=false;
+     $scope.openDiv= function (){
+         if($scope.open){
+             $scope.open=false;
+         }
+         else{
+               $scope.open=true;
+         }
+     }
+     })
+ myApp.controller('CommunityCtrl', function ($scope, TemplateService, NavigationService, $timeout, $uibModal, $location,apiService) {
+     $scope.template = TemplateService.getHTML("content/community.html");
+     TemplateService.title = "Community"; //This is the Title of the Website
+     $scope.navigation = NavigationService.getNavigation();
+     $scope.formSubmitted = false;
+ })
  myApp.controller('ContactusCtrl', function ($scope, TemplateService, NavigationService, $timeout, $uibModal, $location,apiService) {
      $scope.template = TemplateService.getHTML("content/contactus.html");
      TemplateService.title = "Contactus"; //This is the Title of the Website
@@ -68103,6 +68236,151 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
      TemplateService.title = "Co-curricularProgram"; //This is the Title of the Website
      $scope.navigation = NavigationService.getNavigation();
      $scope.formSubmitted = false;
+       $scope.ArtOpen = function () {
+         $uibModal.open({
+             animation: true,
+             templateUrl: 'views/modal/art.html',
+             scope: $scope,
+             size: 'md',
+         });
+     };
+         $scope.STEMOpen = function () {
+         $uibModal.open({
+             animation: true,
+             templateUrl: 'views/modal/STEM.html',
+             scope: $scope,
+             size: 'md',
+         });
+     };
+     
+ })
+ myApp.controller('EmploymentOpportunitiesCtrl', function ($scope, TemplateService, NavigationService, $timeout, $uibModal, $location, apiService) {
+     $scope.template = TemplateService.getHTML("content/employment_opportunities.html");
+     TemplateService.title = "EmploymentOpportunities"; //This is the Title of the Website
+     $scope.navigation = NavigationService.getNavigation();
+     $scope.formSubmitted = false;
+     $scope.view = "tab-one";
+     $scope.Nexttab = function (view) {
+         if (view == "tab-one") {
+             $scope.view = "tab-two";
+         } if (view == "tab-two") {
+             $scope.view = "tab-three";
+         } if (view == "tab-three") {
+             $scope.view = "tab-four";
+         }
+     }
+    
+      $scope.Previoustab = function (view) {
+         if (view == "tab-two") {
+             $scope.view = "tab-one";
+         } if (view == "tab-three") {
+             $scope.view = "tab-two";
+         }
+         if (view == "tab-four") {
+             $scope.view = "tab-three";
+         }
+     }
+
+     ///for datepicker
+      $scope.today = function () {
+         $scope.dt = new Date();
+     };
+     $scope.today();
+
+     $scope.clear = function () {
+         $scope.dt = null;
+     };
+
+     $scope.inlineOptions = {
+         customClass: getDayClass,
+         minDate: new Date(),
+         showWeeks: true
+     };
+
+     $scope.dateOptions = {
+         dateDisabled: disabled,
+         formatYear: 'yy',
+         maxDate: new Date(2020, 5, 22),
+         minDate: new Date(),
+         startingDay: 1
+     };
+
+     // Disable weekend selection
+     function disabled(data) {
+         var date = data.date,
+             mode = data.mode;
+         return mode === 'day' && (date.getDay() === 0 || date.getDay() === 6);
+     }
+
+     $scope.toggleMin = function () {
+         $scope.inlineOptions.minDate = $scope.inlineOptions.minDate ? null : new Date();
+         $scope.dateOptions.minDate = $scope.inlineOptions.minDate;
+     };
+
+     $scope.toggleMin();
+
+     $scope.open1 = function () {
+         $scope.popup1.opened = true;
+     };
+
+     $scope.open2 = function () {
+         $scope.popup2.opened = true;
+     };
+
+     $scope.setDate = function (year, month, day) {
+         $scope.dt = new Date(year, month, day);
+     };
+
+     $scope.formats = ['dd-MMMM-yyyy', 'yyyy/MM/dd', 'dd.MM.yyyy', 'shortDate'];
+     $scope.format = $scope.formats[0];
+     $scope.altInputFormats = ['M!/d!/yyyy'];
+
+     $scope.popup1 = {
+         opened: false
+     };
+
+     $scope.popup2 = {
+         opened: false
+     };
+
+     var tomorrow = new Date();
+     tomorrow.setDate(tomorrow.getDate() + 1);
+     var afterTomorrow = new Date();
+     afterTomorrow.setDate(tomorrow.getDate() + 1);
+     $scope.events = [{
+         date: tomorrow,
+         status: 'full'
+     }, {
+         date: afterTomorrow,
+         status: 'partially'
+     }];
+
+     function getDayClass(data) {
+         var date = data.date,
+             mode = data.mode;
+         if (mode === 'day') {
+             var dayToCheck = new Date(date).setHours(0, 0, 0, 0);
+
+             for (var i = 0; i < $scope.events.length; i++) {
+                 var currentDay = new Date($scope.events[i].date).setHours(0, 0, 0, 0);
+
+                 if (dayToCheck === currentDay) {
+                     return $scope.events[i].status;
+                 }
+             }
+         }
+
+         return '';
+     }
+     $scope.open=false;
+     $scope.openDiv= function (){
+         if($scope.open){
+             $scope.open=false;
+         }
+         else{
+               $scope.open=true;
+         }
+     }
  })
  myApp.controller('CampusFacilityCtrl', function ($scope, TemplateService, NavigationService, $timeout, $uibModal, $location,apiService) {
      $scope.template = TemplateService.getHTML("content/campus_facility.html");

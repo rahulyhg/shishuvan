@@ -548,7 +548,12 @@ a.readmore {
 .orange {
     color: #eb774c;
 }
-
+.education-pillar-home{
+    // padding: 10px 30px;
+    height: 120px;
+    align-items: center;
+    justify-content: center;
+}
 .contact-icon {
     border: 1px solid;
     border-radius: 50%;
@@ -563,7 +568,12 @@ a.readmore {
     transform: translateY(-50%);
     width: 60px;
 }
-
+.education-padd{
+padding: 20px 10px 0 10px;
+h3{
+    margin: 0;
+}
+}
 .contact-details h4 {
     color: #211f20;
     letter-spacing: 2px;

@@ -24,25 +24,19 @@
         <div class="row">
             <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
                 <div class="area-title text-center">
-                    <h2>Welcome to Our School</h2>
-                    <p>Starting with the new school year in our kindergarten</p>
+                    <h2>Welcome to ShishuVihar</h2>
+                    <!--<p>Starting with the new school year in our kindergarten</p>-->
                 </div>
             </div>
             <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
                 <div class="about-content-home">
-                    <h3>A School with a Difference</h3>
-                    <p class="text-justify">Our educational approach embraces the fact that every learner who comes to Shishuvihar School comes with
-                        his/her own hopes and aspirations. To meet these needs we believe it is important to encourage the
-                        pursuit of academic endeavour within a caring environment that promotes each student’s ability and
-                        learning style. At ShishuVihar, our students mean the world to us. Our teachers and administrators
-                        are committed to helping every one of them attain their full potential and that objective drives
-                        everything we do. The concepts of respect, motivation and achievement are fundamental and permeate
-                        every aspect of school life. We recognize that all children are unique and, as such, keep our class
-                        sizes small enough to provide each one with a tailored and well-rounded academic experience. However,
-                        learning is not confined to the classroom. Our students participate in a broad range of cultural
-                        and extra-curricular activities which complement and enrich their academic work.</p>
-                  
-                    
+                    <h3>A School with a difference!</h3>
+                    <p class="text-justify">Our educational approach embraces the fact that every learner who comes to our school comes with varied
+                        needs, interests and abilities. To meet these and enable students maximize their potential, we believe
+                        it is important to encourage the pursuit of academic excellence within a caring environment that
+                        promotes each student’s ability and learning style.</p>
+                    <p>At ShishuVihar School, our students mean the world to us. Our teachers and administrators are committed
+                        to helping each one of them attain their full potential and that objective drives everything we do.</p>
                 </div>
             </div>
             <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
@@ -53,22 +47,46 @@
         </div>
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
-                  <p class="text-justify">Our curriculum and teaching pedagogy ensures that our students will be prepared as successful world citizens,
-                        in both their future studies and life beyond education. It is a pleasure to welcome you to find out
-                        more about our school through this brochure.
-                    </p>
-                    <a href="#" class="readmore">Readmore</a>
+                <p class="text-justify">Our curriculum and teaching pedagogy ensures that our students will be prepared as successful world citizens,
+                    in both their future studies and life beyond education. It is a pleasure to welcome you to find out more
+                    about our school through this brochure.
+                </p>
+                <a href="#" class="readmore" ui-sref="aboutus">Readmore</a>
             </div>
         </div>
     </div>
 </section>
-<section class="facilities-area section-padding" id="promotion">
+<section class="team-area gray-bg section-padding" id="team">
     <div class="container">
         <div class="row">
             <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
                 <div class="area-title text-center">
                     <h2>School Facilities</h2>
-                    <p>Starting with the new school year in our kindergarten</p>
+                    <p>Our World of Difference</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12" ng-repeat="T in school_facility track by $index">
+                <div class="single-team-member fix text-center">
+                    <div class="team-member-img ">
+                        <img src="{{T.img}}" alt="" class="img-responsive">
+                    </div>
+                    <div class="member-details">
+                        <h3>{{T.desc}}</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--<section class="facilities-area section-padding" id="promotion">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                <div class="area-title text-center">
+                    <h2>School Facilities</h2>
+                    <p>Our World of Difference</p>
                 </div>
             </div>
         </div>
@@ -153,102 +171,108 @@
             </div>
         </div>
     </div>
-</section>
-<section class="team-area gray-bg section-padding" id="team">
+</section>-->
+<section class="facilities-area section-padding" id="Our Educational Pillars">
     <div class="container">
         <div class="row">
             <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
                 <div class="area-title text-center">
-                    <h2>Our Teachers</h2>
-                    <p>Professional team that aims to respect your child’s feelings</p>
+                    <h2>Our Educational Pillars</h2>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12" ng-repeat="T in Teachers track by $index">
-                <div class="single-team-member fix text-center">
-                    <div class="team-member-img ">
-                        <img src="{{T.img}}" alt="" class="img-responsive">
+            <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12 no-padding">
+                <div class="green-bg text-center education-padd">
+                    <h3>International Mindedness</h3>
+                    <div class="d-flex education-pillar-home">
+                        <p>We celebrate diversity and encourage our students to learn about and respect other people’s cultures
+                            and beliefs.</p>
                     </div>
-                    <div class="member-details">
-                        <h3>{{T.name}}</h3>
-                        <p>{{T.desc}}</p>
-                        <div class="member-social-bookmark">
-                            <ul>
-                                <li><a href="#"><i class="icofont icofont-social-facebook"></i></a></li>
-                                <li><a href="#"><i class="icofont icofont-social-twitter"></i></a></li>
-                                <li><a href="#"><i class="icofont icofont-social-linkedin"></i></a></li>
-                                <li><a href="#"><i class="icofont icofont-social-google-hangouts"></i></a></li>
-                            </ul>
-                        </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12 no-padding">
+                <div class=" pink-bg text-center education-padd">
+                    <h3>Principled</h3>
+                    <div class="d-flex education-pillar-home">
+                        <p>We aim to develop students who at all times act with integrity and honesty.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12 no-padding">
+                <div class="yellow-bg text-center education-padd">
+                    <h3>Compassion</h3>
+                    <div class="d-flex education-pillar-home">
+                        <p>Our school culture is built around the theme of empathy and respect</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12 no-padding">
+                <div class="dark-bg text-center education-padd">
+                    <h3>Responsibility</h3>
+                    <div class="d-flex education-pillar-home">
+                        <p>We encourage and look forward to our students taking ownership of their own learning.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12 no-padding">
+                <div class="blue-bg text-center education-padd">
+                    <h3>Reflective</h3>
+                    <div class="d-flex education-pillar-home">
+                        <p>Our students are concerned with the process as much as the end product of their learning. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12 no-padding">
+                <div class="orange-bg  text-center education-padd">
+                    <h3>Innovative</h3>
+                    <div class="d-flex education-pillar-home ">
+                        <p>Our teaching pedagogy and assessment aims to enable students apply their learning in familiar as
+                            well as unfamiliar contexts.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
 <section class="course-area section-padding" id="courses">
     <div class="container">
         <div class="row">
             <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
                 <div class="area-title text-center">
-                    <h2>Our Courses</h2>
-                    <p>Additional courses for your kids</p>
+                    <h2>Our Academic Programme</h2>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12" ng-repeat="C in Courses track by $index">
-                <div class="single_courses text-center">
-                    <div class="course-cover">
-                        <div class="course-bg"></div>
-                        <img src="{{C.img}}" alt="">
-                    </div>
-                    <div class="course-details">
-                        <h3>{{C.courseDetail}}</h3>
-                        <div class="price-details">
-                            <p>80<span>USD</span></p>
-                            <p><a href="#">Readmore</a></p>
-                        </div>
-                    </div>
+            <div class="col-md-8">
+                <div class="">
+                    <h3>Early Years Curriculum</h3>
+                </div>
+                <div class="">
+                    <p>Our early years curriculum comprises the following classes: Nursery – Junior Kindergarten – Senior Kindergarten.
+                        The Early Years Program (EYP) consists of the first years of school life (ages 3 to 5). In the EYP,
+                        we aim to provide a safe and stimulating environment focusing on discovering and transdisciplinary
+                        learning wherein children can develop socially, emotionally, creatively, physically and academically.</p>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
-<section class="testmonial-area gray-bg section-padding" id="testmonial">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
-                <div class="area-title text-center">
-                    <h2>What Parents Say</h2>
-                    <p>Have a look what say our student's parents about us</p>
-                </div>
-            </div>
+            <div class="col-md-4"></div>
         </div>
         <div class="row">
-            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
-                <div class="testmonial-slider">
-                    <swiper autoplay="1500" effect="slide" slides-per-view="3" loop="true" speed="1000">
-                        <slides>
-                            <slide ng-repeat="s in parentsDay track by $index">
-                                <div class="single-testmonial">
-                                    <div class="testmonial-author-details">
-                                        <p>{{s.para}}</p>
-                                    </div>
-                                    <div class="member-image-and-title">
-                                        <img src="img/testmonial/member-01.jpg" alt="">
-                                        <div class="member-title">
-                                            <h3>{{s.name}}</h3>
-                                            <p>{{s.desc}}</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </slide>
-                        </slides>
-                    </swiper>
+            <div class="col-md-8">
+                <div class="">
+                    <h3>Early Years Curriculum</h3>
+                </div>
+                <div class="">
+                    <p>The Primary School comprises Grades 1 to 5. In this section, children follow the Cambridge Primary Curriculum
+                        covering a wide range of subjects including Mathematics, English, Hindi, Marathi, Science, Humanities,
+                        ICT (Computers), Visual Arts, Music and Physical Education. </p>
                 </div>
             </div>
+            <div class="col-md-4"></div>
         </div>
     </div>
 </section>
