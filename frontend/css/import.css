@@ -10782,6 +10782,15 @@ a.readmore {
   width: 100%;
   background-position: 50% 50%; }
 
+.community-bg {
+  background: transparent url(../img/home/b2.png) no-repeat scroll center center/cover;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-position: 50% 50%; }
+
 .page-barner-bg::after {
   background: #000 none repeat scroll 0 0;
   content: "";
