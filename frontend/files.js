@@ -24,8 +24,9 @@ module.exports = [
   "bower_components/angular-toastr/dist/angular-toastr.js",
   "bower_components/angular-toastr/dist/angular-toastr.tpls.js",
   "bower_components/angular-promise-buttons/dist/angular-promise-buttons.js",
-   "bower_components/swiper/dist/js/swiper.min.js",
-  
+  "bower_components/swiper/dist/js/swiper.min.js",
+  'bower_components/jStorage/jstorage.js',
+
 
   //App.js
   'frontend/js/app.js',
@@ -50,14 +51,14 @@ module.exports = [
   // Contorllers
   'frontend/js/controllers/controller.js',
   'frontend/js/controllers/aboutus.js',
-    'frontend/js/controllers/admission.js',
+  'frontend/js/controllers/admission.js',
   'frontend/js/controllers/community.js',
   'frontend/js/controllers/contactus.js',
   'frontend/js/controllers/faq.js',
   'frontend/js/controllers/academic_programmes.js',
   'frontend/js/controllers/Co-curricularProgram.js',
-   'frontend/js/controllers/employment_opportunities.js',
-   'frontend/js/controllers/campusfacility.js',
+  'frontend/js/controllers/employment_opportunities.js',
+  'frontend/js/controllers/campusfacility.js',
   'frontend/js/controllers/header-controller.js',
   'frontend/js/controllers/language-controller.js',
 ];

@@ -47,7 +47,7 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="first-name">First name:</label>
+                                    <label for="first-name">First name:<span style="font-size:13px; color:red">&#x2731;</span></label>
                                     <input type="text" class="form-control" ng-model="studentForm.formData.name" name="name" required>
                                     <span class="errormsg" ng-show="studentForm.name.$touched && studentForm.name.$invalid">First Name is required.</span>
                                 </div>
@@ -55,21 +55,21 @@
                             <div class="clearfix visible-md"></div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="middle-name">Middle Name:</label>
+                                    <label for="middle-name">Middle Name:<span style="font-size:13px; color:red">&#x2731;</span></label>
                                     <input type="text" class="form-control" ng-model="studentForm.formData.middleName" name="middleName" required>
                                     <span class="errormsg" ng-show="studentForm.middleName.$touched && studentForm.middleName.$invalid">MiddleName is required.</span>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="family-name">Family Name:</label>
+                                    <label for="family-name">Family Name:<span style="font-size:13px; color:red">&#x2731;</span></label>
                                     <input type="text" class="form-control" ng-model="studentForm.formData.familyName" name="familyName" required>
                                     <span class="errormsg" ng-show="studentForm.familyName.$touched && studentForm.familyName.$invalid">Family Name is required.</span>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div>
-                                    <label for="email">Gender</label>
+                                    <label for="email">Gender<span style="font-size:13px; color:red">&#x2731;</span></label>
                                 </div>
                                 <div class="inline-div gender-div">
                                     <input type="radio" id="test6" name="radio-group" checked ng-model="studentForm.formData.gender" value="Boy" name="gender">
@@ -79,7 +79,7 @@
                                     <input type="radio" id="test7" name="radio-group" ng-model="studentForm.formData.gender" value="Girl" name="gender">
                                     <label for="test7">Girl</label>
                                 </div>
-                                <span class="errormsg" ng-show="studentForm.gender.$touched && studentForm.gender.$invalid">DOB is required.</span>
+                                <span class="errormsg text-danger" ng-if="viewerr">Gender is required.</span>
                             </div>
                         </div>
                         <div class="row">
@@ -99,7 +99,7 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="DOB">Date of Birth:</label>
+                                    <label for="DOB">Date of Birth:<span style="font-size:13px; color:red">&#x2731;</span></label>
                                     <div class="">
                                         <div class="row">
                                             <div class="col-md-12">
@@ -122,7 +122,7 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="nationality">Nationality:</label>
+                                    <label for="nationality">Nationality:<span style="font-size:13px; color:red">&#x2731;</span></label>
                                     <input type="text" class="form-control" ng-model="studentForm.formData.nationality" name="nationality" required>
                                     <span class="errormsg" ng-show="studentForm.nationality.$touched && studentForm.nationality.$invalid">Nationality is required.</span>
                                 </div>
@@ -131,14 +131,14 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="Grade">Grade Applying to:</label>
+                                    <label for="Grade">Grade Applying to:<span style="font-size:13px; color:red">&#x2731;</span></label>
                                     <select class="form-control" id="sel1" ng-model="studentForm.formData.applyGrade">
                                 <option value="Nursery">Nursery</option>
                                 <option value="Junior Kg">Junior Kg</option>
                                 <option value="Senior Kg">Senior Kg</option>
                                 <option value="Grade 1">Grade 1</option>
                                 </select>
-                                    <span class="errormsg" ng-show="studentForm.applyGrade.$touched && studentForm.applyGrade.$invalid">Nationality is required.</span>
+                                    <span class="errormsg text-danger" ng-if="viewmsg">Grade is required.</span>
                                 </div>
                             </div>
                         </div>
@@ -206,7 +206,7 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="name">Name of Parent:</label>
+                                        <label for="name">Name of Parent:<span style="font-size:13px; color:red">&#x2731;</span></label>
                                         <input type="text" class="form-control" ng-model="studentForm.formData.nameOfParent" name="nameOfParent" required>
                                         <span class="errormsg" ng-show="studentForm.nameOfParent.$touched && studentForm.nameOfParent.$invalid">Name Of Parent is required.</span>
                                     </div>
@@ -221,7 +221,7 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="email">Email Id:</label>
+                                        <label for="email">Email Id:<span style="font-size:13px; color:red">&#x2731;</span></label>
                                         <input type="email" class="form-control" ng-model="studentForm.formData.emailId" name="emailId" required>
                                         <span class="errormsg" ng-show="studentForm.emailId.$touched && studentForm.emailId.$invalid">Email Id is required.</span>
                                     </div>

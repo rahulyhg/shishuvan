@@ -1,4 +1,4 @@
- myApp.controller('AdmissionCtrl', function ($scope, TemplateService, NavigationService, $timeout, $uibModal, $location, apiService) {
+ myApp.controller('AdmissionCtrl', function ($scope, TemplateService, NavigationService, $timeout, $uibModal, $location, apiService, $state) {
      $scope.template = TemplateService.getHTML("content/admission.html");
      TemplateService.title = "Admission"; //This is the Title of the Website
      $scope.navigation = NavigationService.getNavigation();
@@ -27,7 +27,15 @@
      };
 
      // Disable weekend selection
-     function disabled(data) {
+     function disabled(data) { //To open the modal after submitting the form
+         $scope.openSubmitTextForm = function () {
+             $uibModal.open({
+                 animation: true,
+                 templateUrl: 'views/modal/admission-success-msg.html',
+                 scope: $scope,
+                 size: 'sm',
+             });
+         };
          var date = data.date,
              mode = data.mode;
          return mode === 'day' && (date.getDay() === 0 || date.getDay() === 6);
@@ -101,14 +109,44 @@
              $scope.open = true;
          }
      }
+     //To open the modal after submitting the form
+     $scope.openSubmitTextForm = function () {
+         console('giii');
+         $uibModal.open({
+             animation: true,
+             templateUrl: 'views/modal/admission-success-msg.html',
+             scope: $scope,
+             size: 'sm',
+         });
+     };
+     $scope.viewerr = false;
+     $scope.viewmsg = false;
      $scope.submitForm = function (studentForm) {
-         NavigationService.saveStudentForm(studentForm, function (data) {
-             console.log("!!!!!!!!!!!!submitForm(studentForm)", data);
-             if (data.data) {
-                 //  NavigationService.sendStudentApplication(data.data.data, function (data) {
-                 //      console.log("send email to applicant", data.data);
-                 //  });
-             }
-         })
+         if (!studentForm.gender) {
+             $scope.viewerr = true;
+         }
+         if (!studentForm.applyGrade) {
+             $scope.viewmsg = true;
+         }
+         if (studentForm.gender && studentForm.applyGrade) {
+             console.log("!!!!!!!!!!!!submitForm(studentForm)", studentForm);
+             NavigationService.saveStudentForm(studentForm, function (data) {
+                 console.log("!!!!!!!!!!!!submitForm(studentForm)", data);
+                 if (data.data) {
+                     // NavigationService.sendStudentApplication(data.data.data, function (data) {
+                     // console.log("send email to applicant", data.data);
+                     // });
+                     $scope.openSubmitTextForm();
+                     $timeout(function () {
+                         $state.reload();
+                         //  $uibModalInstance.dismiss('cancel');
+                     }, 1000);
+
+
+                 }
+             })
+         }
+
      }
+
  });

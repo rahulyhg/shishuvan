@@ -1,4 +1,4 @@
- myApp.controller('EmploymentOpportunitiesCtrl', function ($scope, TemplateService, NavigationService, $timeout, $uibModal, $location, apiService) {
+ myApp.controller('EmploymentOpportunitiesCtrl', function ($scope, TemplateService, NavigationService, $timeout, $uibModal, $location, apiService, $state) {
      $scope.template = TemplateService.getHTML("content/employment_opportunities.html");
      TemplateService.title = "EmploymentOpportunities"; //This is the Title of the Website
      $scope.navigation = NavigationService.getNavigation();
@@ -127,6 +127,15 @@
              $scope.open = true;
          }
      }
+     //To open the modal after submitting the form
+     $scope.openSubmitTextForm = function () {
+         $uibModal.open({
+             animation: true,
+             templateUrl: 'views/modal/employee-admission-msg.html',
+             scope: $scope,
+             size: 'sm',
+         });
+     };
      $scope.submitForm = function (employeeForm) {
          NavigationService.saveEmployeeForm(employeeForm, function (data) {
              console.log("!!!!!!!!!!!!submitForm(employeeForm)", data);
@@ -134,7 +143,13 @@
                  //  NavigationService.sendEmployeeApplication(data.data.data, function (data) {
                  //      console.log("send email to applicant", data.data);
                  //  });
+                 $scope.openSubmitTextForm();
+                 $timeout(function () {
+                     //  $uibModalInstance.dismiss('cancel');
+                     $state.reload();
+                 }, 800);
              }
          })
      }
+
  });

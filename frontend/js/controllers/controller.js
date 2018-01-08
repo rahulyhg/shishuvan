@@ -2,26 +2,43 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
         $scope.template = TemplateService.getHTML("content/home.html");
         TemplateService.title = "Home"; //This is the Title of the Website
         $scope.navigation = NavigationService.getNavigation();
-
+        // To open modal when website loads 
+        $scope.startMsgOpen = function () {
+            $uibModal.open({
+                animation: true,
+                templateUrl: 'views/modal/start-msg.html',
+                scope: $scope,
+                size: 'md',
+            });
+        };
+        // To open modal once when website loads first time. For that we will use jstorage
+        $scope.$on('$viewContentLoaded', function () {
+            if (_.isEmpty($.jStorage.get('firstTime'))) {
+                $.jStorage.set('firstTime', {
+                    value: true
+                });
+                $scope.startMsgOpen(); // To open modal when website loads
+            }
+        });
 
         $scope.mySlides = [{
-            img: 'img/home/b1.png',
-            // title1: "aaaaaaaaaaaaaaaaaaaaa",
-            // title2: "bbbbbbbbbbbbbbbbbbbbbbbbbbb"
-        }, {
-            img: 'img/home/b2.png',
-            // title1: "cccccccccccccccccccc",
-            // title2: "bbbbbbbbbbbbbbbbbbbbbbbbbbb"
-        }, {
-            img: 'img/home/b3.png',
-            // title1: "ggggggggggggggggggggggg",
-            // title2: "bbbbbbbbbbbbbbbbbbbbbbbbbbb"
-        }
-        //  {
-        //     img: 'img/home/b4.png',
-        //     title1: "jjjjjjjjjjjjjjjjjjjjjjjjjj",
-        //     title2: "bbbbbbbbbbbbbbbbbbbbbbbbbbb"
-        // }
+                img: 'img/home/b1.png',
+                // title1: "aaaaaaaaaaaaaaaaaaaaa",
+                // title2: "bbbbbbbbbbbbbbbbbbbbbbbbbbb"
+            }, {
+                img: 'img/home/b2.png',
+                // title1: "cccccccccccccccccccc",
+                // title2: "bbbbbbbbbbbbbbbbbbbbbbbbbbb"
+            }, {
+                img: 'img/home/b3.png',
+                // title1: "ggggggggggggggggggggggg",
+                // title2: "bbbbbbbbbbbbbbbbbbbbbbbbbbb"
+            }
+            //  {
+            //     img: 'img/home/b4.png',
+            //     title1: "jjjjjjjjjjjjjjjjjjjjjjjjjj",
+            //     title2: "bbbbbbbbbbbbbbbbbbbbbbbbbbb"
+            // }
         ];
         var abc = _.times(100, function (n) {
             return n;
@@ -32,15 +49,6 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
             i++;
             console.log("This is a button Click");
         };
-        $scope.startMsgOpen = function () {
-            $uibModal.open({
-                animation: true,
-                templateUrl: 'views/modal/start-msg.html',
-                scope: $scope,
-                size: 'md',
-            });
-        };
-        $scope.startMsgOpen(); // To open modal when website loads
 
         // $scope.parentsDay = [{
         //     para: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiu  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim",
