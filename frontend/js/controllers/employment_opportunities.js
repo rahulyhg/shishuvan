@@ -7,17 +7,20 @@
      $scope.Nexttab = function (view) {
          if (view == "tab-one") {
              $scope.view = "tab-two";
-         } if (view == "tab-two") {
+         }
+         if (view == "tab-two") {
              $scope.view = "tab-three";
-         } if (view == "tab-three") {
+         }
+         if (view == "tab-three") {
              $scope.view = "tab-four";
          }
      }
-    
-      $scope.Previoustab = function (view) {
+
+     $scope.Previoustab = function (view) {
          if (view == "tab-two") {
              $scope.view = "tab-one";
-         } if (view == "tab-three") {
+         }
+         if (view == "tab-three") {
              $scope.view = "tab-two";
          }
          if (view == "tab-four") {
@@ -26,7 +29,7 @@
      }
 
      ///for datepicker
-      $scope.today = function () {
+     $scope.today = function () {
          $scope.dt = new Date();
      };
      $scope.today();
@@ -116,13 +119,22 @@
 
          return '';
      }
-     $scope.open=false;
-     $scope.openDiv= function (){
-         if($scope.open){
-             $scope.open=false;
-         }
-         else{
-               $scope.open=true;
+     $scope.open = false;
+     $scope.openDiv = function () {
+         if ($scope.open) {
+             $scope.open = false;
+         } else {
+             $scope.open = true;
          }
      }
- })
+     $scope.submitForm = function (employeeForm) {
+         NavigationService.saveEmployeeForm(employeeForm, function (data) {
+             console.log("!!!!!!!!!!!!submitForm(employeeForm)", data);
+             if (data.data) {
+                 //  NavigationService.sendEmployeeApplication(data.data.data, function (data) {
+                 //      console.log("send email to applicant", data.data);
+                 //  });
+             }
+         })
+     }
+ });

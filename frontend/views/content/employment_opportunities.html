@@ -6,29 +6,28 @@
                 <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
                     <div class="welcome-text text-center">
                         <h1>Employment Opportunities</h1>
-                        <h3>Home /Employment Opportunities</h3>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<section>
+<section id="working">
     <div class="container">
         <div class="admission-top">
             <h3 class="pink-color">Working at ShishuVihar School </h3>
-            <p>We are pleased to receive interest from qualified and experienced educators. At ShishuVihar School, we aim to
-                recruit the very best educators and will carefully consider every application to identify the top candidates
-                best suited to every teaching position. To apply for a position at ShishuVihar School, you are requested
-                to fill in the form given below.
+            <p>We are pleased to receive interest from qualified and experienced educators.</p>
+            <p> At ShishuVihar School, we aim to recruit the very best educators and will carefully consider every application
+                to identify the top candidates best suited to every teaching position.</p>
+            <p> To apply for a position at ShishuVihar School, you are requested to fill in the form given below.
             </p>
         </div>
     </div>
 </section>
-<section>
+<section id="Application">
     <div class="container">
         <div class="employment-form-start">
-            <form>
+            <form name="employeeForm">
                 <div class="admission-form">
                     <div class="text-center about-content">
                         <h2>TEACHER APPLICATION FORM</h2>
@@ -36,95 +35,97 @@
                     <div class="tab-one" ng-if="view=='tab-one'">
                         <h3 class="pink-color">SECTION ONE – Your Personal Details:</h3>
                         <div class="admission-main pink-border">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="first-name">First name:</label>
-                                            <input type="text" class="form-control">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="middle-name">Surname:</label>
-                                            <input type="text" class="form-control">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="family-name">Title:</label>
-                                            <input type="text" class="form-control">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div>
-                                            <label for="no">Phone No (home)</label>
-                                            <input type="text" class="form-control">
-                                        </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="first-name">First name:</label>
+                                        <input type="text" class="form-control" ng-model="employeeForm.formData.name" name="name" required>
+                                        <span class="errormsg" ng-show="employeeForm.name.$touched && employeeForm.name.$invalid">First name is required.</span>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div>
-                                            <label for="no">Phone No (mobile)</label>
-                                            <input type="text" class="form-control">
-                                        </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="middle-name">Surname:</label>
+                                        <input type="text" class="form-control" ng-model="employeeForm.formData.lastName" name="lastName">
+                                        <span class="errormsg" ng-show="employeeForm.name.$touched && employeeForm.name.$invalid">First name is required.</span>
                                     </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="DOB">Date of Birth:</label>
-                                            <div class="">
-                                                <div class="row">
-                                                    <div class="col-md-12">
-                                                        <p class="input-group">
-                                                            <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="dt" is-open="popup1.opened" datepicker-options="dateOptions"
-                                                                ng-required="true" close-text="Close" alt-input-formats="altInputFormats"
-                                                            />
-                                                            <span class="input-group-btn calender-border">
-            <button type="button" class="btn btn-default" ng-click="open1()"><i class="fa fa-calendar" aria-hidden="true"></i></button>
-          </span>
-                                                        </p>
-                                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="family-name">Title:</label>
+                                        <input type="text" class="form-control" ng-model="employeeForm.formData.title">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div>
+                                        <label for="no">Phone No (home)</label>
+                                        <input type="text" class="form-control" ng-model="employeeForm.formData.phnNo">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div>
+                                        <label for="no">Phone No (mobile)</label>
+                                        <input type="text" class="form-control" ng-model="employeeForm.formData.mobileNo">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="DOB">Date of Birth:</label>
+                                        <div class="">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <p class="input-group">
+                                                        <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="employeeForm.formData.dob" is-open="popup1.opened"
+                                                            datepicker-options="dateOptions" ng-required="true" close-text="Close"
+                                                            alt-input-formats="altInputFormats" />
+                                                        <span class="input-group-btn calender-border">
+                                                                 <button type="button" class="btn btn-default" ng-click="open1()"><i class="fa fa-calendar" aria-hidden="true"></i></button>
+                                                        </span>
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <label for="comment">Address:</label>
-                                            <textarea class="form-control" rows="5" id="Address"></textarea>
-                                        </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="comment">Address:</label>
+                                        <textarea class="form-control" rows="5" id="Address" ng-model="employeeForm.formData.address"></textarea>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="postcode">Postcode:</label>
-                                            <input type="text" class="form-control">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="email">Email Id:</label>
-                                            <input type="email" class="form-control">
-                                        </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="postcode">Postcode:</label>
+                                        <input type="text" class="form-control" ng-model="employeeForm.formData.postCode">
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="nationality">Nationality:</label>
-                                            <input type="text" class="form-control">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="DOB">Country:</label>
-                                            <input type="text" class="form-control">
-                                        </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="email">Email Id:</label>
+                                        <input type="email" class="form-control" ng-model="employeeForm.formData.emailId">
                                     </div>
                                 </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="nationality">Nationality:</label>
+                                        <input type="text" class="form-control" ng-model="employeeForm.formData.nationality">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="DOB">Country:</label>
+                                        <input type="text" class="form-control" ng-model="employeeForm.formData.country">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -140,13 +141,13 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="Present Job Title">Present Job Title</label>
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control" ng-model="employeeForm.formData.prsentJobTiltle">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="">
                                         <label for="Name of the School">Name of school / employer:</label>
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control" ng-model="employeeForm.formData.presentJobName">
                                     </div>
                                 </div>
                             </div>
@@ -154,14 +155,14 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="comment">Date appointed to post:</label>
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control" ng-model="employeeForm.formData.appointedDate">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="comment">Type of school:
                                         (International / ICSE / CBSE / SSC etc)</label>
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control" ng-model="employeeForm.formData.typeOfSchool">
                                     </div>
                                 </div>
                             </div>
@@ -169,7 +170,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="comment">Address:</label>
-                                        <textarea class="form-control" rows="5" id="Address"></textarea>
+                                        <textarea class="form-control" rows="5" id="Address" ng-model="employeeForm.formData.jobAddress"></textarea>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -178,11 +179,11 @@
                                             <label for="email"></label>
                                         </div>
                                         <div class="inline-div">
-                                            <input type="radio" id="test6" name="radio-group" checked>
+                                            <input type="radio" id="test6" name="radio-group" checked ng-model="employeeForm.formData.typeOfWork" value="Full Time">
                                             <label for="test6">Full Time</label>
                                         </div>
                                         <div class="inline-div">
-                                            <input type="radio" id="test7" name="radio-group">
+                                            <input type="radio" id="test7" name="radio-group" ng-model="employeeForm.formData.typeOfWork" value="Part Time">
                                             <label for="test7">Part Time</label>
                                         </div>
                                     </div>
@@ -194,21 +195,21 @@
                         <div class="admission-form">
                             <div>
                                 <h3 class="blue-color">SECTION THREE – Qualifications / Education:</h3>
-                                <p class="declaration">Please record all your qualifications below in chronological order starting with your most
-                                    recent University Qualifications (with a mention of percentage achieved for each qualification)</p>
+                                <!--<p class="declaration">Please record all your qualifications below in chronological order starting with your most
+                                    recent University Qualifications (with a mention of percentage achieved for each qualification)</p>-->
                             </div>
                             <div class="admission-main blue-border">
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="name">University / College Details:</label>
-                                            <input type="text" class="form-control">
+                                            <input type="text" class="form-control" ng-model="employeeForm.formData.collegeName">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="contact">Dates:</label>
-                                            <input type="number" class="form-control">
+                                            <input type="number" class="form-control" ng-model="employeeForm.formData.dateQ">
                                         </div>
                                     </div>
                                 </div>
@@ -216,7 +217,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="qualifications">Details of qualifications achieved  and examinations passed </label>
-                                            <input type="text" class="form-control">
+                                            <input type="text" class="form-control" ng-model="employeeForm.formData.qualification">
                                         </div>
                                     </div>
                                 </div>
@@ -227,16 +228,16 @@
                         <div class="admission-form">
                             <div class="">
                                 <h3 class="yellow-color">SECTION FOUR– Declaration </h3>
-                                <p class="declaration">
+                                <!--<p class="declaration">
                                     I declare that all the information provided in this application is honest and truthful, to the best of my ability.class="declaration"
-                                </p>
+                                </p>-->
                             </div>
                             <div class="admission-main yellow-border">
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="name">Applicant Name:</label>
-                                            <input type="text" class="form-control">
+                                            <input type="text" class="form-control" ng-model="employeeForm.formData.applicantName">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
@@ -245,9 +246,9 @@
                                             <div class="row">
                                                 <div class="col-md-12">
                                                     <p class="input-group">
-                                                        <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="dt" is-open="popup1.opened" datepicker-options="dateOptions"
-                                                            ng-required="true" close-text="Close" alt-input-formats="altInputFormats"
-                                                        />
+                                                        <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="employeeForm.formData.dateApp" is-open="popup1.opened"
+                                                            datepicker-options="dateOptions" ng-required="true" close-text="Close"
+                                                            alt-input-formats="altInputFormats" />
                                                         <span class="input-group-btn yellow-border-cale">
                                        <button type="button" class="btn btn-default" ng-click="open1()"><i class="fa fa-calendar" aria-hidden="true"></i></button>
                                             </span>
@@ -262,7 +263,7 @@
                     </div>
                 </div>
                 <div class="submit-btn text-center admission-top" ng-if="view=='tab-four'">
-                    <button class="btn yellow-border">Submit</button>
+                    <button class="btn yellow-border" ng-click="submitForm(employeeForm.formData)">Submit</button>
                 </div>
             </form>
         </div>

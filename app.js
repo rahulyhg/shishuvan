@@ -21,6 +21,17 @@
 // Ensure we're in the project directory, so relative paths work as expected
 // no matter where we actually lift from.
 process.chdir(__dirname);
+var mongoose;
+mongoose = require('mongoose');
+var md5 = require('md5');
+
+global["database"] = "shishuVihar";
+mongoose.Promise = global.Promise;
+mongoose.connect('mongodb://localhost:27017/' + database, function (err) {
+    if (err) {
+        console.log(err);
+    }
+});
 
 // Ensure a "sails" can be located:
 (function () {

@@ -93,13 +93,22 @@
 
          return '';
      }
-     $scope.open=false;
-     $scope.openDiv= function (){
-         if($scope.open){
-             $scope.open=false;
-         }
-         else{
-               $scope.open=true;
+     $scope.open = false;
+     $scope.openDiv = function () {
+         if ($scope.open) {
+             $scope.open = false;
+         } else {
+             $scope.open = true;
          }
      }
-     })
+     $scope.submitForm = function (studentForm) {
+         NavigationService.saveStudentForm(studentForm, function (data) {
+             console.log("!!!!!!!!!!!!submitForm(studentForm)", data);
+             if (data.data) {
+                 //  NavigationService.sendStudentApplication(data.data.data, function (data) {
+                 //      console.log("send email to applicant", data.data);
+                 //  });
+             }
+         })
+     }
+ });

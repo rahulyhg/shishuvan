@@ -1,4 +1,4 @@
-myApp.factory('NavigationService', function () {
+myApp.factory('NavigationService', function ($http) {
     var navigation = [{
             name: "About Us",
             classis: "active",
@@ -174,13 +174,13 @@ myApp.factory('NavigationService', function () {
                     name: "Initiatives of the KVOSJM Trust",
                     classis: "active",
                     anchor: "community",
-                     link: "Initiatives"
+                    link: "Initiatives"
                 },
                 {
                     name: "Our Aspirations ",
                     classis: "active",
                     anchor: "community",
-                     link: "Our-Traditions"
+                    link: "Our-Traditions"
                 }
             ]
         },
@@ -197,7 +197,7 @@ myApp.factory('NavigationService', function () {
                     name: "Admissions FAQ",
                     classis: "active",
                     anchor: "faq",
-                    link:"faq"
+                    link: "faq"
                 },
                 {
                     name: "Contact & Enquiries",
@@ -235,6 +235,38 @@ myApp.factory('NavigationService', function () {
     return {
         getNavigation: function () {
             return navigation;
+        },
+        saveEmployeeForm: function (data, callback) {
+            $http({
+                url: adminurl + 'Employee/save',
+                method: 'POST',
+                data: data,
+                withCredentials: false
+            }).then(callback);
+        },
+        saveStudentForm: function (data, callback) {
+            $http({
+                url: adminurl + 'Student/save',
+                method: 'POST',
+                data: data,
+                withCredentials: false
+            }).then(callback);
+        },
+        sendEmployeeApplication: function (data, callback) {
+            $http({
+                url: adminurl + 'Employee/employeeFormEmail',
+                method: 'POST',
+                data: data,
+                withCredentials: false
+            }).then(callback);
+        },
+        sendStudentApplication: function (data, callback) {
+            $http({
+                url: adminurl + 'Employee/studentFormEmail',
+                method: 'POST',
+                data: data,
+                withCredentials: false
+            }).then(callback);
         },
     };
 });

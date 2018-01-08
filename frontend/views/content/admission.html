@@ -5,8 +5,7 @@
             <div class="row">
                 <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
                     <div class="welcome-text text-center">
-                        <!--<h1>Our Community</h1>
-                        <h3>Home / Our Community</h3>-->
+                        <h1>Admissions</h1>
                     </div>
                 </div>
             </div>
@@ -37,204 +36,225 @@
 </section>
 <section>
     <div class="container">
-          <div class="Admission-start">
-         <form>
-        <div class="admission-form">
-            <div class="text-center about-content">
-                <h2>We thank you for your interest in ShishuVihar School</h2>
-            </div>
-            <h3 class="pink-color">Personal Information of the child</h3>
-            <div class="admission-main pink-border">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="first-name">First name:</label>
-                                <input type="text" class="form-control">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="middle-name">Middle Name:</label>
-                                <input type="text" class="form-control">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="family-name">Family Name:</label>
-                                <input type="text" class="form-control">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div>
-                                <label for="email">Gender</label>
-                            </div>
-                            <div class="inline-div gender-div">
-                                <input type="radio" id="test6" name="radio-group" checked>
-                                <label for="test6">Boy</label>
-                            </div>
-                            <div class="inline-div gender-div">
-                                <input type="radio" id="test7" name="radio-group">
-                                <label for="test7">Girl</label>
-                            </div>
-                        </div>
+        <div class="Admission-start">
+            <form name="studentForm">
+                <div class="admission-form">
+                    <div class="text-center about-content">
+                        <h2>We thank you for your interest in ShishuVihar School</h2>
                     </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label for="comment">Address:</label>
-                                <textarea class="form-control" rows="5" id="Address"></textarea>
+                    <h3 class="pink-color">Personal Information of the child</h3>
+                    <div class="admission-main pink-border">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="first-name">First name:</label>
+                                    <input type="text" class="form-control" ng-model="studentForm.formData.name" name="name" required>
+                                    <span class="errormsg" ng-show="studentForm.name.$touched && studentForm.name.$invalid">First Name is required.</span>
+                                </div>
+                            </div>
+                            <div class="clearfix visible-md"></div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="middle-name">Middle Name:</label>
+                                    <input type="text" class="form-control" ng-model="studentForm.formData.middleName" name="middleName" required>
+                                    <span class="errormsg" ng-show="studentForm.middleName.$touched && studentForm.middleName.$invalid">MiddleName is required.</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="family-name">Family Name:</label>
+                                    <input type="text" class="form-control" ng-model="studentForm.formData.familyName" name="familyName" required>
+                                    <span class="errormsg" ng-show="studentForm.familyName.$touched && studentForm.familyName.$invalid">Family Name is required.</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div>
+                                    <label for="email">Gender</label>
+                                </div>
+                                <div class="inline-div gender-div">
+                                    <input type="radio" id="test6" name="radio-group" checked ng-model="studentForm.formData.gender" value="Boy" name="gender"
+                                        required>
+                                    <label for="test6">Boy</label>
+                                </div>
+                                <div class="inline-div gender-div">
+                                    <input type="radio" id="test7" name="radio-group" ng-model="studentForm.formData.gender" value="Girl" name="gender" required>
+                                    <label for="test7">Girl</label>
+                                </div>
+                                <span class="errormsg" ng-show="studentForm.gender.$touched && studentForm.gender.$invalid">DOB is required.</span>
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="Aadhaar-no">Student Aadhaar Card No:</label>
-                                <input type="text" class="form-control">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="comment">Address:</label>
+                                    <textarea class="form-control" rows="5" id="Address" ng-model="studentForm.formData.address"></textarea>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="DOB">Date of Birth:</label>
-                                <div class="">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <p class="input-group">
-                                                <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="dt" is-open="popup1.opened" datepicker-options="dateOptions"
-                                                    ng-required="true" close-text="Close" alt-input-formats="altInputFormats"
-                                                />
-                                                <span class="input-group-btn calender-border">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="Aadhaar-no">Student Aadhaar Card No:</label>
+                                    <input type="text" class="form-control" ng-model="studentForm.formData.aadharCardNo">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="DOB">Date of Birth:</label>
+                                    <div class="">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <p class="input-group">
+                                                    <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="studentForm.formData.dob" is-open="popup1.opened"
+                                                        datepicker-options="dateOptions" ng-required="true" close-text="Close"
+                                                        alt-input-formats="altInputFormats" name="dob" required/>
+                                                    <span class="input-group-btn calender-border">
             <button type="button" class="btn btn-default" ng-click="open1()"><i class="fa fa-calendar" aria-hidden="true"></i></button>
-          </span>
-                                            </p>
+                                                    </span>
+                                                </p>
+                                                <span class="errormsg" ng-show="studentForm.dob.$touched && studentForm.dob.$invalid">DOB is required.</span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="nationality">Nationality:</label>
-                                <input type="text" class="form-control">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="nationality">Nationality:</label>
+                                    <input type="text" class="form-control" ng-model="studentForm.formData.nationality" name="nationality" required>
+                                    <span class="errormsg" ng-show="studentForm.nationality.$touched && studentForm.nationality.$invalid">Nationality is required.</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="Grade">Grade Applying to:</label>
-                                <select class="form-control" id="sel1">
-                                <option>Nursery</option>
-                                <option>Junior Kg</option>
-                                <option>Senior Kg</option>
-                                <option>Grade 1</option>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="Grade">Grade Applying to:</label>
+                                    <select class="form-control" id="sel1" ng-model="studentForm.formData.applyGrade" required>
+                                <option value="Nursery">Nursery</option>
+                                <option value="Junior Kg">Junior Kg</option>
+                                <option value="Senior Kg">Senior Kg</option>
+                                <option value="Grade 1">Grade 1</option>
                                 </select>
+                                    <span class="errormsg" ng-show="studentForm.applyGrade.$touched && studentForm.applyGrade.$invalid">Nationality is required.</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-            </div>
-        </div>
-        <div class="admission-form">
-            <div class="">
-                <div class="inline-div">
-                    <h3 class="green-color">Current School</h3>
                 </div>
-                <!--<div class="inline-div pull-right">
+                <div class="admission-form">
+                    <div class="">
+                        <div class="inline-div">
+                            <h3 class="green-color">Current School</h3>
+                        </div>
+                        <!--<div class="inline-div pull-right">
                     <h3>
                         <button class="btn btn-open" ng-click="openDiv();">open/close</button>
                     </h3>
                 </div>-->
-            </div>
-            <div class="admission-main green-border">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="form-group">
-                            <label for="Name of the School">Name of the School:</label>
-                            <input type="text" class="form-control">
-                        </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="">
-                            <label for="Name of the School">Board studying in:</label>
-                        </div>
-                        <div class="inline-div">
-                            <input type="radio" id="test1" name="radio-group" checked>
-                            <label for="test1">SSC</label>
-                        </div>
-                        <div class="inline-div">
-                            <input type="radio" id="test2" name="radio-group">
-                            <label for="test2">ICSE</label>
-                        </div>
-                        <div class="inline-div">
-                            <input type="radio" id="test3" name="radio-group">
-                            <label for="test3">CBSE</label>
-                        </div>
-                        <div class="inline-div">
-                            <input type="radio" id="test4" name="radio-group">
-                            <label for="test4">IB</label>
-                        </div>
-                        <div class="inline-div">
-                            <input type="radio" id="test5" name="radio-group">
-                            <label for="test5">Cambridge</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="form-group">
-                            <label for="comment">Address:</label>
-                            <textarea class="form-control" rows="5" id="Address"></textarea>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="admission-form">
-                <h3 class="blue-color">Parent Information </h3>
-                <div class="admission-main blue-border">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="name">Name of Parent:</label>
-                                <input type="text" class="form-control">
+                    <div class="admission-main green-border">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="Name of the School">Name of the School:</label>
+                                    <input type="text" class="form-control" ng-model="studentForm.formData.currentSchoolName">
+                                </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="contact">Contact No:</label>
-                                <input type="number" class="form-control">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="">
+                                    <label for="Name of the School">Board studying in:</label>
+                                </div>
+                                <div class="inline-div">
+                                    <input type="radio" id="test1" name="radio-group1" checked ng-model="studentForm.formData.StudyingBoard" value="SSC">
+                                    <label for="test1">SSC</label>
+                                </div>
+                                <div class="inline-div">
+                                    <input type="radio" id="test2" name="radio-group1" ng-model="studentForm.formData.StudyingBoard" value="ICSE">
+                                    <label for="test2">ICSE</label>
+                                </div>
+                                <div class="inline-div">
+                                    <input type="radio" id="test3" name="radio-group1" ng-model="studentForm.formData.StudyingBoard" value="CBSE">
+                                    <label for="test3">CBSE</label>
+                                </div>
+                                <div class="inline-div">
+                                    <input type="radio" id="test4" name="radio-group1" ng-model="studentForm.formData.StudyingBoard" value="IB">
+                                    <label for="test4">IB</label>
+                                </div>
+                                <div class="inline-div">
+                                    <input type="radio" id="test5" name="radio-group1" ng-model="studentForm.formData.StudyingBoard" value="Cambridge">
+                                    <label for="test5">Cambridge</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="comment">Address:</label>
+                                    <textarea class="form-control" rows="5" id="Address" ng-model="studentForm.formData.schoolAddress"></textarea>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="email">Email Id:</label>
-                                <input type="email" class="form-control">
+                    <div class="admission-form">
+                        <h3 class="blue-color">Parent Information </h3>
+                        <div class="admission-main blue-border">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="name">Name of Parent:</label>
+                                        <input type="text" class="form-control" ng-model="studentForm.formData.nameOfParent" name="nameOfParent" required>
+                                        <span class="errormsg" ng-show="studentForm.nameOfParent.$touched && studentForm.nameOfParent.$invalid">Name Of Parent is required.</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="contact">Contact No:</label>
+                                        <input type="number" class="form-control" ng-model="studentForm.formData.contactNo">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="email">Email Id:</label>
+                                        <input type="email" class="form-control" ng-model="studentForm.formData.emailId" name="emailId" required>
+                                        <span class="errormsg" ng-show="studentForm.emailId.$touched && studentForm.emailId.$invalid">Email Id is required.</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
-               
-            </div>
+                <div class="submit-btn text-center admission-top">
+                    <button class="btn submit-btn blue-border" ng-click="submitForm(studentForm.formData)" ng-disabled="studentForm.$invalid">submit</button>
+                </div>
+            </form>
         </div>
-        <div class="submit-btn text-center admission-top">
-            <button class="btn submit-btn blue-border">submit</button>
-        </div>
-        </form>
-         </div>
 </section>
 <section>
     <div class="container">
         <div class="admission-top">
             <h3 class="pink-color">School Timings</h3>
-            <div class="admission-main">
-                <p>Nursery, Junior Kg, Senior Kg - 8.30 a.m. to 12.45 p.m.</p>
-                <p>Grade 1 - 8.30 a.m. to 3.00 p.m.
-                </p>
+            <div class="admission-main row">
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="text-center">
+                        <h3>Nursery, Junior Kg, Senior Kg</h3>
+                        <p> - 8.30 a.m. to 12.45 p.m.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="text-center">
+                        <h3>Grade 1 </h3>
+                        <p>- 8.30 a.m. to 3.00 p.m.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -243,10 +263,20 @@
     <div class="container">
         <div class="admission-top">
             <h3 class="pink-color">Admission Office Hours</h3>
-            <div class="admission-main">
-                <p>Monday to Friday: 9.30 a.m. to 5.30 p.m.</p>
-                <p>Saturday: 8.30 a.m. to 12.30 p.m.
-                </p>
+            <div class="admission-main row">
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="text-center">
+                        <h3>Monday to Friday:</h3>
+                        <p> 9.30 a.m. to 5.30 p.m.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="text-center">
+                        <h3>Saturday:</h3>
+                        <p> 8.30 a.m. to 12.30 p.m.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
