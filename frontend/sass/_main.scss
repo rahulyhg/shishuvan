@@ -396,11 +396,12 @@ a.readmore {
 }
 
 .member-details {
-    bottom: -45px;
-    color: rgb(255, 255, 255);
-    padding-top: 80px;
+      width: 100%;
+    min-height: 111px;
+    bottom: -50px;
+    color: white;
+    padding-top: 60px;
     position: absolute;
-    width: 100%;
     background: url("../img/team_bg.png") center center / 100% 100% no-repeat scroll rgba(0, 0, 0, 0);
     transition: all 0.3s ease-in-out 0s;
 }
@@ -548,12 +549,14 @@ a.readmore {
 .orange {
     color: #eb774c;
 }
-.education-pillar-home{
+
+.education-pillar-home {
     // padding: 10px 30px;
     height: 120px;
     align-items: center;
     justify-content: center;
 }
+
 .contact-icon {
     border: 1px solid;
     border-radius: 50%;
@@ -568,12 +571,14 @@ a.readmore {
     transform: translateY(-50%);
     width: 60px;
 }
-.education-padd{
-padding: 20px 10px 0 10px;
-h3{
-    margin: 0;
+
+.education-padd {
+    padding: 20px 10px 0 10px;
+    h3 {
+        margin: 0;
+    }
 }
-}
+
 .contact-details h4 {
     color: #211f20;
     letter-spacing: 2px;
@@ -924,7 +929,7 @@ h3{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
 
 .slider-area h2 {

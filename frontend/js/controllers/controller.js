@@ -82,23 +82,23 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
     //     courseDetail: "Angel Di Maria",
     // }]
     $scope.school_facility = [{
-        img: "img/course/course_1.jpg",
+        img: "img/school_facility/1.png",
         desc: "Technology enabled &amp; temperature controlled learning spaces."
     }, {
-        img: "img/course/course_1.jpg",
+        img: "img/school_facility/2.png",
         desc: "Specially designed indoor and outdoor play area for our early years learners."
     }, {
-        img: "img/course/course_1.jpg",
+        img: "img/school_facility/3.png",
         desc: "Multipurpose room for dance / drama / music"
     }, {
-        img: "img/course/course_1.jpg",
+        img: "img/school_facility/6.png",
+        desc: "Coding Skills Program"
+    } ,{
+        img: "img/school_facility/4.png",
         desc: "Small class sizes"
     }, {
-        img: "img/course/course_1.jpg",
+        img: "img/school_facility/5.png",
         desc: "Age appropriate STEM Education"
-    }, {
-        img: "img/course/course_1.jpg",
-        desc: "Coding Skills Program"
     }]
 })
 .controller('navCtrl', function ($scope, $location, $anchorScroll,$state, $timeout) {
