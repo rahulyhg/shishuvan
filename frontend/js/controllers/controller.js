@@ -1,111 +1,122 @@
-myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
-    $scope.template = TemplateService.getHTML("content/home.html");
-    TemplateService.title = "Home"; //This is the Title of the Website
-    $scope.navigation = NavigationService.getNavigation();
+myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationService, $timeout, $uibModal) {
+        $scope.template = TemplateService.getHTML("content/home.html");
+        TemplateService.title = "Home"; //This is the Title of the Website
+        $scope.navigation = NavigationService.getNavigation();
 
- 
-    $scope.mySlides = [{
-        img: 'http://flexslider.woothemes.com/images/kitchen_adventurer_cheesecake_brownie.jpg',
-        title1: "aaaaaaaaaaaaaaaaaaaaa",
-        title2: "bbbbbbbbbbbbbbbbbbbbbbbbbbb"
-    }, {
-        img: 'http://flexslider.woothemes.com/images/kitchen_adventurer_lemon.jpg',
-        title1: "cccccccccccccccccccc",
-        title2: "bbbbbbbbbbbbbbbbbbbbbbbbbbb"
-    }, {
-        img: 'http://flexslider.woothemes.com/images/kitchen_adventurer_donut.jpg',
-        title1: "ggggggggggggggggggggggg",
-        title2: "bbbbbbbbbbbbbbbbbbbbbbbbbbb"
-    }, {
-        img: 'http://flexslider.woothemes.com/images/kitchen_adventurer_caramel.jpg',
-        title1: "jjjjjjjjjjjjjjjjjjjjjjjjjj",
-        title2: "bbbbbbbbbbbbbbbbbbbbbbbbbbb"
-    }];
-    var abc = _.times(100, function (n) {
-        return n;
-    });
 
-    var i = 0;
-    $scope.buttonClick = function () {
-        i++;
-        console.log("This is a button Click");
-    };
+        $scope.mySlides = [{
+            img: 'http://flexslider.woothemes.com/images/kitchen_adventurer_cheesecake_brownie.jpg',
+            title1: "aaaaaaaaaaaaaaaaaaaaa",
+            title2: "bbbbbbbbbbbbbbbbbbbbbbbbbbb"
+        }, {
+            img: 'http://flexslider.woothemes.com/images/kitchen_adventurer_lemon.jpg',
+            title1: "cccccccccccccccccccc",
+            title2: "bbbbbbbbbbbbbbbbbbbbbbbbbbb"
+        }, {
+            img: 'http://flexslider.woothemes.com/images/kitchen_adventurer_donut.jpg',
+            title1: "ggggggggggggggggggggggg",
+            title2: "bbbbbbbbbbbbbbbbbbbbbbbbbbb"
+        }, {
+            img: 'http://flexslider.woothemes.com/images/kitchen_adventurer_caramel.jpg',
+            title1: "jjjjjjjjjjjjjjjjjjjjjjjjjj",
+            title2: "bbbbbbbbbbbbbbbbbbbbbbbbbbb"
+        }];
+        var abc = _.times(100, function (n) {
+            return n;
+        });
 
-    // $scope.parentsDay = [{
-    //     para: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiu  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim",
-    //     name: "ssssssss",
-    //     desc: "esdxfcghbvjn"
-    // }, {
-    //     para: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiu  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim",
-    //     name: "ssssssss",
-    //     desc: "esdxfcghbvjn"
-    // }, {
-    //     para: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiu  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim",
-    //     name: "ssssssss",
-    //     desc: "esdxfcghbvjn"
-    // }, {
-    //     para: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiu  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim",
-    //     name: "ssssssss",
-    //     desc: "esdxfcghbvjn"
-    // }, {
-    //     para: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiu  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim",
-    //     name: "ssssssss",
-    //     desc: "esdxfcghbvjn"
-    // }, {
-    //     para: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiu  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim",
-    //     name: "ssssssss",
-    //     desc: "esdxfcghbvjn"
-    // }]
-    // $scope.Courses = [{
-    //     img: "img/course/course_1.jpg",
-    //     courseDetail: "Angel Di Maria",
-    // }, {
-    //     img: "img/course/course_1.jpg",
-    //     courseDetail: "Angel Di Maria",
-    // }, {
-    //     img: "img/course/course_1.jpg",
-    //     courseDetail: "Angel Di Maria",
-    // }, {
-    //     img: "img/course/course_1.jpg",
-    //     courseDetail: "Angel Di Maria",
-    // }, {
-    //     img: "img/course/course_1.jpg",
-    //     courseDetail: "Angel Di Maria",
-    // }, {
-    //     img: "img/course/course_1.jpg",
-    //     courseDetail: "Angel Di Maria",
-    // }, {
-    //     img: "img/course/course_1.jpg",
-    //     courseDetail: "Angel Di Maria",
-    // }, {
-    //     img: "img/course/course_1.jpg",
-    //     courseDetail: "Angel Di Maria",
-    // }]
-    $scope.school_facility = [{
-        img: "img/school_facility/home1.png",
-        desc: "Temperature Controlled Learning Spaces."
-    }, {
-        img: "img/school_facility/home2.png",
-        desc: "Technology Enabled Classrooms."
-    }, {
-        img: "img/school_facility/home3.png",
-        desc: "Specially Designed Play Area for our Early Years Learners"
-    }, {
-        img: "img/school_facility/home6.png",
-        desc: "Multi-purpose Outdoor Play Area"
-    } ,{
-        img: "img/school_facility/home4.png",
-        desc: "Early Years Classroom"
-    }, {
-        img: "img/school_facility/home5.png",
-        desc: "Small Class Sizes"
-    }]
-})
-.controller('navCtrl', function ($scope, $location, $anchorScroll,$state, $timeout) {
-   $scope.goToAnchor = function (anchor, id) {
+        var i = 0;
+        $scope.buttonClick = function () {
+            i++;
+            console.log("This is a button Click");
+        };
+        $scope.startMsgOpen = function () {
+            $uibModal.open({
+                animation: true,
+                templateUrl: 'views/modal/start-msg.html',
+                scope: $scope,
+                size: 'md',
+            });
+        };
+        $scope.startMsgOpen(); // To open modal when website loads
+
+        // $scope.parentsDay = [{
+        //     para: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiu  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim",
+        //     name: "ssssssss",
+        //     desc: "esdxfcghbvjn"
+        // }, {
+        //     para: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiu  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim",
+        //     name: "ssssssss",
+        //     desc: "esdxfcghbvjn"
+        // }, {
+        //     para: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiu  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim",
+        //     name: "ssssssss",
+        //     desc: "esdxfcghbvjn"
+        // }, {
+        //     para: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiu  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim",
+        //     name: "ssssssss",
+        //     desc: "esdxfcghbvjn"
+        // }, {
+        //     para: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiu  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim",
+        //     name: "ssssssss",
+        //     desc: "esdxfcghbvjn"
+        // }, {
+        //     para: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiu  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim",
+        //     name: "ssssssss",
+        //     desc: "esdxfcghbvjn"
+        // }]
+        // $scope.Courses = [{
+        //     img: "img/course/course_1.jpg",
+        //     courseDetail: "Angel Di Maria",
+        // }, {
+        //     img: "img/course/course_1.jpg",
+        //     courseDetail: "Angel Di Maria",
+        // }, {
+        //     img: "img/course/course_1.jpg",
+        //     courseDetail: "Angel Di Maria",
+        // }, {
+        //     img: "img/course/course_1.jpg",
+        //     courseDetail: "Angel Di Maria",
+        // }, {
+        //     img: "img/course/course_1.jpg",
+        //     courseDetail: "Angel Di Maria",
+        // }, {
+        //     img: "img/course/course_1.jpg",
+        //     courseDetail: "Angel Di Maria",
+        // }, {
+        //     img: "img/course/course_1.jpg",
+        //     courseDetail: "Angel Di Maria",
+        // }, {
+        //     img: "img/course/course_1.jpg",
+        //     courseDetail: "Angel Di Maria",
+        // }]
+        $scope.school_facility = [{
+            img: "img/school_facility/home1.png",
+            desc: "Temperature Controlled Learning Spaces."
+        }, {
+            img: "img/school_facility/home2.png",
+            desc: "Technology Enabled Classrooms."
+        }, {
+            img: "img/school_facility/home3.png",
+            desc: "Specially Designed Play Area for our Early Years Learners"
+        }, {
+            img: "img/school_facility/home6.png",
+            desc: "Multi-purpose Outdoor Play Area"
+        }, {
+            img: "img/school_facility/home4.png",
+            desc: "Early Years Classroom"
+        }, {
+            img: "img/school_facility/home5.png",
+            desc: "Small Class Sizes"
+        }]
+
+
+    })
+    .controller('navCtrl', function ($scope, $location, $anchorScroll, $state, $timeout) {
+        $scope.goToAnchor = function (anchor, id) {
             console.log("inside anchor")
             $state.go(anchor)
-                // $location.hash(anchor);
+            // $location.hash(anchor);
             if (id) {
                 $timeout(function () {
                     // $anchorScroll();
@@ -119,7 +130,7 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
 
 
     })
-.controller('FormCtrl', function ($scope, TemplateService, NavigationService, $timeout, toastr, $http) {
+    .controller('FormCtrl', function ($scope, TemplateService, NavigationService, $timeout, toastr, $http) {
         $scope.template = TemplateService.getHTML("content/form.html");
         TemplateService.title = "Form"; //This is the Title of the Website
         $scope.navigation = NavigationService.getNavigation();
@@ -145,9 +156,9 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
         $scope.navigation = NavigationService.getNavigation();
     })
 
-// Example API Controller
-.controller('DemoAPICtrl', function ($scope, TemplateService, apiService, NavigationService, $timeout) {
-    apiService.getDemo($scope.formData, function (data) {
-        console.log(data);
+    // Example API Controller
+    .controller('DemoAPICtrl', function ($scope, TemplateService, apiService, NavigationService, $timeout) {
+        apiService.getDemo($scope.formData, function (data) {
+            console.log(data);
+        });
     });
-});
