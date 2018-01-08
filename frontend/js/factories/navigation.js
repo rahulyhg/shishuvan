@@ -197,16 +197,12 @@ myApp.factory('NavigationService', function ($http) {
                     name: "Admissions FAQ",
                     classis: "active",
                     anchor: "faq",
-<<<<<<< HEAD
                     link: "faq"
                 },
                 {
                     name: "Contact & Enquiries",
                     classis: "active",
                     anchor: "admission"
-=======
-                    link:"faq"
->>>>>>> 5d8982582382146b52493b8d9bf3b478d3eaebdc
                 }
             ]
         },
@@ -218,7 +214,7 @@ myApp.factory('NavigationService', function ($http) {
                 name: "Working at ShishuVihar School",
                 classis: "active",
                 anchor: "employment_opportunities",
-                 link: "Working"
+                link: "Working"
             }, {
                 name: "Online Application Form",
                 classis: "active",

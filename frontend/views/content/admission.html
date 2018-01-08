@@ -72,12 +72,11 @@
                                     <label for="email">Gender</label>
                                 </div>
                                 <div class="inline-div gender-div">
-                                    <input type="radio" id="test6" name="radio-group" checked ng-model="studentForm.formData.gender" value="Boy" name="gender"
-                                        required>
+                                    <input type="radio" id="test6" name="radio-group" checked ng-model="studentForm.formData.gender" value="Boy" name="gender">
                                     <label for="test6">Boy</label>
                                 </div>
                                 <div class="inline-div gender-div">
-                                    <input type="radio" id="test7" name="radio-group" ng-model="studentForm.formData.gender" value="Girl" name="gender" required>
+                                    <input type="radio" id="test7" name="radio-group" ng-model="studentForm.formData.gender" value="Girl" name="gender">
                                     <label for="test7">Girl</label>
                                 </div>
                                 <span class="errormsg" ng-show="studentForm.gender.$touched && studentForm.gender.$invalid">DOB is required.</span>
@@ -133,7 +132,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="Grade">Grade Applying to:</label>
-                                    <select class="form-control" id="sel1" ng-model="studentForm.formData.applyGrade" required>
+                                    <select class="form-control" id="sel1" ng-model="studentForm.formData.applyGrade">
                                 <option value="Nursery">Nursery</option>
                                 <option value="Junior Kg">Junior Kg</option>
                                 <option value="Senior Kg">Senior Kg</option>
