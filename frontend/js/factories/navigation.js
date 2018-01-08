@@ -198,11 +198,6 @@ myApp.factory('NavigationService', function () {
                     classis: "active",
                     anchor: "faq",
                     link:"faq"
-                },
-                {
-                    name: "Contact & Enquiries",
-                    classis: "active",
-                    anchor: "admission"
                 }
             ]
         },
@@ -213,22 +208,19 @@ myApp.factory('NavigationService', function () {
             subnav: [{
                 name: "Working at ShishuVihar School",
                 classis: "active",
-                anchor: "employment_opportunities"
+                anchor: "employment_opportunities",
+                 link: "Working"
             }, {
                 name: "Online Application Form",
                 classis: "active",
-                anchor: "employment_opportunities"
+                anchor: "employment_opportunities",
+                link: "Application"
             }]
         },
         {
             name: "Contact Us",
             classis: "active",
             anchor: "contactus",
-            subnav: [{
-                name: "Directions & Contact Information (Google Map)",
-                classis: "active",
-                anchor: "home"
-            }]
         }
     ];
 
