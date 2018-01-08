@@ -37,13 +37,14 @@
 </section>
 <section>
     <div class="container">
+          <div class="Admission-start">
+         <form>
         <div class="admission-form">
             <div class="text-center about-content">
                 <h2>We thank you for your interest in ShishuVihar School</h2>
             </div>
             <h3 class="pink-color">Personal Information of the child</h3>
             <div class="admission-main pink-border">
-                <form>
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
@@ -133,7 +134,6 @@
                             </div>
                         </div>
                     </div>
-                </form>
             </div>
         </div>
         <div class="admission-form">
@@ -141,89 +141,91 @@
                 <div class="inline-div">
                     <h3 class="green-color">Current School</h3>
                 </div>
-                <div class="inline-div pull-right">
+                <!--<div class="inline-div pull-right">
                     <h3>
                         <button class="btn btn-open" ng-click="openDiv();">open/close</button>
                     </h3>
-                </div>
+                </div>-->
             </div>
-            <div class="admission-main green-border" ng-if="open">
-                <form>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label for="Name of the School">Name of the School:</label>
-                                <input type="text" class="form-control">
-                            </div>
+            <div class="admission-main green-border">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="Name of the School">Name of the School:</label>
+                            <input type="text" class="form-control">
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="">
-                                <label for="Name of the School">Board studying in:</label>
-                            </div>
-                            <div class="inline-div">
-                                <input type="radio" id="test1" name="radio-group" checked>
-                                <label for="test1">SSC</label>
-                            </div>
-                            <div class="inline-div">
-                                <input type="radio" id="test2" name="radio-group">
-                                <label for="test2">ICSE</label>
-                            </div>
-                            <div class="inline-div">
-                                <input type="radio" id="test3" name="radio-group">
-                                <label for="test3">CBSE</label>
-                            </div>
-                            <div class="inline-div">
-                                <input type="radio" id="test4" name="radio-group">
-                                <label for="test4">IB</label>
-                            </div>
-                            <div class="inline-div">
-                                <input type="radio" id="test5" name="radio-group">
-                                <label for="test5">Cambridge</label>
-                            </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="">
+                            <label for="Name of the School">Board studying in:</label>
+                        </div>
+                        <div class="inline-div">
+                            <input type="radio" id="test1" name="radio-group" checked>
+                            <label for="test1">SSC</label>
+                        </div>
+                        <div class="inline-div">
+                            <input type="radio" id="test2" name="radio-group">
+                            <label for="test2">ICSE</label>
+                        </div>
+                        <div class="inline-div">
+                            <input type="radio" id="test3" name="radio-group">
+                            <label for="test3">CBSE</label>
+                        </div>
+                        <div class="inline-div">
+                            <input type="radio" id="test4" name="radio-group">
+                            <label for="test4">IB</label>
+                        </div>
+                        <div class="inline-div">
+                            <input type="radio" id="test5" name="radio-group">
+                            <label for="test5">Cambridge</label>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label for="comment">Address:</label>
-                                <textarea class="form-control" rows="5" id="Address"></textarea>
-                            </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="comment">Address:</label>
+                            <textarea class="form-control" rows="5" id="Address"></textarea>
                         </div>
                     </div>
-                </form>
+                </div>
             </div>
             <div class="admission-form">
                 <h3 class="blue-color">Parent Information </h3>
                 <div class="admission-main blue-border">
-                    <form>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="name">Name of Parent:</label>
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="contact">Contact No:</label>
-                                    <input type="number" class="form-control">
-                                </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="name">Name of Parent:</label>
+                                <input type="text" class="form-control">
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="email">Email Id:</label>
-                                    <input type="email" class="form-control">
-                                </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="contact">Contact No:</label>
+                                <input type="number" class="form-control">
                             </div>
                         </div>
-                    </form>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="email">Email Id:</label>
+                                <input type="email" class="form-control">
+                            </div>
+                        </div>
+                    </div>
                 </div>
+               
             </div>
         </div>
+        <div class="submit-btn text-center admission-top">
+            <button class="btn submit-btn blue-border">submit</button>
+        </div>
+        </form>
+         </div>
 </section>
 <section>
     <div class="container">
