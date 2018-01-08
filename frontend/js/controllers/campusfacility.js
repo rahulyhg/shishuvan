@@ -5,21 +5,21 @@
      $scope.formSubmitted = false;
       $scope.school_facility = [{
         img: "img/school_facility/1.png",
-        desc: "Technology enabled & temperature controlled learning spaces."
+        desc: "Temperature Controlled Learning Spaces."
     }, {
         img: "img/school_facility/2.png",
-        desc: "Specially designed indoor and outdoor play area for our early years learners."
+        desc: "Technology Enabled Classrooms."
     }, {
         img: "img/school_facility/3.png",
-        desc: "Multipurpose room for dance / drama / music"
+        desc: "Specially Designed Play Area for our Early Years Learners"
     }, {
         img: "img/school_facility/6.png",
-        desc: "Coding Skills Program"
+        desc: "Multi-purpose Outdoor Play Area"
     } ,{
         img: "img/school_facility/4.png",
-        desc: "Small class sizes"
+        desc: "Early Years Classroom"
     }, {
         img: "img/school_facility/5.png",
-        desc: "Age appropriate STEM Education"
+        desc: "Small Class Sizes"
     }]
  })
