@@ -67464,8 +67464,8 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $locat
             templateUrl: tempateURL,
             controller: 'Co-curricularProgramCtrl'
         })
-        .state('campus_facility', {
-            url: "/campus_facility",
+        .state('school_facility', {
+            url: "/school_facility",
             templateUrl: tempateURL,
             controller: 'CampusFacilityCtrl'
         })
@@ -67695,55 +67695,55 @@ myApp.factory('NavigationService', function () {
                     link: "MissionandVission",
 
                 },
-                {
-                    name: "Educational Pillars",
-                    classis: "active",
-                    anchor: "aboutus",
-                    link: "EducationalPillars",
-                },
-                {
-                    name: "School Governing Board",
-                    classis: "active",
-                    anchor: "aboutus",
-                    link: "SchoolGoverningBoard",
-                }
+                // {
+                //     name: "Educational Pillars",
+                //     classis: "active",
+                //     anchor: "aboutus",
+                //     link: "EducationalPillars",
+                // },
+                // {
+                //     name: "School Governing Board",
+                //     classis: "active",
+                //     anchor: "aboutus",
+                //     link: "SchoolGoverningBoard",
+                // }
             ]
         },
         {
-            name: "Campus Facilities",
+            name: "School Facilities",
             classis: "active",
-            anchor: "campus_facility",
-            subnav: [{
-                    name: "Virtual tour of the School",
-                    classis: "active",
-                    anchor: "campus_facility"
-                },
-                {
-                    name: "Technology enabled & temperature controlled learning spaces",
-                    classis: "active",
-                    anchor: "campus_facility"
-                },
-                {
-                    name: "Play Area",
-                    classis: "active",
-                    anchor: "campus_facility"
-                },
-                {
-                    name: "Multipurpose Room",
-                    classis: "active",
-                    anchor: "home"
-                },
-                {
-                    name: "Music Room",
-                    classis: "active",
-                    anchor: "home"
-                },
-                {
-                    name: "Sick Bay",
-                    classis: "active",
-                    anchor: "home"
-                }
-            ]
+            anchor: "school_facility",
+            // subnav: [{
+            //         name: "Virtual tour of the School",
+            //         classis: "active",
+            //         anchor: "campus_facility"
+            //     },
+            //     {
+            //         name: "Technology enabled & temperature controlled learning spaces",
+            //         classis: "active",
+            //         anchor: "campus_facility"
+            //     },
+            //     {
+            //         name: "Play Area",
+            //         classis: "active",
+            //         anchor: "campus_facility"
+            //     },
+            //     {
+            //         name: "Multipurpose Room",
+            //         classis: "active",
+            //         anchor: "home"
+            //     },
+            //     {
+            //         name: "Music Room",
+            //         classis: "active",
+            //         anchor: "home"
+            //     },
+            //     {
+            //         name: "Sick Bay",
+            //         classis: "active",
+            //         anchor: "home"
+            //     }
+            // ]
         },
         {
             name: "Program",
@@ -67856,7 +67856,7 @@ myApp.factory('NavigationService', function () {
                      link: "Initiatives"
                 },
                 {
-                    name: "Our Traditions",
+                    name: "Our Aspirations ",
                     classis: "active",
                     anchor: "community",
                      link: "Our-Traditions"
@@ -67873,9 +67873,10 @@ myApp.factory('NavigationService', function () {
                     anchor: "admission"
                 },
                 {
-                    name: "Admission Process",
+                    name: "Admissions FAQ",
                     classis: "active",
-                    anchor: "faq"
+                    anchor: "faq",
+                    link:"faq"
                 },
                 {
                     name: "Contact & Enquiries",
@@ -67965,91 +67966,74 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
         console.log("This is a button Click");
     };
 
-    $scope.parentsDay = [{
-        para: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiu  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim",
-        name: "ssssssss",
-        desc: "esdxfcghbvjn"
+    // $scope.parentsDay = [{
+    //     para: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiu  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim",
+    //     name: "ssssssss",
+    //     desc: "esdxfcghbvjn"
+    // }, {
+    //     para: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiu  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim",
+    //     name: "ssssssss",
+    //     desc: "esdxfcghbvjn"
+    // }, {
+    //     para: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiu  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim",
+    //     name: "ssssssss",
+    //     desc: "esdxfcghbvjn"
+    // }, {
+    //     para: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiu  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim",
+    //     name: "ssssssss",
+    //     desc: "esdxfcghbvjn"
+    // }, {
+    //     para: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiu  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim",
+    //     name: "ssssssss",
+    //     desc: "esdxfcghbvjn"
+    // }, {
+    //     para: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiu  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim",
+    //     name: "ssssssss",
+    //     desc: "esdxfcghbvjn"
+    // }]
+    // $scope.Courses = [{
+    //     img: "img/course/course_1.jpg",
+    //     courseDetail: "Angel Di Maria",
+    // }, {
+    //     img: "img/course/course_1.jpg",
+    //     courseDetail: "Angel Di Maria",
+    // }, {
+    //     img: "img/course/course_1.jpg",
+    //     courseDetail: "Angel Di Maria",
+    // }, {
+    //     img: "img/course/course_1.jpg",
+    //     courseDetail: "Angel Di Maria",
+    // }, {
+    //     img: "img/course/course_1.jpg",
+    //     courseDetail: "Angel Di Maria",
+    // }, {
+    //     img: "img/course/course_1.jpg",
+    //     courseDetail: "Angel Di Maria",
+    // }, {
+    //     img: "img/course/course_1.jpg",
+    //     courseDetail: "Angel Di Maria",
+    // }, {
+    //     img: "img/course/course_1.jpg",
+    //     courseDetail: "Angel Di Maria",
+    // }]
+    $scope.school_facility = [{
+        img: "img/school_facility/1.png",
+        desc: "Technology enabled &amp; temperature controlled learning spaces."
     }, {
-        para: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiu  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim",
-        name: "ssssssss",
-        desc: "esdxfcghbvjn"
+        img: "img/school_facility/2.png",
+        desc: "Specially designed indoor and outdoor play area for our early years learners."
     }, {
-        para: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiu  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim",
-        name: "ssssssss",
-        desc: "esdxfcghbvjn"
+        img: "img/school_facility/3.png",
+        desc: "Multipurpose room for dance / drama / music"
     }, {
-        para: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiu  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim",
-        name: "ssssssss",
-        desc: "esdxfcghbvjn"
+        img: "img/school_facility/6.png",
+        desc: "Coding Skills Program"
+    } ,{
+        img: "img/school_facility/4.png",
+        desc: "Small class sizes"
     }, {
-        para: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiu  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim",
-        name: "ssssssss",
-        desc: "esdxfcghbvjn"
-    }, {
-        para: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiu  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim",
-        name: "ssssssss",
-        desc: "esdxfcghbvjn"
-    }]
-
-    $scope.Courses = [{
-        img: "img/course/course_1.jpg",
-        courseDetail: "Angel Di Maria",
-
-    }, {
-        img: "img/course/course_1.jpg",
-        courseDetail: "Angel Di Maria",
-
-    }, {
-        img: "img/course/course_1.jpg",
-        courseDetail: "Angel Di Maria",
-    }, {
-        img: "img/course/course_1.jpg",
-        courseDetail: "Angel Di Maria",
-    }, {
-        img: "img/course/course_1.jpg",
-        courseDetail: "Angel Di Maria",
-    }, {
-        img: "img/course/course_1.jpg",
-        courseDetail: "Angel Di Maria",
-    }, {
-        img: "img/course/course_1.jpg",
-        courseDetail: "Angel Di Maria",
-    }, {
-        img: "img/course/course_1.jpg",
-        courseDetail: "Angel Di Maria",
-    }]
-    $scope.Teachers = [{
-        img: "img/course/course_1.jpg",
-        name: "Angel Di Maria",
-        desc: "Assistant Teacher"
-    }, {
-        img: "img/course/course_1.jpg",
-        name: "Angel Di Maria",
-        desc: "Assistant Teacher"
-    }, {
-        img: "img/course/course_1.jpg",
-        name: "Angel Di Maria",
-        desc: "Assistant Teacher"
-    }, {
-        img: "img/course/course_1.jpg",
-        name: "Angel Di Maria",
-        desc: "Assistant Teacher"
-    }, {
-        img: "img/course/course_1.jpg",
-        name: "Angel Di Maria",
-        desc: "Assistant Teacher"
-    }, {
-        img: "img/course/course_1.jpg",
-        name: "Angel Di Maria",
-        desc: "Assistant Teacher"
-    }, {
-        img: "img/course/course_1.jpg",
-        name: "Angel Di Maria",
-        desc: "Assistant Teacher"
-    }, {
-        img: "img/course/course_1.jpg",
-        name: "Angel Di Maria",
-        desc: "Assistant Teacher"
+        img: "img/school_facility/5.png",
+        desc: "Age appropriate STEM Education"
     }]
 })
 .controller('navCtrl', function ($scope, $location, $anchorScroll,$state, $timeout) {
@@ -68225,6 +68209,12 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
      $scope.navigation = NavigationService.getNavigation();
      $scope.formSubmitted = false;
  })
+ myApp.controller('FaqCtrl', function ($scope, TemplateService, NavigationService, $timeout, $uibModal, $location,apiService) {
+     $scope.template = TemplateService.getHTML("content/faq.html");
+     TemplateService.title = "Faq"; //This is the Title of the Website
+     $scope.navigation = NavigationService.getNavigation();
+     $scope.formSubmitted = false;
+ })
  myApp.controller('AcademicProgrammesCtrl', function ($scope, TemplateService, NavigationService, $timeout, $uibModal, $location,apiService) {
      $scope.template = TemplateService.getHTML("content/academic_programmes.html");
      TemplateService.title = "AcademicProgrammes"; //This is the Title of the Website
@@ -68383,10 +68373,29 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
      }
  })
  myApp.controller('CampusFacilityCtrl', function ($scope, TemplateService, NavigationService, $timeout, $uibModal, $location,apiService) {
-     $scope.template = TemplateService.getHTML("content/campus_facility.html");
-     TemplateService.title = "CampusFacility"; //This is the Title of the Website
+     $scope.template = TemplateService.getHTML("content/school_facility.html");
+     TemplateService.title = "SchoolFacility"; //This is the Title of the Website
      $scope.navigation = NavigationService.getNavigation();
      $scope.formSubmitted = false;
+      $scope.school_facility = [{
+        img: "img/school_facility/1.png",
+        desc: "Technology enabled & temperature controlled learning spaces."
+    }, {
+        img: "img/school_facility/2.png",
+        desc: "Specially designed indoor and outdoor play area for our early years learners."
+    }, {
+        img: "img/school_facility/3.png",
+        desc: "Multipurpose room for dance / drama / music"
+    }, {
+        img: "img/school_facility/6.png",
+        desc: "Coding Skills Program"
+    } ,{
+        img: "img/school_facility/4.png",
+        desc: "Small class sizes"
+    }, {
+        img: "img/school_facility/5.png",
+        desc: "Age appropriate STEM Education"
+    }]
  })
 myApp.controller('headerCtrl', function ($scope, TemplateService) {
     $scope.template = TemplateService;

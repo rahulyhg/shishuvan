@@ -5,7 +5,7 @@
      $scope.formSubmitted = false;
       $scope.school_facility = [{
         img: "img/school_facility/1.png",
-        desc: "Technology enabled &amp; temperature controlled learning spaces."
+        desc: "Technology enabled & temperature controlled learning spaces."
     }, {
         img: "img/school_facility/2.png",
         desc: "Specially designed indoor and outdoor play area for our early years learners."
