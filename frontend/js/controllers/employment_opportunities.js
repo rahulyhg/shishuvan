@@ -137,19 +137,19 @@
          });
      };
      $scope.submitForm = function (employeeForm) {
-         NavigationService.saveEmployeeForm(employeeForm, function (data) {
-             console.log("!!!!!!!!!!!!submitForm(employeeForm)", data);
-             if (data.data) {
-                 //  NavigationService.sendEmployeeApplication(data.data.data, function (data) {
-                 //      console.log("send email to applicant", data.data);
-                 //  });
-                 $scope.openSubmitTextForm();
-                 $timeout(function () {
-                     //  $uibModalInstance.dismiss('cancel');
-                     $state.reload();
-                 }, 1000);
-             }
-         })
+         //  NavigationService.saveEmployeeForm(employeeForm, function (data) {
+         //      console.log("!!!!!!!!!!!!submitForm(employeeForm)", data);
+         //      if (data.data) {
+         //  NavigationService.sendEmployeeApplication(data.data.data, function (data) {
+         //      console.log("send email to applicant", data.data);
+         //  });
+         $scope.openSubmitTextForm();
+         $timeout(function () {
+             //  $uibModalInstance.dismiss('cancel');
+             $state.reload();
+         }, 1000);
+         //      }
+         //  })
      }
 
  });
