@@ -131,7 +131,9 @@ header {
 .nav-up {
     transform: translateY(-100%);
 }
-
+.flex-direction-nav a:before{
+    font-size: 28px;
+}
 //header scss//
 .cust-nav {
     min-height: 100px;
@@ -245,7 +247,9 @@ h5 {
 .section-bottom {
     padding-bottom: 100px;
 }
-
+.community-bottom{
+    padding-bottom: 45px;
+}
 .area-title {
     font-family: "Boogaloo", cursive;
     font-size: 24px;
@@ -435,9 +439,9 @@ a.readmore {
 }
 
 .facilities-icon {
-    bottom: -50px;
+     bottom: -15px;
     font-size: 200px;
-    left: -50px;
+    left: 20px;
     opacity: 0.2;
     position: absolute;
     z-index: 1;
@@ -566,9 +570,9 @@ a.readmore {
     padding-top: 12px;
     position: absolute;
     text-align: center;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
+    // top: 50%;
+    // -webkit-transform: translateY(-50%);
+    // transform: translateY(-50%);
     width: 60px;
 }
 
@@ -859,6 +863,51 @@ width: 200px
     width: 100%;
     background-position: 50% 50%;
 }
+.admission-bg {
+    background: rgba(0, 0, 0, 0) url(../img/admission/admission-bg.png) no-repeat scroll center center / cover;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-position: 50% 50%;
+}
+.contact-bg{
+   background: rgba(0, 0, 0, 0) url(../img/contact/contact.png) no-repeat scroll center center / cover;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-position: 50% 50%;
+}
+.academic-bg {
+    background: rgba(0, 0, 0, 0) url(../img/program/academic/academic.png) no-repeat scroll center center / cover;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-position: 50% 50%;
+}
+.employment-bg{
+   background: rgba(0, 0, 0, 0) url(../img/employment/job.png) no-repeat scroll center center / cover;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-position: 50% 50%;
+}
+.co-curricular-bg{
+    background: rgba(0, 0, 0, 0) url(../img/program/co-curiculam/banner-academic.jpg) no-repeat scroll center center / cover;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-position: 50% 50%;
+}
 .page-barner-bg::after {
     background: #000 none repeat scroll 0 0;
     content: "";
@@ -881,7 +930,7 @@ width: 200px
     font-size: 80px;
     font-weight: 300;
     letter-spacing: 2px;
-    margin-bottom: 25px;
+    margin: 0;
 }
 
 .welcom-barner-area {
@@ -889,7 +938,7 @@ width: 200px
     -ms-flex-align: center;
     align-items: center;
     background: #333 none repeat scroll 0 0;
-    color: #fff;
+    color: #ff6b8c;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -974,8 +1023,8 @@ width: 200px
     border-radius: 0;
     border: 0;
     color: #fff;
-    max-height: 140px;
-    min-height: 40px;
+    // max-height: 140px;
+    height: 40px;
     background: transparent;
     border: 0;
     border-bottom: 2px solid #92278f;
@@ -1009,7 +1058,8 @@ width: 200px
     display: block;
     height: 40px;
     padding: 10px;
-    width: 100%;
+    margin: 0 50px;
+    width: 83%;
 }
 
 .contact-form-and-newsletter-area .row {
@@ -1358,5 +1408,7 @@ font-weight: bold;
 line-height: 1.2;
 }
 }
-
+.margin20{
+    margin-bottom: 20px
+}
 //Emd of all modal pages

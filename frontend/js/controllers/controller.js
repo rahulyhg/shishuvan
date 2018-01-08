@@ -5,22 +5,24 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
 
 
         $scope.mySlides = [{
-            img: 'http://flexslider.woothemes.com/images/kitchen_adventurer_cheesecake_brownie.jpg',
-            title1: "aaaaaaaaaaaaaaaaaaaaa",
-            title2: "bbbbbbbbbbbbbbbbbbbbbbbbbbb"
+            img: 'img/home/b1.png',
+            // title1: "aaaaaaaaaaaaaaaaaaaaa",
+            // title2: "bbbbbbbbbbbbbbbbbbbbbbbbbbb"
         }, {
-            img: 'http://flexslider.woothemes.com/images/kitchen_adventurer_lemon.jpg',
-            title1: "cccccccccccccccccccc",
-            title2: "bbbbbbbbbbbbbbbbbbbbbbbbbbb"
+            img: 'img/home/b2.png',
+            // title1: "cccccccccccccccccccc",
+            // title2: "bbbbbbbbbbbbbbbbbbbbbbbbbbb"
         }, {
-            img: 'http://flexslider.woothemes.com/images/kitchen_adventurer_donut.jpg',
-            title1: "ggggggggggggggggggggggg",
-            title2: "bbbbbbbbbbbbbbbbbbbbbbbbbbb"
-        }, {
-            img: 'http://flexslider.woothemes.com/images/kitchen_adventurer_caramel.jpg',
-            title1: "jjjjjjjjjjjjjjjjjjjjjjjjjj",
-            title2: "bbbbbbbbbbbbbbbbbbbbbbbbbbb"
-        }];
+            img: 'img/home/b3.png',
+            // title1: "ggggggggggggggggggggggg",
+            // title2: "bbbbbbbbbbbbbbbbbbbbbbbbbbb"
+        }
+        //  {
+        //     img: 'img/home/b4.png',
+        //     title1: "jjjjjjjjjjjjjjjjjjjjjjjjjj",
+        //     title2: "bbbbbbbbbbbbbbbbbbbbbbbbbbb"
+        // }
+        ];
         var abc = _.times(100, function (n) {
             return n;
         });
