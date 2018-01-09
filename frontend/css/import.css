@@ -13,6 +13,7 @@
 /* ====================================================================================================================
  * FONT-FACE
  * ====================================================================================================================*/
+@import url("https://fonts.googleapis.com/css?family=Sue+Ellen+Francisco");
 @font-face {
   font-family: 'flexslider-icon';
   src: url("fonts/flexslider-icon.eot");
@@ -10004,6 +10005,10 @@ button.close {
   src: url("../fonts/Poppins-Regular.ttf"); }
 
 @font-face {
+  font-family: 'Sue Ellen Francisco', cursive;
+  src: url("../fonts/SueEllenFrancisco.ttf"); }
+
+@font-face {
   font-family: 'flexslider-icon';
   src: url("../fonts/flexslider-icon.eot");
   src: url("../fonts/flexslider-icon.eot?#iefix") format("embedded-opentype"), url("../fonts/flexslider-icon.woff") format("woff"), url("../fonts/flexslider-icon.ttf") format("truetype"), url("../fonts/flexslider-icon.svg#flexslider-icon") format("svg");
@@ -10334,19 +10339,38 @@ a.readmore {
   border-bottom: 0px;
   -webkit-transition: 0.3s;
   transition: 0.3s; }
-  .single-team-member:hover {
-    border-color: #1ec0ff; }
+  .single-team-member:before {
+    background-color: rgba(0, 0, 0, 0.5);
+    bottom: 0;
+    content: "";
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    -webkit-transition: all 1.2s ease 0s;
+    transition: all 1.2s ease 0s;
+    z-index: 1; }
 
-.member-details {
+.single-team-member:hover:before {
+  opacity: 1; }
+
+.single-team-member:hover .team-member-desc {
+  opacity: 1; }
+
+.single-team-member .team-member-desc {
   width: 100%;
-  min-height: 111px;
-  bottom: -55px;
-  color: white;
-  padding-top: 50px;
+  height: 100%;
   position: absolute;
-  background: url("../img/team_bg.png") center center/100% 100% no-repeat scroll transparent;
-  -webkit-transition: all 0.3s ease-in-out 0s;
-  transition: all 0.3s ease-in-out 0s; }
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 2;
+  -webkit-transition: all 1.2s ease 0s;
+  transition: all 1.2s ease 0s; }
+  .single-team-member .team-member-desc h3 {
+    color: white !important;
+    font-size: 30px; }
 
 .member-details > h3 {
   font-family: 'Poppins-Regular', sans-serif;
@@ -10473,7 +10497,7 @@ a.readmore {
   color: #eb774c; }
 
 .education-pillar-home {
-  height: 120px;
+  min-height: 120px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -10972,11 +10996,28 @@ a.readmore {
   align-items: center;
   -ms-flex-align: center; }
 
-.align-middle {
-  vertical-align: middle; }
-
 .section-padding15 {
   padding: 15px; }
+
+.section-padding-tb15 {
+  padding: 15px 0; }
+
+.d-table {
+  display: table;
+  width: 100%;
+  height: 100%; }
+
+.d-cell {
+  display: table-cell; }
+
+.align-top {
+  vertical-align: top; }
+
+.align-bottom {
+  vertical-align: bottom; }
+
+.align-middle {
+  vertical-align: middle; }
 
 .coming-soon {
   background: #000;
@@ -11027,6 +11068,7 @@ a.readmore {
     border-top: 2px solid #ff6b8c;
     padding: 12px;
     color: #ff6b8c;
+    font-family: 'Sue Ellen Francisco', cursive;
     font-size: 25px;
     position: relative; }
     .quotes-main h4:before {
@@ -11087,7 +11129,7 @@ a.readmore {
 .main-content {
   padding: 10px 30px;
   width: 500px;
-  height: 90px;
+  min-height: 90px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -11104,7 +11146,7 @@ a.readmore {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100px;
-  height: 90px;
+  min-height: 90px;
   background-color: #36353d; }
 
 .admission-form h3 {
@@ -17693,9 +17735,25 @@ select {
   .cust-nav .navbar-brand img {
     width: 150px; }
   .section-padding {
-    padding: 50px 0; } }
+    padding: 50px 0; }
+  .admission-main {
+    margin: 0; }
+  .timeline {
+    width: 699px; }
+    .timeline .main-content {
+      width: 342px; }
+  .area-title {
+    margin-bottom: 35px; }
+  .education-pillar-home {
+    min-height: 145px; } }
 
 @media (max-width: 767px) {
+  body {
+    padding-top: 70px; }
+  .row {
+    display: block; }
+  .cust-nav {
+    min-height: 0; }
   .cust-nav .navbar-nav {
     float: none;
     text-align: center; }
@@ -17711,4 +17769,51 @@ select {
   .area-title h2 {
     font-size: 40px; }
   .about-content-home h3 {
-    font-size: 30px; } }
+    font-size: 30px; }
+  .welcom-barner-area {
+    min-height: 235px; }
+  .about-content .row {
+    display: block; }
+  .padding-about {
+    padding-bottom: 30px; }
+  .about-area .width-small {
+    width: 100%; }
+  .about-area .width-large {
+    width: 100%; }
+  .welcome-text h1 {
+    font-size: 55px; }
+  .quotes-main {
+    width: 260px; }
+  .admission-form h3 {
+    margin: 15px 0; }
+  .admission-main {
+    margin: 0; }
+  .timeline {
+    width: 300px; }
+    .timeline .first-row {
+      -webkit-box-orient: horizontal;
+      box-orient: horizontal;
+      -webkit-box-direction: reverse;
+      box-direction: reverse;
+      -moz-flex-direction: row-reverse;
+      flex-direction: row-reverse;
+      -ms-flex-direction: row-reverse; }
+    .timeline .second-row {
+      -webkit-box-pack: start;
+      box-pack: start;
+      -moz-justify-content: flex-start;
+      -ms-justify-content: flex-start;
+      -o-justify-content: flex-start;
+      justify-content: flex-start;
+      -ms-flex-pack: start; }
+    .timeline .main-content {
+      width: 185px; }
+    .timeline .border-left,
+    .timeline .border-right {
+      border: none; }
+  .padding-about {
+    padding-bottom: 0px; }
+  .team-area.section-padding {
+    padding-bottom: 0px; }
+  .member-details > h3 {
+    font-size: 18px; } }
