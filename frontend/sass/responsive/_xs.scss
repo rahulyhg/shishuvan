@@ -1,6 +1,14 @@
  @media (max-width: $screen-xs-max) {
      // Mobile
-     //scss for home page
+     body {
+         padding-top: 70px;
+     }
+     .row {
+         display: block;
+     } //scss for home page
+     .cust-nav {
+         min-height: 0;
+     }
      .cust-nav .navbar-nav {
          float: none;
          text-align: center;
@@ -23,7 +31,8 @@
      }
      .about-content-home h3 {
          font-size: 30px;
-     } //Start of about page
+     } //end of scss for home page
+     //Start of about page
      .welcom-barner-area {
          min-height: 235px;
      }
@@ -42,7 +51,7 @@
      } //End of about page
      //Start of admission page
      .welcome-text h1 {
-         font-size: 65px;
+         font-size: 55px;
      }
      .quotes-main {
          width: 260px;
@@ -53,5 +62,32 @@
      .admission-main {
          @include margin(0);
      } //End of admission page
-     //end of scss for home page
+     //Start of community page
+     .timeline {
+         width: 300px;
+         .first-row {
+             @include flex-direction(row-reverse);
+         }
+         .second-row {
+             @include justify-content(flex-start);
+         }
+         .main-content {
+             width: 185px;
+         }
+         .border-left,
+         .border-right {
+             border: none;
+         }
+     } //End of community page
+     //start of employment page
+     .padding-about {
+         padding-bottom: 0px;
+     } //end of employment page
+     //scss for school facility //
+     .team-area.section-padding {
+         padding-bottom: 0px;
+     }
+     .member-details>h3 {
+         font-size: 18px;
+     } //end of school facility//
  }
