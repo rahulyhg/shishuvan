@@ -4,9 +4,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
-                    <div class="welcome-text text-center">
+                    <!--<div class="welcome-text text-center">
                         <h1>Admissions</h1>
-                    </div>
+                    </div>-->
                 </div>
             </div>
         </div>
@@ -52,14 +52,15 @@
                                     <span class="errormsg" ng-show="studentForm.name.$touched && studentForm.name.$invalid">First Name is required.</span>
                                 </div>
                             </div>
-                            <div class="clearfix visible-md"></div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="middle-name">Middle Name:<span style="font-size:13px; color:red">&#x2731;</span></label>
                                     <input type="text" class="form-control" ng-model="studentForm.formData.middleName" name="middleName" required>
                                     <span class="errormsg" ng-show="studentForm.middleName.$touched && studentForm.middleName.$invalid">MiddleName is required.</span>
                                 </div>
-                            </div>
+                            </div> 
+                        </div>
+                            <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="family-name">Family Name:<span style="font-size:13px; color:red">&#x2731;</span></label>
