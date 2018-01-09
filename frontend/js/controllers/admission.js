@@ -111,7 +111,6 @@
      }
      //To open the modal after submitting the form
      $scope.openSubmitTextForm = function () {
-         console('giii');
          $uibModal.open({
              animation: true,
              templateUrl: 'views/modal/admission-success-msg.html',
@@ -130,8 +129,6 @@
          }
          if (studentForm.gender && studentForm.applyGrade) {
              NavigationService.saveStudentForm(studentForm, function (data) {
-                 console.log("WWWWWWWWWWWWWW")
-                 console.log("!!!!!!!!!!!!submitForm(studentForm)line 133", data);
                  if (data.data) {
                      // NavigationService.sendStudentApplication(data.data.data, function (data) {
                      // console.log("send email to applicant", data.data);

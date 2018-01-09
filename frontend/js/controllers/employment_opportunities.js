@@ -143,8 +143,6 @@
          }
          if (employeeForm.typeOfWork) {
              NavigationService.saveEmployeeForm(employeeForm, function (data) {
-                 console.log("HIEEEEEEEEEE")
-                 console.log("!!!!!!!!!!!!submitForm(employeeForm)line 146", data);
                  if (data.data) {
                      //  NavigationService.sendEmployeeApplication(data.data.data, function (data) {
                      //      console.log("send email to applicant", data.data);
