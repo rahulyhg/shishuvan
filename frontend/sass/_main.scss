@@ -421,22 +421,53 @@ a.readmore {
     border-image: initial;
     border-bottom: 0px;
     transition: 0.3s;
-    &:hover {
-        border-color: rgb(30, 192, 255);
+    &:before {
+        background-color: rgba(0, 0, 0, 0.5);
+        bottom: 0;
+        content: "";
+        left: 0;
+        opacity: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        @include transition(all 1.2s ease 0s);
+        z-index: 1;
     }
 }
 
-.member-details {
-    width: 100%;
-    min-height: 111px;
-    bottom: -55px;
-    color: white;
-    padding-top: 50px;
-    position: absolute;
-    background: url("../img/team_bg.png") center center / 100% 100% no-repeat scroll rgba(0, 0, 0, 0);
-    transition: all 0.3s ease-in-out 0s;
+.single-team-member:hover:before {
+    opacity: 1;
 }
 
+.single-team-member:hover .team-member-desc {
+    opacity: 1;
+}
+
+.single-team-member .team-member-desc {
+    @include size(100%,
+    100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: 2;
+    @include transition(all 1.2s ease 0s);
+    h3{
+        color: white !important;
+        font-size: 30px;
+    }
+}
+
+// .member-details {
+//     width: 100%;
+//     min-height: 111px;
+//     bottom: -55px;
+//     color: white;
+//     padding-top: 50px;
+//     position: absolute;
+//     background: url("../img/team_bg.png") center center / 100% 100% no-repeat scroll rgba(0, 0, 0, 0);
+//     transition: all 0.3s ease-in-out 0s;
+// }
 .member-details>h3 {
     font-family: 'Poppins-Regular', sans-serif;
     font-size: 20px;
@@ -1153,16 +1184,34 @@ a.readmore {
     @include align-items(center);
 }
 
-.align-middle {
-    vertical-align: middle;
-}
-
 .section-padding15 {
     @include padding(15px);
 }
 
 .section-padding-tb15 {
     @include padding(15px 0);
+}
+
+.d-table {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+.d-cell {
+    display: table-cell;
+}
+
+.align-top {
+    vertical-align: top;
+}
+
+.align-bottom {
+    vertical-align: bottom;
+}
+
+.align-middle {
+    vertical-align: middle;
 }
 
 //end of flex scss
