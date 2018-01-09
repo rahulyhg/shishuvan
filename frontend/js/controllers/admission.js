@@ -130,7 +130,8 @@
          }
          if (studentForm.gender && studentForm.applyGrade) {
              NavigationService.saveStudentForm(studentForm, function (data) {
-                 //      console.log("!!!!!!!!!!!!submitForm(studentForm)", data);
+                 console.log("WWWWWWWWWWWWWW")
+                 console.log("!!!!!!!!!!!!submitForm(studentForm)line 133", data);
                  if (data.data) {
                      // NavigationService.sendStudentApplication(data.data.data, function (data) {
                      // console.log("send email to applicant", data.data);
