@@ -129,22 +129,19 @@
              $scope.viewmsg = true;
          }
          if (studentForm.gender && studentForm.applyGrade) {
-             console.log("!!!!!!!!!!!!submitForm(studentForm)", studentForm);
-             //  NavigationService.saveStudentForm(studentForm, function (data) {
-             //      console.log("!!!!!!!!!!!!submitForm(studentForm)", data);
-             //      if (data.data) {
-             // NavigationService.sendStudentApplication(data.data.data, function (data) {
-             // console.log("send email to applicant", data.data);
-             // });
-             $scope.openSubmitTextForm();
-             $timeout(function () {
-                 $state.reload();
-                 //  $uibModalInstance.dismiss('cancel');
-             }, 1000);
-
-
-             //  }
-             //  })
+             NavigationService.saveStudentForm(studentForm, function (data) {
+                 //      console.log("!!!!!!!!!!!!submitForm(studentForm)", data);
+                 if (data.data) {
+                     // NavigationService.sendStudentApplication(data.data.data, function (data) {
+                     // console.log("send email to applicant", data.data);
+                     // });
+                     $scope.openSubmitTextForm();
+                     $timeout(function () {
+                         $state.reload();
+                         //  $uibModalInstance.dismiss('cancel');
+                     }, 1000);
+                 }
+             })
          }
 
      }
