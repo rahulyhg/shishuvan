@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
                     <div class="welcome-text text-center">
-                        <h1>Employment Opportunities</h1>
+                        <!--<h1>Employment Opportunities</h1>-->
                     </div>
                 </div>
             </div>
@@ -162,12 +162,12 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="comment">Date appointed to post:</label>
+                                        <label for="comment">Date appointed to post: <span style="font-size:13px; color:red">&#x2731;</label>
                                         <!--<input type="text" class="form-control" ng-model="employeeForm.formData.appointedDate">-->
                                         <p class="input-group">
                                             <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="employeeForm.formData.appointedDate"
                                                 is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close"
-                                                alt-input-formats="altInputFormats" name="dob" required/>
+                                                alt-input-formats="altInputFormats" name="appointedDate" required/>
                                             <span class="input-group-btn green-border-cale">
                                                                  <button type="button" class="btn btn-default" ng-click="open1()"><i class="fa fa-calendar" aria-hidden="true"></i></button>
                                                         </span>
@@ -203,6 +203,7 @@
                                             <input type="radio" id="test7" name="radio-group" ng-model="employeeForm.formData.typeOfWork" value="Part Time">
                                             <label for="test7">Part Time</label>
                                         </div>
+                                        <span class="errormsg" ng-if="viewerr">Type of Work is required.</span>
                                     </div>
                                 </div>
                             </div>
@@ -226,12 +227,12 @@
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label for="contact">Dates:</label>
+                                            <label for="contact">Dates:<span style="font-size:13px; color:red">&#x2731;</span></label>
                                             <!--<input type="number" class="form-control" ng-model="employeeForm.formData.dateQ">-->
                                             <p class="input-group">
                                                 <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="employeeForm.formData.dateQ" is-open="popup1.opened"
                                                     datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats"
-                                                    name="dob" required/>
+                                                    name="dateQ" required/>
                                                 <span class="input-group-btn blue-border-cale ">
                                                                  <button type="button" class="btn btn-default" ng-click="open1()"><i class="fa fa-calendar" aria-hidden="true"></i></button>
                                                         </span>
@@ -270,7 +271,7 @@
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label for="contact">Date:</label>
+                                            <label for="contact">Date:<span style="font-size:13px; color:red">&#x2731;</span></label>
                                             <div class="row">
                                                 <div class="col-md-12">
                                                     <p class="input-group">
@@ -290,7 +291,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="submit-btn text-center admission-top" ng-if="view=='tab-four'">
+                <p class="text-center section-padding15 no-margin" ng-if="viewerr">
+                    Please fill up the form Properly
+                </p>
+                <div class="submit-btn text-center section-padding15" ng-if="view=='tab-four'">
                     <button class="btn yellow-border" ng-click="submitForm(employeeForm.formData)" ng-disabled="employeeForm.$invalid">Submit</button>
                 </div>
             </form>
