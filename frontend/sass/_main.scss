@@ -7,12 +7,18 @@ $brand-danger: #fc483f !default;
 $brand-info: #000072 !default;
 $theme-color1:#090791 !default;
 @import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Sue+Ellen+Francisco');
 
 /* Bootstrap Variables Goes Here */
 
 @font-face {
     font-family: 'Poppins-Regular';
     src: url("../fonts/Poppins-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'SueEllenFrancisco', cursive;
+    src: url("../fonts/SueEllenFrancisco.ttf");
 }
 
 @import "other/font-fix";
@@ -578,7 +584,7 @@ a.readmore {
 
 .education-pillar-home {
     // padding: 10px 30px;
-    height: 120px;
+    min-height: 120px;
     align-items: center;
     justify-content: center;
 }
@@ -1155,7 +1161,7 @@ a.readmore {
     @include padding(15px);
 }
 
-.section-padding-tb-15 {
+.section-padding-tb15 {
     @include padding(15px 0);
 }
 
@@ -1223,6 +1229,7 @@ a.readmore {
         border-top: 2px solid #ff6b8c;
         padding: 12px;
         color: #ff6b8c;
+        font-family: 'SueEllenFrancisco', cursive;
         font-size: 25px;
         position: relative;
         &:before {
@@ -1289,7 +1296,7 @@ a.readmore {
 .main-content {
     padding: 10px 30px;
     width: 500px;
-    height: 90px;
+    min-height: 90px;
     align-items: center;
     justify-content: center;
 }
@@ -1299,7 +1306,7 @@ a.readmore {
     align-items: center;
     justify-content: center;
     width: 100px;
-    height: 90px;
+    min-height: 90px;
     background-color: #36353d;
 }
 

@@ -1,8 +1,6 @@
  @media (max-width: $screen-sm-max) {
      // Tablet
-     .row {
-         display: block;
-     } //scss for header 
+     //scss for header 
      .cust-nav .navbar-nav li a {
          padding: 15px 10px;
          font-size: 16px;
@@ -15,5 +13,22 @@
      }
      .section-padding {
          padding: 50px 0;
+     } //Start of admission page
+     .admission-main {
+         @include margin(0);
+     } //End o f admission page
+     //Start of community page
+     .timeline {
+         width: 699px;
+         .main-content {
+             width: 342px;
+         }
+     } //End of community page
+     //Start of home page
+     .area-title {
+         margin-bottom: 35px;
      }
+     .education-pillar-home {
+         min-height: 145px;
+     } //End of home page
  }
