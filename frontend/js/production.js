@@ -68761,7 +68761,7 @@ myApp.factory('NavigationService', function ($http) {
                 //     }
                 // ]
             }, {
-                name: "Co-curricular Program",
+                name: "Co-curricular Programmes",
                 classis: "active",
                 anchor: "co-curricular_program",
                 // innersub: [{
@@ -68873,11 +68873,6 @@ myApp.factory('NavigationService', function ($http) {
                     classis: "active",
                     anchor: "faq",
                     link: "faq"
-                },
-                {
-                    name: "Contact & Enquiries",
-                    classis: "active",
-                    anchor: "admission"
                 }
             ]
         },
@@ -69061,22 +69056,22 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
         //     courseDetail: "Angel Di Maria",
         // }]
         $scope.school_facility = [{
-            img: "img/school_facility/home1.png",
+            img: "img/school_facility/home6.png",
             desc: "Temperature Controlled Learning Spaces."
         }, {
-            img: "img/school_facility/home2.png",
+            img: "img/school_facility/home5.png",
             desc: "Technology Enabled Classrooms."
         }, {
-            img: "img/school_facility/home3.png",
+            img: "img/school_facility/home4.png",
             desc: "Specially Designed Play Area for our Early Years Learners"
         }, {
-            img: "img/school_facility/home6.png",
+            img: "img/school_facility/home3.png",
             desc: "Multi-purpose Outdoor Play Area"
         }, {
-            img: "img/school_facility/home4.png",
+            img: "img/school_facility/home2.png",
             desc: "Early Years Classroom"
         }, {
-            img: "img/school_facility/home5.png",
+            img: "img/school_facility/home1.png",
             desc: "Small Class Sizes"
         }]
 
@@ -69270,21 +69265,21 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
          }
          if (studentForm.gender && studentForm.applyGrade) {
              console.log("!!!!!!!!!!!!submitForm(studentForm)", studentForm);
-             NavigationService.saveStudentForm(studentForm, function (data) {
-                 console.log("!!!!!!!!!!!!submitForm(studentForm)", data);
-                 if (data.data) {
-                     // NavigationService.sendStudentApplication(data.data.data, function (data) {
-                     // console.log("send email to applicant", data.data);
-                     // });
-                     $scope.openSubmitTextForm();
-                     $timeout(function () {
-                         $state.reload();
-                         //  $uibModalInstance.dismiss('cancel');
-                     }, 1000);
+             //  NavigationService.saveStudentForm(studentForm, function (data) {
+             //      console.log("!!!!!!!!!!!!submitForm(studentForm)", data);
+             //      if (data.data) {
+             // NavigationService.sendStudentApplication(data.data.data, function (data) {
+             // console.log("send email to applicant", data.data);
+             // });
+             $scope.openSubmitTextForm();
+             $timeout(function () {
+                 $state.reload();
+                 //  $uibModalInstance.dismiss('cancel');
+             }, 1000);
 
 
-                 }
-             })
+             //  }
+             //  })
          }
 
      }
@@ -69476,19 +69471,19 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
          });
      };
      $scope.submitForm = function (employeeForm) {
-         NavigationService.saveEmployeeForm(employeeForm, function (data) {
-             console.log("!!!!!!!!!!!!submitForm(employeeForm)", data);
-             if (data.data) {
-                 //  NavigationService.sendEmployeeApplication(data.data.data, function (data) {
-                 //      console.log("send email to applicant", data.data);
-                 //  });
-                 $scope.openSubmitTextForm();
-                 $timeout(function () {
-                     //  $uibModalInstance.dismiss('cancel');
-                     $state.reload();
-                 }, 800);
-             }
-         })
+         //  NavigationService.saveEmployeeForm(employeeForm, function (data) {
+         //      console.log("!!!!!!!!!!!!submitForm(employeeForm)", data);
+         //      if (data.data) {
+         //  NavigationService.sendEmployeeApplication(data.data.data, function (data) {
+         //      console.log("send email to applicant", data.data);
+         //  });
+         $scope.openSubmitTextForm();
+         $timeout(function () {
+             //  $uibModalInstance.dismiss('cancel');
+             $state.reload();
+         }, 1000);
+         //      }
+         //  })
      }
 
  });

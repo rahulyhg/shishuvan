@@ -10373,10 +10373,10 @@ a.readmore {
   width: 40px; }
 
 .facilities-icon {
-  bottom: -15px;
+  bottom: -50px;
   font-size: 200px;
-  left: 20px;
-  opacity: 0.2;
+  left: -24px;
+  opacity: 0.5;
   position: absolute;
   z-index: 1; }
 
@@ -10738,7 +10738,7 @@ a.readmore {
   background-position: 50% 50%; }
 
 .admission-bg {
-  background: transparent url(../img/home/b1.png) no-repeat scroll center center/cover;
+  background: transparent url(../img/admission/Addmission.png) no-repeat scroll center center/cover;
   height: 100%;
   left: 0;
   position: absolute;
@@ -10747,7 +10747,7 @@ a.readmore {
   background-position: 50% 50%; }
 
 .contact-bg {
-  background: transparent url(../img/home/b3.png) no-repeat scroll center center/cover;
+  background: transparent url(../img/contact/contact.png) no-repeat scroll center center/cover;
   height: 100%;
   left: 0;
   position: absolute;
@@ -10765,7 +10765,7 @@ a.readmore {
   background-position: 50% 50%; }
 
 .employment-bg {
-  background: transparent url(../img/home/b5.png) no-repeat scroll center center/cover;
+  background: transparent url(../img/employment/Employment-Opportunities.png) no-repeat scroll center center/cover;
   height: 100%;
   left: 0;
   position: absolute;
@@ -10783,7 +10783,7 @@ a.readmore {
   background-position: 50% 50%; }
 
 .community-bg {
-  background: transparent url(../img/home/b2.png) no-repeat scroll center center/cover;
+  background: transparent url(../img/home/b5.png) no-repeat scroll center center/cover;
   height: 100%;
   left: 0;
   position: absolute;
@@ -10818,7 +10818,7 @@ a.readmore {
   -ms-flex-align: center;
   align-items: center;
   background: #333 none repeat scroll 0 0;
-  color: #ff6b8c;
+  color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

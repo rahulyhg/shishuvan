@@ -67,7 +67,7 @@ myApp.factory('NavigationService', function ($http) {
             // ]
         },
         {
-            name: "Program",
+            name: "Programme",
             classis: "active",
             // anchor: "program",
             subnav: [{
@@ -194,7 +194,7 @@ myApp.factory('NavigationService', function ($http) {
                     anchor: "admission"
                 },
                 {
-                    name: "Admissions FAQ",
+                    name: "Admission FAQs",
                     classis: "active",
                     anchor: "faq",
                     link: "faq"

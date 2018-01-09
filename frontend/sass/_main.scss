@@ -25,9 +25,11 @@ body {
     line-height: 1.7em;
     padding-top: 100px;
 }
-p{
-    color:black;
+
+p {
+    color: black;
 }
+
 img.loading {
     text-align: center;
     opacity: 1;
@@ -47,12 +49,15 @@ img.doneLoading {
 nav li:hover .dropdown-menu {
     display: block;
 }
-.font30{
-font-size: 30px;
+
+.font30 {
+    font-size: 30px;
 }
+
 #map img {
     opacity: 1;
 }
+
 a,
 .btn,
 [ui-sref] {
@@ -134,9 +139,11 @@ header {
 .nav-up {
     transform: translateY(-100%);
 }
-.flex-direction-nav a:before{
+
+.flex-direction-nav a:before {
     font-size: 28px;
 }
+
 //header scss//
 .cust-nav {
     min-height: 100px;
@@ -249,9 +256,11 @@ h5 {
 .section-bottom {
     padding-bottom: 100px;
 }
-.community-bottom{
+
+.community-bottom {
     padding-bottom: 45px;
 }
+
 .area-title {
     font-family: "Boogaloo", cursive;
     font-size: 24px;
@@ -333,19 +342,21 @@ a.readmore {
     background: #43c077;
     color: #ffffff;
 }
+
 .green-border-cale {
-border-bottom: 2px solid #43c077;
-.btn {
-padding: 5px 16px;
-}
+    border-bottom: 2px solid #43c077;
+    .btn {
+        padding: 5px 16px;
+    }
 }
 
 .blue-border-cale {
-border-bottom: 2px solid #53b1c8;
-.btn {
-padding: 5px 16px;
+    border-bottom: 2px solid #53b1c8;
+    .btn {
+        padding: 5px 16px;
+    }
 }
-}
+
 .green-color {
     color: #43c077
 }
@@ -429,7 +440,7 @@ padding: 5px 16px;
     font-size: 20px;
     letter-spacing: 1px;
     margin-bottom: 5px;
-    color:black;
+    color: black;
 }
 
 .member-details>p {
@@ -454,10 +465,10 @@ padding: 5px 16px;
 }
 
 .facilities-icon {
-     bottom: -15px;
+    bottom: -50px;
     font-size: 200px;
-    left: 20px;
-    opacity: 0.2;
+    left: -24px;
+    opacity: 0.5;
     position: absolute;
     z-index: 1;
 }
@@ -747,7 +758,7 @@ padding: 5px 16px;
 .footer-copyright {
     letter-spacing: 1px;
     padding: 40px 0;
-    p{
+    p {
         color: #ccc;
     }
 }
@@ -856,13 +867,15 @@ padding: 5px 16px;
 
 //End of scss for footer //
 //Start of about us scss
-.width-small{
-width: 200px
+.width-small {
+    width: 200px
 }
-.width-large{
+
+.width-large {
     width: 63%;
     padding: 0 15px;
 }
+
 .page-barner-bg {
     background: rgba(0, 0, 0, 0) url(../img/page_barner.jpg) no-repeat scroll center center / cover;
     height: 100%;
@@ -872,6 +885,7 @@ width: 200px
     width: 100%;
     background-position: 50% 50%;
 }
+
 .about-bg {
     background: rgba(0, 0, 0, 0) url(../img/about-us/about-bg.jpg) no-repeat scroll center center / cover;
     height: 100%;
@@ -881,8 +895,9 @@ width: 200px
     width: 100%;
     background-position: 50% 50%;
 }
+
 .admission-bg {
-    background: rgba(0, 0, 0, 0) url(../img/home/b1.png) no-repeat scroll center center / cover;
+    background: rgba(0, 0, 0, 0) url(../img/admission/Addmission.png) no-repeat scroll center center / cover;
     height: 100%;
     left: 0;
     position: absolute;
@@ -890,8 +905,9 @@ width: 200px
     width: 100%;
     background-position: 50% 50%;
 }
-.contact-bg{
-   background: rgba(0, 0, 0, 0) url(../img/home/b3.png) no-repeat scroll center center / cover;
+
+.contact-bg {
+    background: rgba(0, 0, 0, 0) url(../img/contact/contact.png) no-repeat scroll center center / cover;
     height: 100%;
     left: 0;
     position: absolute;
@@ -899,6 +915,7 @@ width: 200px
     width: 100%;
     background-position: 50% 50%;
 }
+
 .academic-bg {
     background: rgba(0, 0, 0, 0) url(../img/program/academic/academic.png) no-repeat scroll center center / cover;
     height: 100%;
@@ -908,8 +925,9 @@ width: 200px
     width: 100%;
     background-position: 50% 50%;
 }
-.employment-bg{
-   background: rgba(0, 0, 0, 0) url(../img/home/b5.png) no-repeat scroll center center / cover;
+
+.employment-bg {
+    background: rgba(0, 0, 0, 0) url(../img/employment/Employment-Opportunities.png) no-repeat scroll center center / cover;
     height: 100%;
     left: 0;
     position: absolute;
@@ -917,7 +935,8 @@ width: 200px
     width: 100%;
     background-position: 50% 50%;
 }
-.co-curricular-bg{
+
+.co-curricular-bg {
     background: rgba(0, 0, 0, 0) url(../img/program/co-curiculam/banner-academic.png) no-repeat scroll center center / cover;
     height: 100%;
     left: 0;
@@ -926,8 +945,9 @@ width: 200px
     width: 100%;
     background-position: 50% 50%;
 }
-.community-bg{
-    background: rgba(0, 0, 0, 0) url(../img/home/b2.png) no-repeat scroll center center / cover;
+
+.community-bg {
+    background: rgba(0, 0, 0, 0) url(../img/home/b5.png) no-repeat scroll center center / cover;
     height: 100%;
     left: 0;
     position: absolute;
@@ -935,6 +955,7 @@ width: 200px
     width: 100%;
     background-position: 50% 50%;
 }
+
 .page-barner-bg::after {
     background: #000 none repeat scroll 0 0;
     content: "";
@@ -965,7 +986,7 @@ width: 200px
     -ms-flex-align: center;
     align-items: center;
     background: #333 none repeat scroll 0 0;
-    color: #ff6b8c;
+    color: white;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -979,6 +1000,18 @@ width: 200px
     justify-content: center;
     position: relative;
     width: 100%;
+    // &:before {
+    //     background-color: rgba(0, 0, 0, 0.3);
+    //     bottom: 0;
+    //     content: "";
+    //     left: 0;
+    //     opacity: 1;
+    //     position: absolute;
+    //     right: 0;
+    //     top: 0;
+    //     transition: all 1.2s ease 0s;
+    //     z-index: 1;
+    // }
 }
 
 .page-barner-bg::after {
@@ -1122,12 +1155,15 @@ width: 200px
 .align-items-center {
     @include align-items(center);
 }
-.align-middle{
+
+.align-middle {
     vertical-align: middle;
 }
+
 .section-padding15 {
-@include padding(15px);
+    @include padding(15px);
 }
+
 //end of flex scss
 //End of scss for contact
 //scss for comming soon page 
@@ -1292,7 +1328,7 @@ width: 200px
     label {
         font-family: "Boogaloo";
         font-weight: normal;
-        color:black !important;
+        color: black !important;
     }
 }
 
@@ -1421,22 +1457,25 @@ select {
 .declaration {
     margin: 15px 100px;
 }
+
 //Start of modal pages
 .start-msg {
-.close-modal .fa-times-circle {
-color: #ff6b8c;
+    .close-modal .fa-times-circle {
+        color: #ff6b8c;
+    }
+    .info {
+        border-bottom: 1px solid #ff6b8c;
+    }
+    .date-info {
+        font-weight: bold;
+    }
+    .contact-us {
+        line-height: 1.2;
+    }
 }
-.info {
-border-bottom: 1px solid #ff6b8c;
-}
-.date-info {
-font-weight: bold;
-}
-.contact-us {
-line-height: 1.2;
-}
-}
-.margin20{
+
+.margin20 {
     margin-bottom: 20px
 }
+
 //Emd of all modal pages
