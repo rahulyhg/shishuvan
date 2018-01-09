@@ -67,8 +67,7 @@ a,
 
 footer {
     // font-size: 12px;
-    background-color: #eee;
-    // padding: 10px 0;
+    background-color: #eee; // padding: 10px 0;
     p {
         margin: 0;
     }
@@ -158,14 +157,12 @@ header {
         }
     }
     .navbar-nav {
-        float: right;
-        // font-weight: bold;
+        float: right; // font-weight: bold;
         color: black; // background: white;
         li {
             a {
                 color: black;
-                background-color: white;
-                // font-weight: bold;
+                background-color: white; // font-weight: bold;
                 letter-spacing: 1px;
                 padding: 40px 20px;
                 font-size: 16px;
@@ -222,8 +219,7 @@ h4,
 h5,
 h6 {
     margin: 0 0 15px;
-    font-family: 'Boogaloo', cursive;
-    // font-weight: 700;
+    font-family: 'Boogaloo', cursive; // font-weight: 700;
 }
 
 h5 {
@@ -595,8 +591,7 @@ a.readmore {
     left: 0;
     padding-top: 12px;
     position: absolute;
-    text-align: center;
-    // top: 50%;
+    text-align: center; // top: 50%;
     // -webkit-transform: translateY(-50%);
     // transform: translateY(-50%);
     width: 60px;
@@ -999,8 +994,7 @@ a.readmore {
     -ms-flex-pack: center;
     justify-content: center;
     position: relative;
-    width: 100%;
-    // &:before {
+    width: 100%; // &:before {
     //     background-color: rgba(0, 0, 0, 0.3);
     //     bottom: 0;
     //     content: "";
@@ -1028,8 +1022,7 @@ a.readmore {
 .about-content {
     h3 {
         color: #7070a4;
-        font-size: 48px;
-        // margin:30px 0;
+        font-size: 48px; // margin:30px 0;
         font-family: 'Boogaloo', cursive;
     }
     h5 {
@@ -1082,8 +1075,7 @@ a.readmore {
 .contact-area .form-control {
     border-radius: 0;
     border: 0;
-    color: #fff;
-    // max-height: 140px;
+    color: #fff; // max-height: 140px;
     height: 40px;
     background: transparent;
     border: 0;
@@ -1135,8 +1127,7 @@ a.readmore {
 
 //for flex scss
 .d-flex {
-    @include display(flex);
-    // @include flex-direction(row);
+    @include display(flex); // @include flex-direction(row);
     // @include flex-wrap(wrap);
 }
 
@@ -1162,6 +1153,10 @@ a.readmore {
 
 .section-padding15 {
     @include padding(15px);
+}
+
+.section-padding-tb-15 {
+    @include padding(15px 0);
 }
 
 //end of flex scss

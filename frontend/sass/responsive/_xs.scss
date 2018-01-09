@@ -1,28 +1,60 @@
  @media (max-width: $screen-xs-max) {
      // Mobile
      //scss for home page
-     .cust-nav .navbar-nav{
+     .row {
+         display: block;
+     }
+     .cust-nav .navbar-nav {
          float: none;
          text-align: center;
      }
      .pogoSlider-progressBar {
-    left: 25%;
-}
-.navbar-brand{
-    height: 70px;
-}
-.navbar-nav > li > .dropdown-menu{
-    width:100%;
-    text-align: center !important;
-}
-.section-padding {
-    padding: 50px 0;
-}
-.area-title h2{
-    font-size: 40px;
-}
-.about-content-home h3{
-    font-size: 30px;
-}
-        //end of scss for home page
+         left: 25%;
+     }
+     .navbar-brand {
+         height: 70px;
+     }
+     .navbar-nav>li>.dropdown-menu {
+         width: 100%;
+         text-align: center !important;
+     }
+     .section-padding {
+         padding: 50px 0;
+     }
+     .area-title h2 {
+         font-size: 40px;
+     }
+     .about-content-home h3 {
+         font-size: 30px;
+     } //Start of about page
+     .welcom-barner-area {
+         min-height: 235px;
+     }
+     .about-content {
+         .row {
+             display: block;
+         }
+     }
+     .about-area {
+         .width-small {
+             width: 100%;
+         }
+         .width-large {
+             width: 100%;
+         }
+     } //End of about page
+     //Start of admission page
+     .welcome-text h1 {
+         font-size: 65px;
+     }
+     .quotes-main {
+         width: 260px;
+     }
+     .admission-form h3 {
+         @include margin(15px 0);
+     }
+     .admission-main {
+         @include margin(0);
+     } //End of admission page
+     //end of scss for home page
  }
