@@ -111,12 +111,7 @@
      }
      //To open the modal after submitting the form
      $scope.openSubmitTextForm = function () {
-         $uibModal.open({
-             animation: true,
-             templateUrl: 'views/modal/admission-success-msg.html',
-             scope: $scope,
-             size: 'sm',
-         });
+
      };
      $scope.viewerr = false;
      $scope.viewmsg = false;
@@ -133,10 +128,17 @@
                      // NavigationService.sendStudentApplication(data.data.data, function (data) {
                      // console.log("send email to applicant", data.data);
                      // });
-                     $scope.openSubmitTextForm();
+
+                     //To open the modal after submitting the form
+                     $scope.thankyou = $uibModal.open({
+                         animation: true,
+                         templateUrl: 'views/modal/admission-success-msg.html',
+                         scope: $scope,
+                         size: 'sm',
+                     });
                      $timeout(function () {
+                         $scope.thankyou.close();
                          $state.reload();
-                         //  $uibModalInstance.dismiss('cancel');
                      }, 1000);
                  }
              })
