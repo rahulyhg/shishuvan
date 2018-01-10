@@ -9,6 +9,7 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                 templateUrl: 'views/modal/start-msg.html',
                 scope: $scope,
                 size: 'md',
+                windowClass: 'start-msg-modal-bg'
             });
         };
         // To open modal once when website loads first time. For that we will use jstorage
@@ -101,22 +102,22 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
         //     courseDetail: "Angel Di Maria",
         // }]
         $scope.school_facility = [{
-            img: "img/school_facility/home6.png",
+            img: "img/school_facility/home1.jpg",
             desc: "Temperature Controlled Learning Spaces."
         }, {
-            img: "img/school_facility/home5.png",
+            img: "img/school_facility/home2.jpg",
             desc: "Technology Enabled Classrooms."
         }, {
-            img: "img/school_facility/home4.png",
+            img: "img/school_facility/home3.jpg",
             desc: "Specially Designed Play Area for our Early Years Learners"
         }, {
-            img: "img/school_facility/home3.png",
+            img: "img/school_facility/home4.jpg",
             desc: "Multi-purpose Outdoor Play Area"
         }, {
-            img: "img/school_facility/home2.png",
+            img: "img/school_facility/home5.jpg",
             desc: "Early Years Classroom"
         }, {
-            img: "img/school_facility/home1.png",
+            img: "img/school_facility/home6.jpg",
             desc: "Small Class Sizes"
         }]
 
