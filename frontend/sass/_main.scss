@@ -310,7 +310,9 @@ a.readmore {
 .relative {
     position: relative;
 }
-
+.errormsg{
+    color: red;
+}
 .padding-20 {
     padding: 20px;
 }
@@ -411,6 +413,16 @@ a.readmore {
     background: rgb(243, 244, 244);
 }
 
+.start-msg-modal-bg .modal-body {
+    background: url("../img/popup_bg.png");
+    position: center;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.start-mg-shadow{
+    text-shadow: 2px 2px white;
+}
 .single-team-member {
     position: relative;
     box-sizing: border-box;
@@ -452,7 +464,7 @@ a.readmore {
     opacity: 0;
     z-index: 2;
     @include transition(all 1.2s ease 0s);
-    h3{
+    h3 {
         color: white !important;
         font-size: 30px;
     }
