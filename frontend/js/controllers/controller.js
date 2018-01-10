@@ -9,6 +9,7 @@ myApp.controller('HomeCtrl', function ($scope, TemplateService, NavigationServic
                 templateUrl: 'views/modal/start-msg.html',
                 scope: $scope,
                 size: 'md',
+                windowClass: 'start-msg-modal-bg'
             });
         };
         // To open modal once when website loads first time. For that we will use jstorage
